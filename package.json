@@ -7,7 +7,7 @@
     "bnd": "npm run build && npm run deploy",
     "deploy": "gh-pages -d public",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
+    "start": "sirv public --no-clear --host=0.0.0.0",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
