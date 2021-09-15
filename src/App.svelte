@@ -84,9 +84,6 @@ import { claim_text, xlink_attr } from "svelte/internal";
 			user-select: none;
 			cursor: pointer;
 		}
-		#canvas{
-			background-color:#F00;
-		}
 		#capture{
 			z-index: 9999;
 			width: 100%;
