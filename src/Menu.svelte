@@ -2,10 +2,22 @@
 	import { onMount } from "svelte";
 
 	let menu;
+    let options = [
+        {label: 'brush size', type: 'range'},
+        {label: 'color', type: 'color'},
+        {label: 'save', type: 'submit'},
+        {label: 'clear', type: 'submit'},
+    ];
 
 	onMount(()=>{
         setPosition();
         window.addEventListener('resize', setPosition);
+        menu.addEventListener('ondragstart', (e)=>{
+            console.log(e);
+        })
+        menu.addEventListener('ondragged', (e)=>{
+            console.log(e);
+        })
 	});
 
     function setPosition(dragEvent = null, pos = null){
@@ -23,15 +35,20 @@
 </script>
 
 <div id="flipslide-logo" bind:this={menu} draggable="true">
-    <!--
-        <div style="position: absolute; top: 0px; left: 0px; float: left; width: 150px; border: 1px solid; z-index:9999">
-            <input type="range" bind:value={iSize} />
-            <input type="color" bind:value={color} />
-            <input type="range" bind:value={frame} />
-            <a href="#" on:click={savePNG}>save</a>
-            <a href="#" on:click={clear}>clear</a>
-        </div>
-    -->
+    <div>
+        <!--
+        {#each options as option}
+            <label for={option.label} type={option.label} />
+            <input id={option.label} type={option.type} />
+        {/each}
+
+        <input type="range" bind:value={iSize} />
+        <input type="color" bind:value={color} />
+        <input type="range" bind:value={frame} />
+        <a href="#" on:click={savePNG}>save</a>
+        <a href="#" on:click={clear}>clear</a>
+        -->
+    </div>
     
     <div>flipslide</div>
 </div>
