@@ -18,14 +18,15 @@
     const dispatch = createEventDispatcher();
 
     function pEvt(e){
-        aPosition.push({
-			x: e.clientX,
-			y: e.clientY
-		});
+			aPosition.push({
+				x: e.clientX,
+				y: e.clientY,
+				pressure: e.pressure
+			});
 
-        dispatch('pEvt', {
-            aPosition
-        });
+			dispatch('pEvt', {
+				aPosition
+			});
     }
 
 	/* -- Pointer Events -- */

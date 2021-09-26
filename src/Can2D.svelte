@@ -5,11 +5,12 @@
 	let ctx;
 
 	export let strokeArray = [];
+	export let iSize = 10;
+
 	let stroke = [];
 
 	let lp = {x: 0, y: 0};
 
-	let iSize = 10;
 	let color = "#000";
 
 	onMount(()=>{
@@ -31,18 +32,23 @@
 
 	function draw(x = 0, y = 0){
 		
-        ctx.strokeStyle = color;
+		ctx.strokeStyle = color;
 		ctx.fillStyle = color;
 
-		ctx.beginPath();
-		ctx.moveTo(x - iSize, y - iSize);
-		ctx.lineTo(lp.x - iSize, lp.y - iSize);
-		ctx.lineTo(lp.x + iSize, lp.y + iSize);
-        ctx.lineTo(x + iSize, y + iSize);
-		ctx.closePath();
-		ctx.stroke();
+		x -= iSize/2;
+		y -= iSize/2;
 
-		ctx.fill();
+		ctx.fillRect(x, y, iSize, iSize);
+
+		/* ctx.beginPath(); */
+		/* ctx.moveTo(x - iSize, y - iSize); */
+		/* ctx.lineTo(lp.x - iSize, lp.y - iSize); */
+		/* ctx.lineTo(lp.x + iSize, lp.y + iSize); */
+		/* ctx.lineTo(x + iSize, y + iSize); */
+		/* ctx.closePath(); */
+		/* ctx.stroke(); */
+
+		/* ctx.fill(); */
 
 		lp = {x: x, y: y};
 	}

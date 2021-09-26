@@ -15,7 +15,12 @@
 
 	let lsStrokes = localStorage.getItem('strokes');
 
+	let menu;
+
 	onMount(()=>{
+		/* console.log(menu.style); */
+		/* menu.style.left = "10px"; */
+		
 		if(lsStrokes){
 			loadLocal();
 		}
@@ -50,6 +55,7 @@
 
 	function drawStrokes(_strokeArray){
 		strokeArray = [...strokeArray, _strokeArray];
+		/* layers[0].iSize = 2; */
 		layers[0].drawStroke(_strokeArray);
 	}
 
@@ -79,7 +85,7 @@
 		<Can2D bind:this={layer}  />
 	{/each}
 
-	<Menu />
+	<Menu bind:this={menu} />
 </main>
 
 <style>
