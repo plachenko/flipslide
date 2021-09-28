@@ -36,16 +36,8 @@
 				if(stroke){
 					fStroke = stroke[0];
 					let e = stroke[stroke.length-1]; 
-					clear();
-					/* draw(e.x, e.y, e.dx, e.dy, e.pressure); */
-
-					for(let i = 1; i<=6;i++){
-						e = stroke[stroke.length-i]; 
-						setInterval(()=>{
-							draw(e.x, e.y, e.dx, e.dy, e.pressure);
-						}, 10);
-
-					}
+					/* clear(); */
+					draw(e.x, e.y, e.dx, e.dy, e.pressure);
 					
 				}
     }
@@ -112,7 +104,8 @@
 			ctx.fillStyle = "#000";
 		}
 		/* color = String(color).match(/.{1,2}/g); */
-		/* ctx.fillStyle = `rgb(${dx*color[0]},${dy*color[1]},100)`; */
+		/* let red = parseInt("0x"+color.slice(1,3)) */
+		/* ctx.fillStyle = `rgb(${dx*iSize + red},${dy*red},10)`; */
 		ctx.fillStyle = color;
 
 		/* ctx.fillStyle = "rgba(0,0,0,.5)"; */

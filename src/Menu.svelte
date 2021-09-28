@@ -53,6 +53,16 @@
 <div id="flipslide-logo" bind:this={menu} draggable="true">
     <div id="menu">
         <input on:change={handleColor} bind:value={color} class="btn" type="color" />
+        {#each options as option }
+            <div class="btn">
+                <span on:click={option.method}>
+                    {option.label}
+                </span>
+            </div>
+        {/each}
+
+
+        </div>
         <div class="btn">
             <span on:click={handleSave}>
                 save
@@ -74,7 +84,7 @@
         -->
     </div>
     
-    <div id="logo">flipslide</div>
+    <div class="btn" id="logo">flipslide</div>
 </div>
 
 <style>
@@ -101,6 +111,7 @@
         background-color:#FFF;
         box-sizing: border-box;
         width: 100px;
+        margin: 0 auto;
         }
     .btn:hover{
         border: 2px solid;
