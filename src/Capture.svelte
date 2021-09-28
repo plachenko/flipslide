@@ -17,10 +17,12 @@
 
     const dispatch = createEventDispatcher();
 
-    function pEvt(e){
+    function pEvt(e: PointerEvent){
 			aPosition.push({
 				x: e.clientX,
 				y: e.clientY,
+				dx: e.movementX,
+				dy: e.movementY,
 				pressure: e.pressure
 			});
 
@@ -32,12 +34,12 @@
 	/* -- Pointer Events -- */
 	function pdn(e){
 		bPenDown = true;
-        pEvt(e);
+		pEvt(e);
 	}
 
 	function pmv(e){
 		if(bPenDown){
-            pEvt(e);
+			pEvt(e);
 		}
 	}
 

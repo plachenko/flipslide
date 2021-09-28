@@ -1,0 +1,1044 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/data/data/com.termux/files/home/repositories/com/github/plachenko/flipslide/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+#capture.svelte-1f3d6cz	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+#cursor.svelte-1do43ns	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+#flipslide-logo.svelte-50jev6	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+#flipslide-logo.svelte-50jev6:active	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+#flipslide-logo.svelte-50jev6:hover	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+$capture_state	public/build/bundle.js	/^        $capture_state() { }$/;"	m	class:app.SvelteComponentDev
+$destroy	public/build/bundle.js	/^        $destroy() {$/;"	m	class:app.SvelteComponent
+$destroy	public/build/bundle.js	/^        $destroy() {$/;"	m	class:app.SvelteComponentDev
+$inject_state	public/build/bundle.js	/^        $inject_state() { }$/;"	m	class:app.SvelteComponentDev
+$on	public/build/bundle.js	/^        $on(type, callback) {$/;"	m	class:app.SvelteComponent
+$set	public/build/bundle.js	/^        $set($$props) {$/;"	m	class:app.SvelteComponent
+0	.vscode/extensions.json	/^  "recommendations": ["svelte.svelte-vscode"]$/;"	s	array:recommendations
+0	tsconfig.json	/^  "exclude": ["node_modules\/*", "__sapper__\/*", "public\/*"]$/;"	s	array:exclude
+0	tsconfig.json	/^  "include": ["src\/**\/*"],$/;"	s	array:include
+1	tsconfig.json	/^  "exclude": ["node_modules\/*", "__sapper__\/*", "public\/*"]$/;"	s	array:exclude
+2	tsconfig.json	/^  "exclude": ["node_modules\/*", "__sapper__\/*", "public\/*"]$/;"	s	array:exclude
+@babel/code-frame	package-lock.json	/^        "@babel\/code-frame": "^7.10.4",$/;"	s	object:dependencies.rollup-plugin-terser.requires
+@babel/code-frame	package-lock.json	/^    "@babel\/code-frame": {$/;"	o	object:dependencies
+@babel/helper-validator-identifier	package-lock.json	/^        "@babel\/helper-validator-identifier": "^7.14.5",$/;"	s	object:dependencies.@babel/highlight.requires
+@babel/helper-validator-identifier	package-lock.json	/^    "@babel\/helper-validator-identifier": {$/;"	o	object:dependencies
+@babel/highlight	package-lock.json	/^        "@babel\/highlight": "^7.14.5"$/;"	s	object:dependencies.@babel/code-frame.requires
+@babel/highlight	package-lock.json	/^    "@babel\/highlight": {$/;"	o	object:dependencies
+@nodelib/fs.scandir	package-lock.json	/^        "@nodelib\/fs.scandir": "2.1.5",$/;"	s	object:dependencies.@nodelib/fs.walk.requires
+@nodelib/fs.scandir	package-lock.json	/^    "@nodelib\/fs.scandir": {$/;"	o	object:dependencies
+@nodelib/fs.stat	package-lock.json	/^        "@nodelib\/fs.stat": "2.0.5",$/;"	s	object:dependencies.@nodelib/fs.scandir.requires
+@nodelib/fs.stat	package-lock.json	/^        "@nodelib\/fs.stat": "^2.0.2",$/;"	s	object:dependencies.fast-glob.requires
+@nodelib/fs.stat	package-lock.json	/^    "@nodelib\/fs.stat": {$/;"	o	object:dependencies
+@nodelib/fs.walk	package-lock.json	/^        "@nodelib\/fs.walk": "^1.2.3",$/;"	s	object:dependencies.fast-glob.requires
+@nodelib/fs.walk	package-lock.json	/^    "@nodelib\/fs.walk": {$/;"	o	object:dependencies
+@polka/url	package-lock.json	/^        "@polka\/url": "^1.0.0-next.20",$/;"	s	object:dependencies.sirv.requires
+@polka/url	package-lock.json	/^    "@polka\/url": {$/;"	o	object:dependencies
+@rollup/plugin-commonjs	package-lock.json	/^    "@rollup\/plugin-commonjs": {$/;"	o	object:dependencies
+@rollup/plugin-commonjs	package.json	/^    "@rollup\/plugin-commonjs": "^17.0.0",$/;"	s	object:devDependencies
+@rollup/plugin-node-resolve	package-lock.json	/^    "@rollup\/plugin-node-resolve": {$/;"	o	object:dependencies
+@rollup/plugin-node-resolve	package.json	/^    "@rollup\/plugin-node-resolve": "^11.0.0",$/;"	s	object:devDependencies
+@rollup/plugin-typescript	package-lock.json	/^    "@rollup\/plugin-typescript": {$/;"	o	object:dependencies
+@rollup/plugin-typescript	package.json	/^    "@rollup\/plugin-typescript": "^8.0.0",$/;"	s	object:devDependencies
+@rollup/pluginutils	package-lock.json	/^        "@rollup\/pluginutils": "4"$/;"	s	object:dependencies.rollup-plugin-css-only.requires
+@rollup/pluginutils	package-lock.json	/^        "@rollup\/pluginutils": "^3.1.0",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+@rollup/pluginutils	package-lock.json	/^        "@rollup\/pluginutils": "^3.1.0",$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+@rollup/pluginutils	package-lock.json	/^        "@rollup\/pluginutils": "^3.1.0",$/;"	s	object:dependencies.@rollup/plugin-typescript.requires
+@rollup/pluginutils	package-lock.json	/^        "@rollup\/pluginutils": {$/;"	o	object:dependencies.rollup-plugin-css-only.dependencies
+@rollup/pluginutils	package-lock.json	/^    "@rollup\/pluginutils": {$/;"	o	object:dependencies
+@tsconfig/svelte	package-lock.json	/^    "@tsconfig\/svelte": {$/;"	o	object:dependencies
+@tsconfig/svelte	package.json	/^    "@tsconfig\/svelte": "^2.0.0"$/;"	s	object:devDependencies
+@types/estree	package-lock.json	/^        "@types\/estree": "*"$/;"	s	object:dependencies.is-reference.requires
+@types/estree	package-lock.json	/^        "@types\/estree": "0.0.39",$/;"	s	object:dependencies.@rollup/pluginutils.requires
+@types/estree	package-lock.json	/^    "@types\/estree": {$/;"	o	object:dependencies
+@types/node	package-lock.json	/^        "@types\/node": "*"$/;"	s	object:dependencies.@types/resolve.requires
+@types/node	package-lock.json	/^        "@types\/node": "*"$/;"	s	object:dependencies.@types/sass.requires
+@types/node	package-lock.json	/^        "@types\/node": "*",$/;"	s	object:dependencies.jest-worker.requires
+@types/node	package-lock.json	/^    "@types\/node": {$/;"	o	object:dependencies
+@types/pug	package-lock.json	/^        "@types\/pug": "^2.0.4",$/;"	s	object:dependencies.svelte-preprocess.requires
+@types/pug	package-lock.json	/^    "@types\/pug": {$/;"	o	object:dependencies
+@types/resolve	package-lock.json	/^        "@types\/resolve": "1.17.1",$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+@types/resolve	package-lock.json	/^    "@types\/resolve": {$/;"	o	object:dependencies
+@types/sass	package-lock.json	/^        "@types\/sass": "^1.16.0",$/;"	s	object:dependencies.svelte-preprocess.requires
+@types/sass	package-lock.json	/^    "@types\/sass": {$/;"	o	object:dependencies
+AnonymousFunction7926283f0100	src/assets/gif.js	/^(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else /;"	f
+AnonymousFunction7926283f0200	src/assets/gif.js	/^(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else /;"	f
+AnonymousFunctione190fe070100	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+AnonymousFunctione190fe070200	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+AnonymousFunctione190fe070300	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+AnonymousFunctione190fe070400	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+AnonymousFunctione190fe070500	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+App	public/build/bundle.js	/^    class App extends SvelteComponentDev {$/;"	c	class:app
+Atkinson	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	p	class:GIFEncoder.ditherPixels.kernels
+Building and running in production mode	README.md	/^## Building and running in production mode$/;"	s	chapter:svelte app
+ByteArray	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c
+ByteArray	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c	class:AnonymousFunctione190fe070200
+Can2D	public/build/bundle.js	/^    class Can2D extends SvelteComponentDev {$/;"	c	class:app
+Capture	public/build/bundle.js	/^    class Capture extends SvelteComponentDev {$/;"	c	class:app
+Deploying to the web	README.md	/^## Deploying to the web$/;"	s	chapter:svelte app
+FalseFloydSteinberg	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	p	class:GIFEncoder.ditherPixels.kernels
+FloydSteinberg	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	p	class:GIFEncoder.ditherPixels.kernels
+GIFEncoder	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c
+GIFEncoder	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c	class:AnonymousFunctione190fe070200
+Get started	README.md	/^## Get started$/;"	s	chapter:svelte app
+LZWEncoder	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c	class:AnonymousFunctione190fe070300
+MAXCODE	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+Menu	public/build/bundle.js	/^    class Menu extends SvelteComponentDev {$/;"	c	class:app
+NeuQuant	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c	class:AnonymousFunctione190fe070400
+Single-page app mode	README.md	/^## Single-page app mode$/;"	s	chapter:svelte app
+Stucki	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	p	class:GIFEncoder.ditherPixels.kernels
+SvelteComponent	public/build/bundle.js	/^    class SvelteComponent {$/;"	c	class:app
+SvelteComponentDev	public/build/bundle.js	/^    class SvelteComponentDev extends SvelteComponent {$/;"	c	class:app
+Using TypeScript	README.md	/^## Using TypeScript$/;"	s	chapter:svelte app
+With [Vercel](https://vercel.com)	README.md	/^### With [Vercel](https:\/\/vercel.com)$/;"	S	section:svelte app""Deploying to the web
+With [surge](https://surge.sh/)	README.md	/^### With [surge](https:\/\/surge.sh\/)$/;"	S	section:svelte app""Deploying to the web
+__svelte_meta	public/build/bundle.js	/^        element.__svelte_meta = {$/;"	c	class:element
+a	public/global.css	/^a {$/;"	s
+a:hover	public/global.css	/^a:hover {$/;"	s
+a:visited	public/global.css	/^a:visited {$/;"	s
+addFrame	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+add_location	public/build/bundle.js	/^    function add_location(element, file, line, column, char) {$/;"	f	function:app
+add_render_callback	public/build/bundle.js	/^    function add_render_callback(fn) {$/;"	f	function:app
+alterneigh	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+altersingle	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+analyzePixels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+ansi-styles	package-lock.json	/^            "ansi-styles": "^4.1.0",$/;"	s	object:dependencies.svelte-check.dependencies.chalk.requires
+ansi-styles	package-lock.json	/^        "ansi-styles": "^3.2.1",$/;"	s	object:dependencies.chalk.requires
+ansi-styles	package-lock.json	/^        "ansi-styles": {$/;"	o	object:dependencies.svelte-check.dependencies
+ansi-styles	package-lock.json	/^    "ansi-styles": {$/;"	o	object:dependencies
+anymatch	package-lock.json	/^        "anymatch": "~3.1.2",$/;"	s	object:dependencies.chokidar.requires
+anymatch	package-lock.json	/^    "anymatch": {$/;"	o	object:dependencies
+app	public/build/bundle.js	/^var app = (function () {$/;"	f
+app	src/main.ts	/^const app = new App({$/;"	C
+append	public/build/bundle.js	/^    function append(target, node) {$/;"	f	function:app
+append_dev	public/build/bundle.js	/^    function append_dev(target, node) {$/;"	f	function:app
+attr	public/build/bundle.js	/^    function attr(node, attribute, value) {$/;"	f	function:app
+attr_dev	public/build/bundle.js	/^    function attr_dev(node, attribute, value) {$/;"	f	function:app
+balanced-match	package-lock.json	/^        "balanced-match": "^1.0.0",$/;"	s	object:dependencies.brace-expansion.requires
+balanced-match	package-lock.json	/^    "balanced-match": {$/;"	o	object:dependencies
+binary-extensions	package-lock.json	/^        "binary-extensions": "^2.0.0"$/;"	s	object:dependencies.is-binary-path.requires
+binary-extensions	package-lock.json	/^    "binary-extensions": {$/;"	o	object:dependencies
+blank_object	public/build/bundle.js	/^    function blank_object() {$/;"	f	function:app
+bnd	package.json	/^    "bnd": "npm run build && npm run deploy",$/;"	s	object:scripts
+body	public/global.css	/^body {$/;"	s
+body	public/global.css	/^html, body {$/;"	s
+brace-expansion	package-lock.json	/^        "brace-expansion": "^1.1.7"$/;"	s	object:dependencies.minimatch.requires
+brace-expansion	package-lock.json	/^    "brace-expansion": {$/;"	o	object:dependencies
+braces	package-lock.json	/^        "braces": "^3.0.1",$/;"	s	object:dependencies.micromatch.requires
+braces	package-lock.json	/^        "braces": "~3.0.2",$/;"	s	object:dependencies.chokidar.requires
+braces	package-lock.json	/^    "braces": {$/;"	o	object:dependencies
+buffer-crc32	package-lock.json	/^        "buffer-crc32": "^0.2.5",$/;"	s	object:dependencies.sorcery.requires
+buffer-crc32	package-lock.json	/^    "buffer-crc32": {$/;"	o	object:dependencies
+buffer-from	package-lock.json	/^        "buffer-from": "^1.0.0",$/;"	s	object:dependencies.source-map-support.requires
+buffer-from	package-lock.json	/^    "buffer-from": {$/;"	o	object:dependencies
+build	package.json	/^    "build": "rollup -c",$/;"	s	object:scripts
+buildColormap	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+builtin-modules	package-lock.json	/^        "builtin-modules": "^3.1.0",$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+builtin-modules	package-lock.json	/^    "builtin-modules": {$/;"	o	object:dependencies
+button	public/global.css	/^button {$/;"	s
+button	public/global.css	/^input, button, select, textarea {$/;"	s
+button:disabled	public/global.css	/^button:disabled {$/;"	s
+button:focus	public/global.css	/^button:focus {$/;"	s
+button:not(:disabled):active	public/global.css	/^button:not(:disabled):active {$/;"	s
+c	public/build/bundle.js	/^            c: [],$/;"	p	class:app.group_outros.outros
+callsites	package-lock.json	/^        "callsites": "^3.0.0"$/;"	s	object:dependencies.parent-module.requires
+callsites	package-lock.json	/^    "callsites": {$/;"	o	object:dependencies
+can2d_binding	public/build/bundle.js	/^    	function can2d_binding($$value, each_value, layer_index) {$/;"	f	function:app.instance
+canvas_1_binding	public/build/bundle.js	/^    	function canvas_1_binding($$value) {$/;"	f	function:app.instance$3
+chalk	package-lock.json	/^        "chalk": "^2.0.0",$/;"	s	object:dependencies.@babel/highlight.requires
+chalk	package-lock.json	/^        "chalk": "^4.0.0",$/;"	s	object:dependencies.svelte-check.requires
+chalk	package-lock.json	/^        "chalk": {$/;"	o	object:dependencies.svelte-check.dependencies
+chalk	package-lock.json	/^    "chalk": {$/;"	o	object:dependencies
+char_out	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+check	package.json	/^    "check": "svelte-check --tsconfig .\/tsconfig.json"$/;"	s	object:scripts
+check_outros	public/build/bundle.js	/^    function check_outros() {$/;"	f	function:app
+children	public/build/bundle.js	/^    function children(element) {$/;"	f	function:app
+chokidar	package-lock.json	/^        "chokidar": "^3.4.1",$/;"	s	object:dependencies.svelte-check.requires
+chokidar	package-lock.json	/^        "chokidar": "^3.5.0",$/;"	s	object:dependencies.livereload.requires
+chokidar	package-lock.json	/^    "chokidar": {$/;"	o	object:dependencies
+cl_block	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+cl_hash	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+clear	public/build/bundle.js	/^    	function clear() {$/;"	f	function:app.instance$3
+clickHandle	public/build/bundle.js	/^    function clickHandle() {$/;"	f	function:app
+color-convert	package-lock.json	/^            "color-convert": "^2.0.1"$/;"	s	object:dependencies.svelte-check.dependencies.ansi-styles.requires
+color-convert	package-lock.json	/^        "color-convert": "^1.9.0"$/;"	s	object:dependencies.ansi-styles.requires
+color-convert	package-lock.json	/^        "color-convert": {$/;"	o	object:dependencies.svelte-check.dependencies
+color-convert	package-lock.json	/^    "color-convert": {$/;"	o	object:dependencies
+color-name	package-lock.json	/^            "color-name": "~1.1.4"$/;"	s	object:dependencies.svelte-check.dependencies.color-convert.requires
+color-name	package-lock.json	/^        "color-name": "1.1.3"$/;"	s	object:dependencies.color-convert.requires
+color-name	package-lock.json	/^        "color-name": {$/;"	o	object:dependencies.svelte-check.dependencies
+color-name	package-lock.json	/^    "color-name": {$/;"	o	object:dependencies
+commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:dependencies.terser.requires
+commander	package-lock.json	/^    "commander": {$/;"	o	object:dependencies
+commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+commondir	package-lock.json	/^    "commondir": {$/;"	o	object:dependencies
+compress	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+concat-map	package-lock.json	/^        "concat-map": "0.0.1"$/;"	s	object:dependencies.brace-expansion.requires
+concat-map	package-lock.json	/^    "concat-map": {$/;"	o	object:dependencies
+console-clear	package-lock.json	/^        "console-clear": "^1.1.0",$/;"	s	object:dependencies.sirv-cli.requires
+console-clear	package-lock.json	/^    "console-clear": {$/;"	o	object:dependencies
+constructor	public/build/bundle.js	/^    	constructor(options) {$/;"	m	class:app.App
+constructor	public/build/bundle.js	/^    	constructor(options) {$/;"	m	class:app.Can2D
+constructor	public/build/bundle.js	/^    	constructor(options) {$/;"	m	class:app.Capture
+constructor	public/build/bundle.js	/^    	constructor(options) {$/;"	m	class:app.Menu
+constructor	public/build/bundle.js	/^        constructor(options) {$/;"	m	class:app.SvelteComponentDev
+contest	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+createEventDispatcher	public/build/bundle.js	/^    function createEventDispatcher() {$/;"	f	function:app
+create_component	public/build/bundle.js	/^    function create_component(block) {$/;"	f	function:app
+create_each_block	public/build/bundle.js	/^    function create_each_block(ctx) {$/;"	f	function:app
+create_fragment	public/build/bundle.js	/^    function create_fragment(ctx) {$/;"	f	function:app
+create_fragment$1	public/build/bundle.js	/^    function create_fragment$1(ctx) {$/;"	f	function:app
+create_fragment$2	public/build/bundle.js	/^    function create_fragment$2(ctx) {$/;"	f	function:app
+create_fragment$3	public/build/bundle.js	/^    function create_fragment$3(ctx) {$/;"	f	function:app
+custom_event	public/build/bundle.js	/^    function custom_event(type, detail, bubbles = false) {$/;"	f	function:app
+deepmerge	package-lock.json	/^        "deepmerge": "^4.2.2",$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+deepmerge	package-lock.json	/^    "deepmerge": {$/;"	o	object:dependencies
+defaultPos	public/build/bundle.js	/^    		let defaultPos = {$/;"	c	class:app.instance$1.setPosition
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@rollup/pluginutils
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.chokidar
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.jest-worker
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.rollup
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.rollup-plugin-css-only
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.rollup-pluginutils
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.source-map-support
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.svelte-check
+dependencies	package-lock.json	/^  "dependencies": {$/;"	o
+dependencies	package.json	/^  "dependencies": {$/;"	o
+deploy	package.json	/^    "deploy": "gh-pages -d public",$/;"	s	object:scripts
+destroy_component	public/build/bundle.js	/^    function destroy_component(component, detaching) {$/;"	f	function:app
+destroy_each	public/build/bundle.js	/^    function destroy_each(iterations, detaching) {$/;"	f	function:app
+detach	public/build/bundle.js	/^    function detach(node) {$/;"	f	function:app
+detach_dev	public/build/bundle.js	/^    function detach_dev(node) {$/;"	f	function:app
+detect-indent	package-lock.json	/^        "detect-indent": "^6.0.0",$/;"	s	object:dependencies.svelte-preprocess.requires
+detect-indent	package-lock.json	/^    "detect-indent": {$/;"	o	object:dependencies
+dev	package.json	/^    "dev": "rollup -c -w",$/;"	s	object:scripts
+devDependencies	package.json	/^  "devDependencies": {$/;"	o
+dispatch_dev	public/build/bundle.js	/^    function dispatch_dev(type, detail) {$/;"	f	function:app
+ditherPixels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+div2_binding	public/build/bundle.js	/^    	function div2_binding($$value) {$/;"	f	function:app.instance$1
+div_binding	public/build/bundle.js	/^    	function div_binding($$value) {$/;"	f	function:app.instance$2
+draw	public/build/bundle.js	/^    	function draw(x = 0, y = 0) {$/;"	f	function:app.instance$3
+drawStroke	public/build/bundle.js	/^    	function drawStroke(stroke) {$/;"	f	function:app.instance$3
+drawStroke	public/build/bundle.js	/^    	get drawStroke() {$/;"	G	class:app.Can2D
+drawStroke	public/build/bundle.js	/^    	set drawStroke(value) {$/;"	S	class:app.Can2D
+drawStrokes	public/build/bundle.js	/^    	function drawStrokes(_strokeArray) {$/;"	f	function:app.instance
+e	src/assets/gif.js	/^(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else /;"	f	function:AnonymousFunction7926283f0100
+element	public/build/bundle.js	/^    function element(name) {$/;"	f	function:app
+encode	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+es6-promise	package-lock.json	/^        "es6-promise": "^3.1.2",$/;"	s	object:dependencies.sander.requires
+es6-promise	package-lock.json	/^    "es6-promise": {$/;"	o	object:dependencies
+escape-string-regexp	package-lock.json	/^        "escape-string-regexp": "^1.0.5",$/;"	s	object:dependencies.chalk.requires
+escape-string-regexp	package-lock.json	/^    "escape-string-regexp": {$/;"	o	object:dependencies
+estree-walker	package-lock.json	/^            "estree-walker": "^2.0.1",$/;"	s	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils.requires
+estree-walker	package-lock.json	/^        "estree-walker": "^0.6.1"$/;"	s	object:dependencies.rollup-pluginutils.requires
+estree-walker	package-lock.json	/^        "estree-walker": "^1.0.1",$/;"	s	object:dependencies.@rollup/pluginutils.requires
+estree-walker	package-lock.json	/^        "estree-walker": "^2.0.1",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+estree-walker	package-lock.json	/^        "estree-walker": {$/;"	o	object:dependencies.@rollup/pluginutils.dependencies
+estree-walker	package-lock.json	/^        "estree-walker": {$/;"	o	object:dependencies.rollup-pluginutils.dependencies
+estree-walker	package-lock.json	/^    "estree-walker": {$/;"	o	object:dependencies
+exclude	tsconfig.json	/^  "exclude": ["node_modules\/*", "__sapper__\/*", "public\/*"]$/;"	a
+extends	tsconfig.json	/^  "extends": "@tsconfig\/svelte\/tsconfig.json",$/;"	s
+fast-glob	package-lock.json	/^        "fast-glob": "^3.2.7",$/;"	s	object:dependencies.svelte-check.requires
+fast-glob	package-lock.json	/^    "fast-glob": {$/;"	o	object:dependencies
+fastq	package-lock.json	/^        "fastq": "^1.6.0"$/;"	s	object:dependencies.@nodelib/fs.walk.requires
+fastq	package-lock.json	/^    "fastq": {$/;"	o	object:dependencies
+fill-range	package-lock.json	/^        "fill-range": "^7.0.1"$/;"	s	object:dependencies.braces.requires
+fill-range	package-lock.json	/^    "fill-range": {$/;"	o	object:dependencies
+findClosest	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+findClosestRGB	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+finish	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+flush	public/build/bundle.js	/^    function flush() {$/;"	f	function:app
+flush_char	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+fs.realpath	package-lock.json	/^        "fs.realpath": "^1.0.0",$/;"	s	object:dependencies.glob.requires
+fs.realpath	package-lock.json	/^    "fs.realpath": {$/;"	o	object:dependencies
+fsevents	package-lock.json	/^        "fsevents": "~2.3.2"$/;"	s	object:dependencies.rollup.requires
+fsevents	package-lock.json	/^        "fsevents": "~2.3.2",$/;"	s	object:dependencies.chokidar.requires
+fsevents	package-lock.json	/^        "fsevents": {$/;"	o	object:dependencies.chokidar.dependencies
+fsevents	package-lock.json	/^        "fsevents": {$/;"	o	object:dependencies.rollup.dependencies
+function-bind	package-lock.json	/^        "function-bind": "^1.1.1"$/;"	s	object:dependencies.has.requires
+function-bind	package-lock.json	/^    "function-bind": {$/;"	o	object:dependencies
+g	src/assets/gif.js	/^(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else /;"	v
+get-port	package-lock.json	/^        "get-port": "^3.2.0",$/;"	s	object:dependencies.sirv-cli.requires
+get-port	package-lock.json	/^    "get-port": {$/;"	o	object:dependencies
+getColormap	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+getData	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:ByteArray
+getGlobalPalette	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+getImagePixels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+get_current_component	public/build/bundle.js	/^    function get_current_component() {$/;"	f	function:app
+get_each_context	public/build/bundle.js	/^    function get_each_context(ctx, list, i) {$/;"	f	function:app
+glob	package-lock.json	/^        "glob": "^7.1.3"$/;"	s	object:dependencies.rimraf.requires
+glob	package-lock.json	/^        "glob": "^7.1.6",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+glob	package-lock.json	/^    "glob": {$/;"	o	object:dependencies
+glob-parent	package-lock.json	/^        "glob-parent": "^5.1.2",$/;"	s	object:dependencies.fast-glob.requires
+glob-parent	package-lock.json	/^        "glob-parent": "~5.1.2",$/;"	s	object:dependencies.chokidar.requires
+glob-parent	package-lock.json	/^    "glob-parent": {$/;"	o	object:dependencies
+graceful-fs	package-lock.json	/^        "graceful-fs": "^4.1.3",$/;"	s	object:dependencies.sander.requires
+graceful-fs	package-lock.json	/^    "graceful-fs": {$/;"	o	object:dependencies
+group_outros	public/build/bundle.js	/^    function group_outros() {$/;"	f	function:app
+handleStrokeEvent	public/build/bundle.js	/^    	function handleStrokeEvent(e) {$/;"	f	function:app.instance
+has	package-lock.json	/^        "has": "^1.0.3"$/;"	s	object:dependencies.is-core-module.requires
+has	package-lock.json	/^    "has": {$/;"	o	object:dependencies
+has-flag	package-lock.json	/^            "has-flag": "^4.0.0"$/;"	s	object:dependencies.jest-worker.dependencies.supports-color.requires
+has-flag	package-lock.json	/^            "has-flag": "^4.0.0"$/;"	s	object:dependencies.svelte-check.dependencies.supports-color.requires
+has-flag	package-lock.json	/^        "has-flag": "^3.0.0"$/;"	s	object:dependencies.supports-color.requires
+has-flag	package-lock.json	/^        "has-flag": {$/;"	o	object:dependencies.jest-worker.dependencies
+has-flag	package-lock.json	/^        "has-flag": {$/;"	o	object:dependencies.svelte-check.dependencies
+has-flag	package-lock.json	/^    "has-flag": {$/;"	o	object:dependencies
+html	public/global.css	/^html, body {$/;"	s
+i	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	v
+iSize	public/build/bundle.js	/^    	get iSize() {$/;"	G	class:app.Can2D
+iSize	public/build/bundle.js	/^    	set iSize(value) {$/;"	S	class:app.Can2D
+import-fresh	package-lock.json	/^        "import-fresh": "^3.2.1",$/;"	s	object:dependencies.svelte-check.requires
+import-fresh	package-lock.json	/^    "import-fresh": {$/;"	o	object:dependencies
+include	tsconfig.json	/^  "include": ["src\/**\/*"],$/;"	a
+indexPixels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+inflight	package-lock.json	/^        "inflight": "^1.0.4",$/;"	s	object:dependencies.glob.requires
+inflight	package-lock.json	/^    "inflight": {$/;"	o	object:dependencies
+inherits	package-lock.json	/^        "inherits": "2",$/;"	s	object:dependencies.glob.requires
+inherits	package-lock.json	/^    "inherits": {$/;"	o	object:dependencies
+init	public/build/bundle.js	/^    function init(component, options, instance, create_fragment, not_equal, props, append_styles/;"	f	function:app
+init	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+input	public/global.css	/^input, button, select, textarea {$/;"	s
+input:disabled	public/global.css	/^input:disabled {$/;"	s
+insert	public/build/bundle.js	/^    function insert(target, node, anchor) {$/;"	f	function:app
+insert_dev	public/build/bundle.js	/^    function insert_dev(target, node, anchor) {$/;"	f	function:app
+instance	public/build/bundle.js	/^    function instance($$self, $$props, $$invalidate) {$/;"	f	function:app
+instance$1	public/build/bundle.js	/^    function instance$1($$self, $$props, $$invalidate) {$/;"	f	function:app
+instance$2	public/build/bundle.js	/^    function instance$2($$self, $$props, $$invalidate) {$/;"	f	function:app
+instance$3	public/build/bundle.js	/^    function instance$3($$self, $$props, $$invalidate) {$/;"	f	function:app
+integrity	package-lock.json	/^          "integrity": "sha512-1fMXF3YP4pZZVozF8j\/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQu/;"	s	object:dependencies.@rollup/pluginutils.dependencies.estree-walker
+integrity	package-lock.json	/^          "integrity": "sha512-EykJT\/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDF/;"	s	object:dependencies.jest-worker.dependencies.has-flag
+integrity	package-lock.json	/^          "integrity": "sha512-EykJT\/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDF/;"	s	object:dependencies.svelte-check.dependencies.has-flag
+integrity	package-lock.json	/^          "integrity": "sha512-RRECPsj7iu\/xb5oKYcsFHSppFNnsj\/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+C/;"	s	object:dependencies.svelte-check.dependencies.color-convert
+integrity	package-lock.json	/^          "integrity": "sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWB/;"	s	object:dependencies.rollup-pluginutils.dependencies.estree-walker
+integrity	package-lock.json	/^          "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz\/h0Plj6enJqjz1Zbq2/;"	s	object:dependencies.source-map-support.dependencies.source-map
+integrity	package-lock.json	/^          "integrity": "sha512-clDjivHqWGXi7u+0d2r2sBi4Ie6VLEAzWMIkvJLnDmxoOhBYOTfzGbOQBA32THHm1/;"	s	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils
+integrity	package-lock.json	/^          "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU\/uBL\/ubcZF9OXbDo8ff4O8yVp5Bf0efS8u/;"	s	object:dependencies.svelte-check.dependencies.color-name
+integrity	package-lock.json	/^          "integrity": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc\/wy9kY7\/WVPcwIO9VA668Pu8RkO7/;"	s	object:dependencies.svelte-check.dependencies.chalk
+integrity	package-lock.json	/^          "integrity": "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO\/+Lwxc9+0q2wLyv4Dfvt80\/DP/;"	s	object:dependencies.jest-worker.dependencies.supports-color
+integrity	package-lock.json	/^          "integrity": "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO\/+Lwxc9+0q2wLyv4Dfvt80\/DP/;"	s	object:dependencies.svelte-check.dependencies.supports-color
+integrity	package-lock.json	/^          "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7Edt/;"	s	object:dependencies.chokidar.dependencies.fsevents
+integrity	package-lock.json	/^          "integrity": "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7Edt/;"	s	object:dependencies.rollup.dependencies.fsevents
+integrity	package-lock.json	/^          "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDoh/;"	s	object:dependencies.svelte-check.dependencies.ansi-styles
+integrity	package-lock.json	/^      "integrity": "sha1-2Klr13\/Wjfd5OnMDajug1UBdR3s="$/;"	s	object:dependencies.concat-map
+integrity	package-lock.json	/^      "integrity": "sha1-3Xzn3hh8Bsi\/NTeWrHHgmfCYDrw="$/;"	s	object:dependencies.get-port
+integrity	package-lock.json	/^      "integrity": "sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs="$/;"	s	object:dependencies.commondir
+integrity	package-lock.json	/^      "integrity": "sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI="$/;"	s	object:dependencies.buffer-crc32
+integrity	package-lock.json	/^      "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18="$/;"	s	object:dependencies.path-is-absolute
+integrity	package-lock.json	/^      "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="$/;"	s	object:dependencies.fs.realpath
+integrity	package-lock.json	/^      "integrity": "sha1-G2HAViGQqN\/2rjuyzwIAyhMLhtQ="$/;"	s	object:dependencies.escape-string-regexp
+integrity	package-lock.json	/^      "integrity": "sha1-Mlj7afeMFNW4FdZkM2tM\/7ZEFZE="$/;"	s	object:dependencies.is-module
+integrity	package-lock.json	/^      "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",$/;"	s	object:dependencies.inflight
+integrity	package-lock.json	/^      "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",$/;"	s	object:dependencies.once
+integrity	package-lock.json	/^      "integrity": "sha1-dB4kXiMfB8r7b98PEzrfohalAq0=",$/;"	s	object:dependencies.sander
+integrity	package-lock.json	/^      "integrity": "sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4="$/;"	s	object:dependencies.require-relative
+integrity	package-lock.json	/^      "integrity": "sha1-iukK19fLBfxZ8asMY3hF1cFaUrc=",$/;"	s	object:dependencies.sorcery
+integrity	package-lock.json	/^      "integrity": "sha1-oIzd6EzNvzTQJ6FFG8kdS80ophM="$/;"	s	object:dependencies.es6-promise
+integrity	package-lock.json	/^      "integrity": "sha1-p9BVi9icQveV3UIyj3QIMcpTvCU="$/;"	s	object:dependencies.color-name
+integrity	package-lock.json	/^      "integrity": "sha1-qIwCU1eR8C7TfHahueqXc8gz+MI="$/;"	s	object:dependencies.is-extglob
+integrity	package-lock.json	/^      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="$/;"	s	object:dependencies.wrappy
+integrity	package-lock.json	/^      "integrity": "sha1-tdRU3CGZriJWmfNGfloH87lVuv0="$/;"	s	object:dependencies.has-flag
+integrity	package-lock.json	/^      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpW/;"	s	object:dependencies.balanced-match
+integrity	package-lock.json	/^      "integrity": "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvN/;"	s	object:dependencies.is-number
+integrity	package-lock.json	/^      "integrity": "sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v\/8MDGJCDL9oD2ppz/;"	s	object:dependencies.magic-string
+integrity	package-lock.json	/^      "integrity": "sha512-5G0tKtBTFImOqDnLB2hG6Bp2qcKEFduo4tZu9MT\/H6NQv\/ghhy30o55ufafxJ\/LdH7/;"	s	object:dependencies.is-glob
+integrity	package-lock.json	/^      "integrity": "sha512-5l4VyZR86LZ\/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB\/c0GUsH+y39UfCi3dz/;"	s	object:dependencies.run-parallel
+integrity	package-lock.json	/^      "integrity": "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li\/Hx6tyK0NEb+2GCy/;"	s	object:dependencies.to-regex-range
+integrity	package-lock.json	/^      "integrity": "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2P/;"	s	object:dependencies.normalize-path
+integrity	package-lock.json	/^      "integrity": "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4/;"	s	object:dependencies.tslib
+integrity	package-lock.json	/^      "integrity": "sha512-7cR8rLy2QhYHpsBDBVYnnWXm8uRTr38RoZakFSW7Bs7PzfMPNZthuMLkwqZv7MTu8lhQ9/;"	s	object:dependencies.tinydate
+integrity	package-lock.json	/^      "integrity": "sha512-88p7+M0QGxKpmnkfXjS4V26AnoC\/eiqZutE8GLdaI5X12NY75bXSdTY9NkmYb2Xyk1O+/;"	s	object:dependencies.@polka/url
+integrity	package-lock.json	/^      "integrity": "sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe\/WZkoIzjn\/3TGDwtOCYtXGxA3O8tPzpc/;"	s	object:dependencies.merge2
+integrity	package-lock.json	/^      "integrity": "sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVB/;"	s	object:dependencies.sourcemap-codec
+integrity	package-lock.json	/^      "integrity": "sha512-9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndm/;"	s	object:dependencies.@babel/code-frame
+integrity	package-lock.json	/^      "integrity": "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9\/Sr/;"	s	object:dependencies.glob-parent
+integrity	package-lock.json	/^      "integrity": "sha512-Au92NuznFklgQCUcV96iXlxUbHuB1vQMaH76DHl5M11TotjOHwqk9CwcrT78+Tnv4FN9u/;"	s	object:dependencies.rollup
+integrity	package-lock.json	/^      "integrity": "sha512-BAkMFcAzl8as1G\/hArkxOxq3G7pjUqQ3gzYbLL0\/5zNkph70e+lCoxBGnm6AW1+\/ai/;"	s	object:dependencies.ws
+integrity	package-lock.json	/^      "integrity": "sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGs/;"	s	object:dependencies.source-map
+integrity	package-lock.json	/^      "integrity": "sha512-DqQgihaQ9cUrskJo9kIyW\/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu/;"	s	object:dependencies.typescript
+integrity	package-lock.json	/^      "integrity": "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox\/BaKbhiXzqQOwK4cO22yElGp2OC/;"	s	object:dependencies.buffer-from
+integrity	package-lock.json	/^      "integrity": "sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GW/;"	s	object:dependencies.rollup-pluginutils
+integrity	package-lock.json	/^      "integrity": "sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM/;"	s	object:dependencies.@types/estree
+integrity	package-lock.json	/^      "integrity": "sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj\/6WqMiFQJpBBYz1Pt+66bZ/;"	s	object:dependencies.deepmerge
+integrity	package-lock.json	/^      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP\/UODVpGsr5OhXhhXg6f+qt/;"	s	object:dependencies.minimist
+integrity	package-lock.json	/^      "integrity": "sha512-GQ2EWRpQV8\/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl\/hC3vtHHBfGm2Ifi6qWV+coDGkr/;"	s	object:dependencies.parent-module
+integrity	package-lock.json	/^      "integrity": "sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Q/;"	s	object:dependencies.serialize-javascript
+integrity	package-lock.json	/^      "integrity": "sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog\/x2\/QzM1EN/;"	s	object:dependencies.@rollup/pluginutils
+integrity	package-lock.json	/^      "integrity": "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+e/;"	s	object:dependencies.commander
+integrity	package-lock.json	/^      "integrity": "sha512-I9jwMn07Sy\/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3/;"	s	object:dependencies.min-indent
+integrity	package-lock.json	/^      "integrity": "sha512-K4JvCtQqad9OY2+yTU8w+E82ywk\/fe+ELNlt1G8z3bVGlZfn\/hOcQQsUhGhW\/N+tb3/;"	s	object:dependencies.@babel/helper-validator-identifier
+integrity	package-lock.json	/^      "integrity": "sha512-KDazLNYAGIuJugdbULwFZULF9qQ13yNWEBFnfVpqlpgAAo6H\/qnM9RjBgh0A0kmHf3Xx/;"	s	object:dependencies.@types/node
+integrity	package-lock.json	/^      "integrity": "sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6/;"	s	object:dependencies.jest-worker
+integrity	package-lock.json	/^      "integrity": "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo\/k5YYdYgpY2\/2EsOsksJrq7lOHxryrVOn/;"	s	object:dependencies.path-parse
+integrity	package-lock.json	/^      "integrity": "sha512-LOnASQoeNZMkzexRuyqcBBDZ6rS+rQxUMkmj5A0PkhhiSZivLIuz6Hxyr1mkGoEZEkk66/;"	s	object:dependencies.@types/pug
+integrity	package-lock.json	/^      "integrity": "sha512-Mti+f9lpJNcwF4tWV8\/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq/;"	s	object:dependencies.chalk
+integrity	package-lock.json	/^      "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg\/0BC0wiv9ih/;"	s	object:dependencies.mkdirp
+integrity	package-lock.json	/^      "integrity": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5/;"	s	object:dependencies.queue-microtask
+integrity	package-lock.json	/^      "integrity": "sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3\/tAQSPIu\/lHxX/;"	s	object:dependencies.glob
+integrity	package-lock.json	/^      "integrity": "sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y\/GNK7v0aa8rY816xWjZ7rJd/;"	s	object:dependencies.anymatch
+integrity	package-lock.json	/^      "integrity": "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENct/;"	s	object:dependencies.callsites
+integrity	package-lock.json	/^      "integrity": "sha512-PoMdXCw0ZyvjpCMT5aV4nkL0QywxP29sODQsSGeDpr\/oI49Qq9tRtAsb\/LbYbDzFlOy/;"	s	object:dependencies.@rollup/plugin-commonjs
+integrity	package-lock.json	/^      "integrity": "sha512-QL\/LvDol\/PAGB2O0S7\/+q2HpSUNodpw7z6nGn9BfoVCPOZ0r4EALrojFU29Bkoi2Hr/;"	s	object:dependencies.@rollup/plugin-typescript
+integrity	package-lock.json	/^      "integrity": "sha512-QNI2ChmuioGC1\/xjyYwyZYADILWyW6AmS1UH6gDj\/SFUUUS4MBAWs\/7mxnkRPc\/F4/;"	s	object:dependencies.semiver
+integrity	package-lock.json	/^      "integrity": "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G\/SHHJYAT/;"	s	object:dependencies.color-convert
+integrity	package-lock.json	/^      "integrity": "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey/;"	s	object:dependencies.supports-color
+integrity	package-lock.json	/^      "integrity": "sha512-RbJbtuwKbuZq9RyzlljZUmmFNaojrg\/zUEyDrS8io7haTcuITQmE4NERx8qiqHreApo6/;"	s	object:dependencies.svelte-preprocess
+integrity	package-lock.json	/^      "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2k/;"	s	object:dependencies.js-tokens
+integrity	package-lock.json	/^      "integrity": "sha512-Rfkk\/Mp\/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj\/ba3kCfza0f6dVDbw/;"	s	object:dependencies.estree-walker
+integrity	package-lock.json	/^      "integrity": "sha512-RkhPPp2zrqDAQA\/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1Dcp/;"	s	object:dependencies.@nodelib/fs.stat
+integrity	package-lock.json	/^      "integrity": "sha512-TYMOE5uoD76vpj+RTkQLzC9cQtbnJNktHPB507FzRWBVaofg7KhIqq1kGbcVOadARSozW/;"	s	object:dependencies.rollup-plugin-css-only
+integrity	package-lock.json	/^      "integrity": "sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1/;"	s	object:dependencies.is-reference
+integrity	package-lock.json	/^      "integrity": "sha512-U9nH88a3fc\/ekCF1l0\/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m/;"	s	object:dependencies.reusify
+integrity	package-lock.json	/^      "integrity": "sha512-VT0ZI6kZRdTh8YyJw3SMbYm\/u+NqfsAxEpWO0Pf9sq8\/e94WxxOpPKx9FR1FlyCtOVD/;"	s	object:dependencies.ansi-styles
+integrity	package-lock.json	/^      "integrity": "sha512-XfegD5pyTAfb+GY6chk283Ox5z8WexG56OvM06RWLpAc\/UHozO8X6xAxEkIitZOtsSMM/;"	s	object:dependencies.local-access
+integrity	package-lock.json	/^      "integrity": "sha512-YpkpUnK8od0o1hmeSc7UUs\/eB\/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+/;"	s	object:dependencies.fastq
+integrity	package-lock.json	/^      "integrity": "sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR\/g7rd0xUimYNlvZRE\/K2MgZTjWy725/;"	s	object:dependencies.is-binary-path
+integrity	package-lock.json	/^      "integrity": "sha512-abv\/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol\/doWcdA4ZqsWQ8ENrFKk/;"	s	object:dependencies.merge-stream
+integrity	package-lock.json	/^      "integrity": "sha512-aqkICXbM1oX5FfgZd2qSSAGdyo\/NRxjWCamxoyi3T8iVQnzGge19HhDYzZ6NrVOW7bhc/;"	s	object:dependencies.@tsconfig/svelte
+integrity	package-lock.json	/^      "integrity": "sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+l/;"	s	object:dependencies.braces
+integrity	package-lock.json	/^      "integrity": "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL/;"	s	object:dependencies.kleur
+integrity	package-lock.json	/^      "integrity": "sha512-ekGhOnNVPgT77r4K\/U3GDhu+FQ2S8TnK\/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84Dp/;"	s	object:dependencies.chokidar
+integrity	package-lock.json	/^      "integrity": "sha512-f0JH+6yMpneYcRJN314lZrSwu9eKkUFEHLN\/kNy8ceh8gaRiLgFPJqrB9HsXjhEGdv4e/;"	s	object:dependencies.terser
+integrity	package-lock.json	/^      "integrity": "sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5\/VKPp5tTpWIV4JHHZK1\/BxbFRtf\/siA2SWTe/;"	s	object:dependencies.has
+integrity	package-lock.json	/^      "integrity": "sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB\//;"	s	object:dependencies.totalist
+integrity	package-lock.json	/^      "integrity": "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEna/;"	s	object:dependencies.readdirp
+integrity	package-lock.json	/^      "integrity": "sha512-iCuPHDFgrHX7H2vEI\/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187uf/;"	s	object:dependencies.brace-expansion
+integrity	package-lock.json	/^      "integrity": "sha512-iZUcRrGuz\/Tbg3loODpW7vrQJkUtpY2fFSf4ELqqkApcS2TkZ1msk7ie8iZPB86lDOP8/;"	s	object:dependencies.@types/sass
+integrity	package-lock.json	/^      "integrity": "sha512-jDctJ\/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7bl/;"	s	object:dependencies.binary-extensions
+integrity	package-lock.json	/^      "integrity": "sha512-k41FwbcLnlgnFh69f4qdUfvDQ+5vaSDnVPFI\/y5XuhKRq97EnVVneO9F1ESVCdiVu4fC/;"	s	object:dependencies.opts
+integrity	package-lock.json	/^      "integrity": "sha512-k\/vGaX4\/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoI/;"	s	object:dependencies.inherits
+integrity	package-lock.json	/^      "integrity": "sha512-lAcryr9Do2PeGtbodspX5I4kWj4yWYAa2WGpDCwzNkP3y8WZTxigMd4\/TMO1rBZEOkMY/;"	s	object:dependencies.svelte
+integrity	package-lock.json	/^      "integrity": "sha512-lGzLKcioL90C7wMczpkY0n\/oART3MbBa8R9OFGE1rJxoVI86u4WAGfEk8Wjv10eKSyTH/;"	s	object:dependencies.builtin-modules
+integrity	package-lock.json	/^      "integrity": "sha512-lY1Q\/PiJGC2zOv\/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4/;"	s	object:dependencies.picomatch
+integrity	package-lock.json	/^      "integrity": "sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid\/drOhgitgYku\/letMUqOXFoWV0zI/;"	s	object:dependencies.strip-indent
+integrity	package-lock.json	/^      "integrity": "sha512-n1lZZ8Ve4ksRqizaBQgxXDgKwttHDhyfQjA6YZZn8+AroHbsIz+JjwxQDxbp+7y5OYCI8/;"	s	object:dependencies.source-map-support
+integrity	package-lock.json	/^      "integrity": "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih\//;"	s	object:dependencies.@nodelib/fs.walk
+integrity	package-lock.json	/^      "integrity": "sha512-oJux\/afbmcZO+N+ADXB88h6XANLie8Y2rh2qBlhgfkpr2c3t\/q\/T0w2JWrHqagaDL8/;"	s	object:dependencies.svelte-check
+integrity	package-lock.json	/^      "integrity": "sha512-pMD+MVR538ipqkG5JXeOEbKWS5um1H4LUUccUQG68qpeqBYbzYy79Gh55jkd2TtPdRfUa/;"	s	object:dependencies.console-clear
+integrity	package-lock.json	/^      "integrity": "sha512-pRmzw\/XUcwXGpD9aI9q\/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V1/;"	s	object:dependencies.micromatch
+integrity	package-lock.json	/^      "integrity": "sha512-pb\/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp\/+vgZqsCGJapvy8N3Q+/;"	s	object:dependencies.resolve-from
+integrity	package-lock.json	/^      "integrity": "sha512-q7Z71n3i4X0R9xthAryBdNGVGAO2R5X+\/xXpmKeuPMrteg+W2U8VusTKV3YiJbXZwKsO/;"	s	object:dependencies.livereload
+integrity	package-lock.json	/^      "integrity": "sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl\/djYSu2OdQ2Pa302N4oq/;"	s	object:dependencies.fill-range
+integrity	package-lock.json	/^      "integrity": "sha512-qf9u2WFWVV0MppaL877j2dBtQIDgmidgjGk5VIMw3OadXvYaXn66U1BFlH2t4+t3i+8Ph/;"	s	object:dependencies.@babel/highlight
+integrity	package-lock.json	/^      "integrity": "sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+/;"	s	object:dependencies.graceful-fs
+integrity	package-lock.json	/^      "integrity": "sha512-qx9go5yraB7ekT7bCMqUHJ5jEaOC\/GXBxUWv+jeWnb7WzHUFdcQPGWk7YmAwFBaQBrog/;"	s	object:dependencies.sirv
+integrity	package-lock.json	/^      "integrity": "sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCw/;"	s	object:dependencies.fast-glob
+integrity	package-lock.json	/^      "integrity": "sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJh/;"	s	object:dependencies.detect-indent
+integrity	package-lock.json	/^      "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnY/;"	s	object:dependencies.safe-buffer
+integrity	package-lock.json	/^      "integrity": "sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62\/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v\//;"	s	object:dependencies.mime
+integrity	package-lock.json	/^      "integrity": "sha512-tzzskb3bG8LvYGFF\/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3/;"	s	object:dependencies.mri
+integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVd/;"	s	object:dependencies.rimraf
+integrity	package-lock.json	/^      "integrity": "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1/;"	s	object:dependencies.randombytes
+integrity	package-lock.json	/^      "integrity": "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xr/;"	s	object:dependencies.import-fresh
+integrity	package-lock.json	/^      "integrity": "sha512-vopCUq3G+25sKjwF5VilIbiY6KCuMNHP1PFvx2Vr3REBNMDllKHFZN2B9jwwC+MqNc3UP/;"	s	object:dependencies.rollup-plugin-svelte
+integrity	package-lock.json	/^      "integrity": "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm\/NOTo0KG7HYHU7/;"	s	object:dependencies.@nodelib/fs.scandir
+integrity	package-lock.json	/^      "integrity": "sha512-vqQZ\/UQowTW7VoiKEM5ouNW90wE5\/GZLfdWuR0ELxyKOJUIaj+uismPZZaICU4DnWPV/;"	s	object:dependencies.rollup-plugin-livereload
+integrity	package-lock.json	/^      "integrity": "sha512-w3iIaU4OxcF52UUXiZNsNeuXIMDvFrr+ZXK6bFZ0Q60qyVfq4uLptoS4bbq3paG3x216e/;"	s	object:dependencies.rollup-plugin-terser
+integrity	package-lock.json	/^      "integrity": "sha512-w677WnINxFkuixAoUEXOStewzLYGI76XVag+0JWMMEyjJQKs0ibWZMxkTlB96Lm3EjZ7I/;"	s	object:dependencies.livereload-js
+integrity	package-lock.json	/^      "integrity": "sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh\/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr06/;"	s	object:dependencies.resolve
+integrity	package-lock.json	/^      "integrity": "sha512-wShG8vs60jKfPWpF2KZRaAtvt3a20OAn7+IJ6hLPECpSABLcKtFKTTI4ZtH5QcBruBHlq/;"	s	object:dependencies.is-core-module
+integrity	package-lock.json	/^      "integrity": "sha512-y5yauMD93rX840MwUJr7C1ysLFBgMspsdTo4UVrDg3fXDvtwOyIqykhVAAm6fk\/3au77/;"	s	object:dependencies.sade
+integrity	package-lock.json	/^      "integrity": "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfa/;"	s	object:dependencies.function-bind
+integrity	package-lock.json	/^      "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4h/;"	s	object:dependencies.minimatch
+integrity	package-lock.json	/^      "integrity": "sha512-yc2n43jcqVyGE2sqV5\/YCmocy9ArjVAP\/BeXyTtADTBBX6V0e5UMqwO8CdQ0kzjb6zu/;"	s	object:dependencies.@rollup/plugin-node-resolve
+integrity	package-lock.json	/^      "integrity": "sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0/;"	s	object:dependencies.@types/resolve
+integrity	package-lock.json	/^      "integrity": "sha512-yyUTNr984ANKDloqepkYbBSqvx3buwYg2sQKPWjSU+IBia5loaoka2If8N9CMwt8AfP17/;"	s	object:dependencies.sirv-cli
+inxbuild	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+inxsearch	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+is-binary-path	package-lock.json	/^        "is-binary-path": "~2.1.0",$/;"	s	object:dependencies.chokidar.requires
+is-binary-path	package-lock.json	/^    "is-binary-path": {$/;"	o	object:dependencies
+is-core-module	package-lock.json	/^        "is-core-module": "^2.2.0",$/;"	s	object:dependencies.resolve.requires
+is-core-module	package-lock.json	/^    "is-core-module": {$/;"	o	object:dependencies
+is-extglob	package-lock.json	/^        "is-extglob": "^2.1.1"$/;"	s	object:dependencies.is-glob.requires
+is-extglob	package-lock.json	/^    "is-extglob": {$/;"	o	object:dependencies
+is-glob	package-lock.json	/^        "is-glob": "^4.0.1"$/;"	s	object:dependencies.glob-parent.requires
+is-glob	package-lock.json	/^        "is-glob": "~4.0.1",$/;"	s	object:dependencies.chokidar.requires
+is-glob	package-lock.json	/^    "is-glob": {$/;"	o	object:dependencies
+is-module	package-lock.json	/^        "is-module": "^1.0.0",$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+is-module	package-lock.json	/^    "is-module": {$/;"	o	object:dependencies
+is-number	package-lock.json	/^        "is-number": "^7.0.0"$/;"	s	object:dependencies.to-regex-range.requires
+is-number	package-lock.json	/^    "is-number": {$/;"	o	object:dependencies
+is-reference	package-lock.json	/^        "is-reference": "^1.2.1",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+is-reference	package-lock.json	/^    "is-reference": {$/;"	o	object:dependencies
+is_empty	public/build/bundle.js	/^    function is_empty(obj) {$/;"	f	function:app
+is_function	public/build/bundle.js	/^    function is_function(thing) {$/;"	f	function:app
+jest-worker	package-lock.json	/^        "jest-worker": "^26.2.1",$/;"	s	object:dependencies.rollup-plugin-terser.requires
+jest-worker	package-lock.json	/^    "jest-worker": {$/;"	o	object:dependencies
+js-tokens	package-lock.json	/^        "js-tokens": "^4.0.0"$/;"	s	object:dependencies.@babel/highlight.requires
+js-tokens	package-lock.json	/^    "js-tokens": {$/;"	o	object:dependencies
+kernels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	c	class:GIFEncoder.ditherPixels
+kleur	package-lock.json	/^        "kleur": "^3.0.0",$/;"	s	object:dependencies.sirv-cli.requires
+kleur	package-lock.json	/^    "kleur": {$/;"	o	object:dependencies
+label	public/global.css	/^label {$/;"	s
+learn	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+livereload	package-lock.json	/^        "livereload": "^0.9.1"$/;"	s	object:dependencies.rollup-plugin-livereload.requires
+livereload	package-lock.json	/^    "livereload": {$/;"	o	object:dependencies
+livereload-js	package-lock.json	/^        "livereload-js": "^3.3.1",$/;"	s	object:dependencies.livereload.requires
+livereload-js	package-lock.json	/^    "livereload-js": {$/;"	o	object:dependencies
+loadLocal	public/build/bundle.js	/^    	function loadLocal() {$/;"	f	function:app.instance
+loc	public/build/bundle.js	/^            loc: { file, line, column, char }$/;"	p	class:element.__svelte_meta
+local-access	package-lock.json	/^        "local-access": "^1.0.1",$/;"	s	object:dependencies.sirv-cli.requires
+local-access	package-lock.json	/^    "local-access": {$/;"	o	object:dependencies
+lockfileVersion	package-lock.json	/^  "lockfileVersion": 1,$/;"	n
+lp	public/build/bundle.js	/^    	let lp = { x: 0, y: 0 };$/;"	c	class:app.instance$3
+magic-string	package-lock.json	/^        "magic-string": "^0.25.7",$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+magic-string	package-lock.json	/^        "magic-string": "^0.25.7",$/;"	s	object:dependencies.svelte-preprocess.requires
+magic-string	package-lock.json	/^    "magic-string": {$/;"	o	object:dependencies
+main.svelte-lmktzq	public/build/bundle.css	/^main.svelte-lmktzq{position:relative;width:100%;height:100%}#capture.svelte-1f3d6cz{touch-action/;"	c
+make_dirty	public/build/bundle.js	/^    function make_dirty(component, i) {$/;"	f	function:app
+menu_1_binding	public/build/bundle.js	/^    	function menu_1_binding($$value) {$/;"	f	function:app.instance
+merge-stream	package-lock.json	/^        "merge-stream": "^2.0.0",$/;"	s	object:dependencies.jest-worker.requires
+merge-stream	package-lock.json	/^    "merge-stream": {$/;"	o	object:dependencies
+merge2	package-lock.json	/^        "merge2": "^1.3.0",$/;"	s	object:dependencies.fast-glob.requires
+merge2	package-lock.json	/^    "merge2": {$/;"	o	object:dependencies
+micromatch	package-lock.json	/^        "micromatch": "^4.0.4"$/;"	s	object:dependencies.fast-glob.requires
+micromatch	package-lock.json	/^    "micromatch": {$/;"	o	object:dependencies
+mime	package-lock.json	/^        "mime": "^2.3.1",$/;"	s	object:dependencies.sirv.requires
+mime	package-lock.json	/^    "mime": {$/;"	o	object:dependencies
+min-indent	package-lock.json	/^        "min-indent": "^1.0.0"$/;"	s	object:dependencies.strip-indent.requires
+min-indent	package-lock.json	/^    "min-indent": {$/;"	o	object:dependencies
+minimatch	package-lock.json	/^        "minimatch": "^3.0.4",$/;"	s	object:dependencies.glob.requires
+minimatch	package-lock.json	/^    "minimatch": {$/;"	o	object:dependencies
+minimist	package-lock.json	/^        "minimist": "^1.2.0",$/;"	s	object:dependencies.sorcery.requires
+minimist	package-lock.json	/^        "minimist": "^1.2.5"$/;"	s	object:dependencies.mkdirp.requires
+minimist	package-lock.json	/^        "minimist": "^1.2.5",$/;"	s	object:dependencies.svelte-check.requires
+minimist	package-lock.json	/^    "minimist": {$/;"	o	object:dependencies
+mkdirp	package-lock.json	/^        "mkdirp": "^0.5.1",$/;"	s	object:dependencies.sander.requires
+mkdirp	package-lock.json	/^    "mkdirp": {$/;"	o	object:dependencies
+mount_component	public/build/bundle.js	/^    function mount_component(component, target, anchor, customElement) {$/;"	f	function:app
+mri	package-lock.json	/^        "mri": "^1.1.0"$/;"	s	object:dependencies.sade.requires
+mri	package-lock.json	/^    "mri": {$/;"	o	object:dependencies
+name	package.json	/^  "name": "flipslide",$/;"	s
+newPage	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:ByteArray
+nextPixel	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+noop	public/build/bundle.js	/^    function noop() { }$/;"	f	function:app
+normalize-path	package-lock.json	/^        "normalize-path": "^3.0.0",$/;"	s	object:dependencies.anymatch.requires
+normalize-path	package-lock.json	/^        "normalize-path": "~3.0.0",$/;"	s	object:dependencies.chokidar.requires
+normalize-path	package-lock.json	/^    "normalize-path": {$/;"	o	object:dependencies
+onMount	public/build/bundle.js	/^    function onMount(fn) {$/;"	f	function:app
+once	package-lock.json	/^        "once": "^1.3.0",$/;"	s	object:dependencies.glob.requires
+once	package-lock.json	/^        "once": "^1.3.0",$/;"	s	object:dependencies.inflight.requires
+once	package-lock.json	/^    "once": {$/;"	o	object:dependencies
+onmessage	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:self
+optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.chokidar.dependencies.fsevents
+optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.rollup.dependencies.fsevents
+opts	package-lock.json	/^        "opts": ">= 1.2.0",$/;"	s	object:dependencies.livereload.requires
+opts	package-lock.json	/^    "opts": {$/;"	o	object:dependencies
+output	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070300.LZWEncoder
+outros	public/build/bundle.js	/^        outros = {$/;"	c	class:app.group_outros
+p	public/build/bundle.js	/^            p: outros \/\/ parent group$/;"	p	class:app.group_outros.outros
+pEvt	public/build/bundle.js	/^    	function pEvt(e) {$/;"	f	function:app.instance$2
+parent-module	package-lock.json	/^        "parent-module": "^1.0.0",$/;"	s	object:dependencies.import-fresh.requires
+parent-module	package-lock.json	/^    "parent-module": {$/;"	o	object:dependencies
+path-is-absolute	package-lock.json	/^        "path-is-absolute": "^1.0.0"$/;"	s	object:dependencies.glob.requires
+path-is-absolute	package-lock.json	/^    "path-is-absolute": {$/;"	o	object:dependencies
+path-parse	package-lock.json	/^        "path-parse": "^1.0.6"$/;"	s	object:dependencies.resolve.requires
+path-parse	package-lock.json	/^    "path-parse": {$/;"	o	object:dependencies
+pdn	public/build/bundle.js	/^    	function pdn(e) {$/;"	f	function:app.instance$2
+picomatch	package-lock.json	/^            "picomatch": "^2.2.2"$/;"	s	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils.requires
+picomatch	package-lock.json	/^        "picomatch": "^2.0.4"$/;"	s	object:dependencies.anymatch.requires
+picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:dependencies.readdirp.requires
+picomatch	package-lock.json	/^        "picomatch": "^2.2.2"$/;"	s	object:dependencies.@rollup/pluginutils.requires
+picomatch	package-lock.json	/^        "picomatch": "^2.2.3"$/;"	s	object:dependencies.micromatch.requires
+picomatch	package-lock.json	/^    "picomatch": {$/;"	o	object:dependencies
+pmv	public/build/bundle.js	/^    	function pmv(e) {$/;"	f	function:app.instance$2
+private	package.json	/^  "private": true,$/;"	b
+production	rollup.config.js	/^const production = !process.env.ROLLUP_WATCH;$/;"	C
+pup	public/build/bundle.js	/^    	function pup(e) {$/;"	f	function:app.instance$2
+queue-microtask	package-lock.json	/^        "queue-microtask": "^1.2.2"$/;"	s	object:dependencies.run-parallel.requires
+queue-microtask	package-lock.json	/^    "queue-microtask": {$/;"	o	object:dependencies
+r	public/build/bundle.js	/^            r: 0,$/;"	p	class:app.group_outros.outros
+randombytes	package-lock.json	/^        "randombytes": "^2.1.0"$/;"	s	object:dependencies.serialize-javascript.requires
+randombytes	package-lock.json	/^    "randombytes": {$/;"	o	object:dependencies
+readdirp	package-lock.json	/^        "readdirp": "~3.6.0"$/;"	s	object:dependencies.chokidar.requires
+readdirp	package-lock.json	/^    "readdirp": {$/;"	o	object:dependencies
+recommendations	.vscode/extensions.json	/^  "recommendations": ["svelte.svelte-vscode"]$/;"	a
+renderFrame	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070500
+require-relative	package-lock.json	/^        "require-relative": "^0.8.7",$/;"	s	object:dependencies.rollup-plugin-svelte.requires
+require-relative	package-lock.json	/^    "require-relative": {$/;"	o	object:dependencies
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.jest-worker.dependencies.supports-color
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.svelte-check.dependencies.ansi-styles
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.svelte-check.dependencies.chalk
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.svelte-check.dependencies.color-convert
+requires	package-lock.json	/^          "requires": {$/;"	o	object:dependencies.svelte-check.dependencies.supports-color
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babel/code-frame
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babel/highlight
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@nodelib/fs.scandir
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@nodelib/fs.walk
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@rollup/plugin-commonjs
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@rollup/plugin-node-resolve
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@rollup/plugin-typescript
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@rollup/pluginutils
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@types/resolve
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@types/sass
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.ansi-styles
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.anymatch
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.brace-expansion
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.braces
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.chalk
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.chokidar
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.color-convert
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.fast-glob
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.fastq
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.fill-range
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.glob
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.glob-parent
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.has
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.import-fresh
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.inflight
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.is-binary-path
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.is-core-module
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.is-glob
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.is-reference
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.jest-worker
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.livereload
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.magic-string
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.micromatch
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.minimatch
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.mkdirp
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.once
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.parent-module
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.randombytes
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.readdirp
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.resolve
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rimraf
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup-plugin-css-only
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup-plugin-livereload
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup-plugin-svelte
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup-plugin-terser
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.rollup-pluginutils
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.run-parallel
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.sade
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.sander
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.serialize-javascript
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.sirv
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.sirv-cli
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.sorcery
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.source-map-support
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.strip-indent
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.supports-color
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.svelte-check
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.svelte-preprocess
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.terser
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.to-regex-range
+requires	package-lock.json	/^  "requires": true,$/;"	b
+resolve	package-lock.json	/^        "resolve": "^1.17.0"$/;"	s	object:dependencies.@rollup/plugin-commonjs.requires
+resolve	package-lock.json	/^        "resolve": "^1.17.0"$/;"	s	object:dependencies.@rollup/plugin-typescript.requires
+resolve	package-lock.json	/^        "resolve": "^1.19.0"$/;"	s	object:dependencies.@rollup/plugin-node-resolve.requires
+resolve	package-lock.json	/^    "resolve": {$/;"	o	object:dependencies
+resolve-from	package-lock.json	/^        "resolve-from": "^4.0.0"$/;"	s	object:dependencies.import-fresh.requires
+resolve-from	package-lock.json	/^    "resolve-from": {$/;"	o	object:dependencies
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/@rollup\/pluginutils\/-\/pluginutils-4.1.1./;"	s	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/ansi-styles\/-\/ansi-styles-4.3.0.tgz",$/;"	s	object:dependencies.svelte-check.dependencies.ansi-styles
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/chalk\/-\/chalk-4.1.2.tgz",$/;"	s	object:dependencies.svelte-check.dependencies.chalk
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/color-convert\/-\/color-convert-2.0.1.tgz",$/;"	s	object:dependencies.svelte-check.dependencies.color-convert
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/color-name\/-\/color-name-1.1.4.tgz",$/;"	s	object:dependencies.svelte-check.dependencies.color-name
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/estree-walker\/-\/estree-walker-0.6.1.tgz",$/;"	s	object:dependencies.rollup-pluginutils.dependencies.estree-walker
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/estree-walker\/-\/estree-walker-1.0.1.tgz",$/;"	s	object:dependencies.@rollup/pluginutils.dependencies.estree-walker
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/fsevents\/-\/fsevents-2.3.2.tgz",$/;"	s	object:dependencies.chokidar.dependencies.fsevents
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/fsevents\/-\/fsevents-2.3.2.tgz",$/;"	s	object:dependencies.rollup.dependencies.fsevents
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/has-flag\/-\/has-flag-4.0.0.tgz",$/;"	s	object:dependencies.jest-worker.dependencies.has-flag
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/has-flag\/-\/has-flag-4.0.0.tgz",$/;"	s	object:dependencies.svelte-check.dependencies.has-flag
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/source-map\/-\/source-map-0.6.1.tgz",$/;"	s	object:dependencies.source-map-support.dependencies.source-map
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/supports-color\/-\/supports-color-7.2.0.tgz/;"	s	object:dependencies.jest-worker.dependencies.supports-color
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/supports-color\/-\/supports-color-7.2.0.tgz/;"	s	object:dependencies.svelte-check.dependencies.supports-color
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@babel\/code-frame\/-\/code-frame-7.14.5.tgz",$/;"	s	object:dependencies.@babel/code-frame
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@babel\/helper-validator-identifier\/-\/helper-/;"	s	object:dependencies.@babel/helper-validator-identifier
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@babel\/highlight\/-\/highlight-7.14.5.tgz",$/;"	s	object:dependencies.@babel/highlight
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@nodelib\/fs.scandir\/-\/fs.scandir-2.1.5.tgz",$/;"	s	object:dependencies.@nodelib/fs.scandir
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@nodelib\/fs.stat\/-\/fs.stat-2.0.5.tgz",$/;"	s	object:dependencies.@nodelib/fs.stat
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@nodelib\/fs.walk\/-\/fs.walk-1.2.8.tgz",$/;"	s	object:dependencies.@nodelib/fs.walk
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@polka\/url\/-\/url-1.0.0-next.20.tgz",$/;"	s	object:dependencies.@polka/url
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@rollup\/plugin-commonjs\/-\/plugin-commonjs-17/;"	s	object:dependencies.@rollup/plugin-commonjs
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@rollup\/plugin-node-resolve\/-\/plugin-node-re/;"	s	object:dependencies.@rollup/plugin-node-resolve
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@rollup\/plugin-typescript\/-\/plugin-typescrip/;"	s	object:dependencies.@rollup/plugin-typescript
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@rollup\/pluginutils\/-\/pluginutils-3.1.0.tgz"/;"	s	object:dependencies.@rollup/pluginutils
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@tsconfig\/svelte\/-\/svelte-2.0.1.tgz",$/;"	s	object:dependencies.@tsconfig/svelte
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@types\/estree\/-\/estree-0.0.39.tgz",$/;"	s	object:dependencies.@types/estree
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@types\/node\/-\/node-16.9.4.tgz",$/;"	s	object:dependencies.@types/node
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@types\/pug\/-\/pug-2.0.5.tgz",$/;"	s	object:dependencies.@types/pug
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@types\/resolve\/-\/resolve-1.17.1.tgz",$/;"	s	object:dependencies.@types/resolve
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@types\/sass\/-\/sass-1.16.1.tgz",$/;"	s	object:dependencies.@types/sass
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/ansi-styles\/-\/ansi-styles-3.2.1.tgz",$/;"	s	object:dependencies.ansi-styles
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/anymatch\/-\/anymatch-3.1.2.tgz",$/;"	s	object:dependencies.anymatch
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/balanced-match\/-\/balanced-match-1.0.2.tgz",$/;"	s	object:dependencies.balanced-match
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/binary-extensions\/-\/binary-extensions-2.2.0.t/;"	s	object:dependencies.binary-extensions
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/brace-expansion\/-\/brace-expansion-1.1.11.tgz"/;"	s	object:dependencies.brace-expansion
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/braces\/-\/braces-3.0.2.tgz",$/;"	s	object:dependencies.braces
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/buffer-crc32\/-\/buffer-crc32-0.2.13.tgz",$/;"	s	object:dependencies.buffer-crc32
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/buffer-from\/-\/buffer-from-1.1.2.tgz",$/;"	s	object:dependencies.buffer-from
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/builtin-modules\/-\/builtin-modules-3.2.0.tgz",$/;"	s	object:dependencies.builtin-modules
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/callsites\/-\/callsites-3.1.0.tgz",$/;"	s	object:dependencies.callsites
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/chalk\/-\/chalk-2.4.2.tgz",$/;"	s	object:dependencies.chalk
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/chokidar\/-\/chokidar-3.5.2.tgz",$/;"	s	object:dependencies.chokidar
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/color-convert\/-\/color-convert-1.9.3.tgz",$/;"	s	object:dependencies.color-convert
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/color-name\/-\/color-name-1.1.3.tgz",$/;"	s	object:dependencies.color-name
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/commander\/-\/commander-2.20.3.tgz",$/;"	s	object:dependencies.commander
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/commondir\/-\/commondir-1.0.1.tgz",$/;"	s	object:dependencies.commondir
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/concat-map\/-\/concat-map-0.0.1.tgz",$/;"	s	object:dependencies.concat-map
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/console-clear\/-\/console-clear-1.1.1.tgz",$/;"	s	object:dependencies.console-clear
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/deepmerge\/-\/deepmerge-4.2.2.tgz",$/;"	s	object:dependencies.deepmerge
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/detect-indent\/-\/detect-indent-6.1.0.tgz",$/;"	s	object:dependencies.detect-indent
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/es6-promise\/-\/es6-promise-3.3.1.tgz",$/;"	s	object:dependencies.es6-promise
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/escape-string-regexp\/-\/escape-string-regexp-1/;"	s	object:dependencies.escape-string-regexp
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/estree-walker\/-\/estree-walker-2.0.2.tgz",$/;"	s	object:dependencies.estree-walker
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/fast-glob\/-\/fast-glob-3.2.7.tgz",$/;"	s	object:dependencies.fast-glob
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/fastq\/-\/fastq-1.13.0.tgz",$/;"	s	object:dependencies.fastq
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/fill-range\/-\/fill-range-7.0.1.tgz",$/;"	s	object:dependencies.fill-range
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/fs.realpath\/-\/fs.realpath-1.0.0.tgz",$/;"	s	object:dependencies.fs.realpath
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/function-bind\/-\/function-bind-1.1.1.tgz",$/;"	s	object:dependencies.function-bind
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/get-port\/-\/get-port-3.2.0.tgz",$/;"	s	object:dependencies.get-port
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/glob-parent\/-\/glob-parent-5.1.2.tgz",$/;"	s	object:dependencies.glob-parent
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/glob\/-\/glob-7.1.7.tgz",$/;"	s	object:dependencies.glob
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/graceful-fs\/-\/graceful-fs-4.2.8.tgz",$/;"	s	object:dependencies.graceful-fs
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/has-flag\/-\/has-flag-3.0.0.tgz",$/;"	s	object:dependencies.has-flag
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/has\/-\/has-1.0.3.tgz",$/;"	s	object:dependencies.has
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/import-fresh\/-\/import-fresh-3.3.0.tgz",$/;"	s	object:dependencies.import-fresh
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/inflight\/-\/inflight-1.0.6.tgz",$/;"	s	object:dependencies.inflight
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/inherits\/-\/inherits-2.0.4.tgz",$/;"	s	object:dependencies.inherits
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-binary-path\/-\/is-binary-path-2.1.0.tgz",$/;"	s	object:dependencies.is-binary-path
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-core-module\/-\/is-core-module-2.6.0.tgz",$/;"	s	object:dependencies.is-core-module
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-extglob\/-\/is-extglob-2.1.1.tgz",$/;"	s	object:dependencies.is-extglob
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-glob\/-\/is-glob-4.0.1.tgz",$/;"	s	object:dependencies.is-glob
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-module\/-\/is-module-1.0.0.tgz",$/;"	s	object:dependencies.is-module
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-number\/-\/is-number-7.0.0.tgz",$/;"	s	object:dependencies.is-number
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/is-reference\/-\/is-reference-1.2.1.tgz",$/;"	s	object:dependencies.is-reference
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/jest-worker\/-\/jest-worker-26.6.2.tgz",$/;"	s	object:dependencies.jest-worker
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/js-tokens\/-\/js-tokens-4.0.0.tgz",$/;"	s	object:dependencies.js-tokens
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/kleur\/-\/kleur-3.0.3.tgz",$/;"	s	object:dependencies.kleur
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/livereload-js\/-\/livereload-js-3.3.2.tgz",$/;"	s	object:dependencies.livereload-js
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/livereload\/-\/livereload-0.9.3.tgz",$/;"	s	object:dependencies.livereload
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/local-access\/-\/local-access-1.1.0.tgz",$/;"	s	object:dependencies.local-access
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/magic-string\/-\/magic-string-0.25.7.tgz",$/;"	s	object:dependencies.magic-string
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/merge-stream\/-\/merge-stream-2.0.0.tgz",$/;"	s	object:dependencies.merge-stream
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/merge2\/-\/merge2-1.4.1.tgz",$/;"	s	object:dependencies.merge2
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/micromatch\/-\/micromatch-4.0.4.tgz",$/;"	s	object:dependencies.micromatch
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/mime\/-\/mime-2.5.2.tgz",$/;"	s	object:dependencies.mime
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/min-indent\/-\/min-indent-1.0.1.tgz",$/;"	s	object:dependencies.min-indent
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/minimatch\/-\/minimatch-3.0.4.tgz",$/;"	s	object:dependencies.minimatch
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/minimist\/-\/minimist-1.2.5.tgz",$/;"	s	object:dependencies.minimist
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/mkdirp\/-\/mkdirp-0.5.5.tgz",$/;"	s	object:dependencies.mkdirp
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/mri\/-\/mri-1.2.0.tgz",$/;"	s	object:dependencies.mri
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/normalize-path\/-\/normalize-path-3.0.0.tgz",$/;"	s	object:dependencies.normalize-path
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/once\/-\/once-1.4.0.tgz",$/;"	s	object:dependencies.once
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/opts\/-\/opts-2.0.2.tgz",$/;"	s	object:dependencies.opts
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parent-module\/-\/parent-module-1.0.1.tgz",$/;"	s	object:dependencies.parent-module
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/path-is-absolute\/-\/path-is-absolute-1.0.1.tgz/;"	s	object:dependencies.path-is-absolute
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/path-parse\/-\/path-parse-1.0.7.tgz",$/;"	s	object:dependencies.path-parse
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/picomatch\/-\/picomatch-2.3.0.tgz",$/;"	s	object:dependencies.picomatch
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/queue-microtask\/-\/queue-microtask-1.2.3.tgz",$/;"	s	object:dependencies.queue-microtask
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/randombytes\/-\/randombytes-2.1.0.tgz",$/;"	s	object:dependencies.randombytes
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/readdirp\/-\/readdirp-3.6.0.tgz",$/;"	s	object:dependencies.readdirp
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/require-relative\/-\/require-relative-0.8.7.tgz/;"	s	object:dependencies.require-relative
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/resolve-from\/-\/resolve-from-4.0.0.tgz",$/;"	s	object:dependencies.resolve-from
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/resolve\/-\/resolve-1.20.0.tgz",$/;"	s	object:dependencies.resolve
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/reusify\/-\/reusify-1.0.4.tgz",$/;"	s	object:dependencies.reusify
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rimraf\/-\/rimraf-2.7.1.tgz",$/;"	s	object:dependencies.rimraf
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup-plugin-css-only\/-\/rollup-plugin-css-on/;"	s	object:dependencies.rollup-plugin-css-only
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup-plugin-livereload\/-\/rollup-plugin-live/;"	s	object:dependencies.rollup-plugin-livereload
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup-plugin-svelte\/-\/rollup-plugin-svelte-7/;"	s	object:dependencies.rollup-plugin-svelte
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup-plugin-terser\/-\/rollup-plugin-terser-7/;"	s	object:dependencies.rollup-plugin-terser
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup-pluginutils\/-\/rollup-pluginutils-2.8.2/;"	s	object:dependencies.rollup-pluginutils
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/rollup\/-\/rollup-2.56.3.tgz",$/;"	s	object:dependencies.rollup
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/run-parallel\/-\/run-parallel-1.2.0.tgz",$/;"	s	object:dependencies.run-parallel
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sade\/-\/sade-1.7.4.tgz",$/;"	s	object:dependencies.sade
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/safe-buffer\/-\/safe-buffer-5.2.1.tgz",$/;"	s	object:dependencies.safe-buffer
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sander\/-\/sander-0.5.1.tgz",$/;"	s	object:dependencies.sander
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/semiver\/-\/semiver-1.1.0.tgz",$/;"	s	object:dependencies.semiver
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/serialize-javascript\/-\/serialize-javascript-4/;"	s	object:dependencies.serialize-javascript
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sirv-cli\/-\/sirv-cli-1.0.14.tgz",$/;"	s	object:dependencies.sirv-cli
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sirv\/-\/sirv-1.0.17.tgz",$/;"	s	object:dependencies.sirv
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sorcery\/-\/sorcery-0.10.0.tgz",$/;"	s	object:dependencies.sorcery
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/source-map-support\/-\/source-map-support-0.5.2/;"	s	object:dependencies.source-map-support
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/source-map\/-\/source-map-0.7.3.tgz",$/;"	s	object:dependencies.source-map
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/sourcemap-codec\/-\/sourcemap-codec-1.4.8.tgz",$/;"	s	object:dependencies.sourcemap-codec
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/strip-indent\/-\/strip-indent-3.0.0.tgz",$/;"	s	object:dependencies.strip-indent
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/supports-color\/-\/supports-color-5.5.0.tgz",$/;"	s	object:dependencies.supports-color
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/svelte-check\/-\/svelte-check-2.2.6.tgz",$/;"	s	object:dependencies.svelte-check
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/svelte-preprocess\/-\/svelte-preprocess-4.9.5.t/;"	s	object:dependencies.svelte-preprocess
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/svelte\/-\/svelte-3.42.6.tgz",$/;"	s	object:dependencies.svelte
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/terser\/-\/terser-5.8.0.tgz",$/;"	s	object:dependencies.terser
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/tinydate\/-\/tinydate-1.3.0.tgz",$/;"	s	object:dependencies.tinydate
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/to-regex-range\/-\/to-regex-range-5.0.1.tgz",$/;"	s	object:dependencies.to-regex-range
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/totalist\/-\/totalist-1.1.0.tgz",$/;"	s	object:dependencies.totalist
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/tslib\/-\/tslib-2.3.1.tgz",$/;"	s	object:dependencies.tslib
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/typescript\/-\/typescript-4.3.5.tgz",$/;"	s	object:dependencies.typescript
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/wrappy\/-\/wrappy-1.0.2.tgz",$/;"	s	object:dependencies.wrappy
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/ws\/-\/ws-7.5.5.tgz",$/;"	s	object:dependencies.ws
+reusify	package-lock.json	/^        "reusify": "^1.0.4"$/;"	s	object:dependencies.fastq.requires
+reusify	package-lock.json	/^    "reusify": {$/;"	o	object:dependencies
+rimraf	package-lock.json	/^        "rimraf": "^2.5.2"$/;"	s	object:dependencies.sander.requires
+rimraf	package-lock.json	/^    "rimraf": {$/;"	o	object:dependencies
+rollup	package-lock.json	/^    "rollup": {$/;"	o	object:dependencies
+rollup	package.json	/^    "rollup": "^2.3.4",$/;"	s	object:devDependencies
+rollup-plugin-css-only	package-lock.json	/^    "rollup-plugin-css-only": {$/;"	o	object:dependencies
+rollup-plugin-css-only	package.json	/^    "rollup-plugin-css-only": "^3.1.0",$/;"	s	object:devDependencies
+rollup-plugin-livereload	package-lock.json	/^    "rollup-plugin-livereload": {$/;"	o	object:dependencies
+rollup-plugin-livereload	package.json	/^    "rollup-plugin-livereload": "^2.0.0",$/;"	s	object:devDependencies
+rollup-plugin-svelte	package-lock.json	/^    "rollup-plugin-svelte": {$/;"	o	object:dependencies
+rollup-plugin-svelte	package.json	/^    "rollup-plugin-svelte": "^7.0.0",$/;"	s	object:devDependencies
+rollup-plugin-terser	package-lock.json	/^    "rollup-plugin-terser": {$/;"	o	object:dependencies
+rollup-plugin-terser	package.json	/^    "rollup-plugin-terser": "^7.0.0",$/;"	s	object:devDependencies
+rollup-pluginutils	package-lock.json	/^        "rollup-pluginutils": "^2.8.2"$/;"	s	object:dependencies.rollup-plugin-svelte.requires
+rollup-pluginutils	package-lock.json	/^    "rollup-pluginutils": {$/;"	o	object:dependencies
+run	public/build/bundle.js	/^    function run(fn) {$/;"	f	function:app
+run-parallel	package-lock.json	/^        "run-parallel": "^1.1.9"$/;"	s	object:dependencies.@nodelib/fs.scandir.requires
+run-parallel	package-lock.json	/^    "run-parallel": {$/;"	o	object:dependencies
+run_all	public/build/bundle.js	/^    function run_all(fns) {$/;"	f	function:app
+s	src/assets/gif.js	/^(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else /;"	f	function:AnonymousFunction7926283f0100.e
+s	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f
+sade	package-lock.json	/^        "sade": "^1.6.0",$/;"	s	object:dependencies.sirv-cli.requires
+sade	package-lock.json	/^        "sade": "^1.7.4",$/;"	s	object:dependencies.svelte-check.requires
+sade	package-lock.json	/^    "sade": {$/;"	o	object:dependencies
+safe-buffer	package-lock.json	/^        "safe-buffer": "^5.1.0"$/;"	s	object:dependencies.randombytes.requires
+safe-buffer	package-lock.json	/^    "safe-buffer": {$/;"	o	object:dependencies
+safe_not_equal	public/build/bundle.js	/^    function safe_not_equal(a, b) {$/;"	f	function:app
+sander	package-lock.json	/^        "sander": "^0.5.0",$/;"	s	object:dependencies.sorcery.requires
+sander	package-lock.json	/^    "sander": {$/;"	o	object:dependencies
+saveLocal	public/build/bundle.js	/^    	function saveLocal() {$/;"	f	function:app.instance
+savePNG	public/build/bundle.js	/^    	function savePNG() {$/;"	f	function:app.instance$3
+savePNG	public/build/bundle.js	/^    function savePNG() {$/;"	f	function:app
+schedule_update	public/build/bundle.js	/^    function schedule_update() {$/;"	f	function:app
+scripts	package.json	/^  "scripts": {$/;"	o
+select	public/global.css	/^input, button, select, textarea {$/;"	s
+semiver	package-lock.json	/^        "semiver": "^1.0.0",$/;"	s	object:dependencies.sirv-cli.requires
+semiver	package-lock.json	/^    "semiver": {$/;"	o	object:dependencies
+serialize-javascript	package-lock.json	/^        "serialize-javascript": "^4.0.0",$/;"	s	object:dependencies.rollup-plugin-terser.requires
+serialize-javascript	package-lock.json	/^    "serialize-javascript": {$/;"	o	object:dependencies
+serve	rollup.config.js	/^function serve() {$/;"	f
+setDelay	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setDispose	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setDither	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setFrameRate	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setGlobalPalette	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setPosition	public/build/bundle.js	/^    	function setPosition(dragEvent = null, pos = null) {$/;"	f	function:app.instance$1
+setQuality	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setRepeat	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+setTransparent	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+set_current_component	public/build/bundle.js	/^    function set_current_component(component) {$/;"	f	function:app
+sirv	package-lock.json	/^        "sirv": "^1.0.13",$/;"	s	object:dependencies.sirv-cli.requires
+sirv	package-lock.json	/^    "sirv": {$/;"	o	object:dependencies
+sirv-cli	package-lock.json	/^    "sirv-cli": {$/;"	o	object:dependencies
+sirv-cli	package.json	/^    "sirv-cli": "^1.0.0"$/;"	s	object:dependencies
+sorcery	package-lock.json	/^        "sorcery": "^0.10.0",$/;"	s	object:dependencies.svelte-preprocess.requires
+sorcery	package-lock.json	/^    "sorcery": {$/;"	o	object:dependencies
+source-map	package-lock.json	/^        "source-map": "^0.6.0"$/;"	s	object:dependencies.source-map-support.requires
+source-map	package-lock.json	/^        "source-map": "^0.7.3",$/;"	s	object:dependencies.svelte-check.requires
+source-map	package-lock.json	/^        "source-map": "~0.7.2",$/;"	s	object:dependencies.terser.requires
+source-map	package-lock.json	/^        "source-map": {$/;"	o	object:dependencies.source-map-support.dependencies
+source-map	package-lock.json	/^    "source-map": {$/;"	o	object:dependencies
+source-map-support	package-lock.json	/^        "source-map-support": "~0.5.20"$/;"	s	object:dependencies.terser.requires
+source-map-support	package-lock.json	/^    "source-map-support": {$/;"	o	object:dependencies
+sourcemap-codec	package-lock.json	/^        "sourcemap-codec": "^1.3.0"$/;"	s	object:dependencies.sorcery.requires
+sourcemap-codec	package-lock.json	/^        "sourcemap-codec": "^1.4.4"$/;"	s	object:dependencies.magic-string.requires
+sourcemap-codec	package-lock.json	/^    "sourcemap-codec": {$/;"	o	object:dependencies
+space	public/build/bundle.js	/^    function space() {$/;"	f	function:app
+start	package.json	/^    "start": "sirv public --no-clear --host=0.0.0.0",$/;"	s	object:scripts
+stream	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+strip-indent	package-lock.json	/^        "strip-indent": "^3.0.0"$/;"	s	object:dependencies.svelte-preprocess.requires
+strip-indent	package-lock.json	/^    "strip-indent": {$/;"	o	object:dependencies
+strokeArray	public/build/bundle.js	/^    	get strokeArray() {$/;"	G	class:app.Can2D
+strokeArray	public/build/bundle.js	/^    	set strokeArray(value) {$/;"	S	class:app.Can2D
+supports-color	package-lock.json	/^            "supports-color": "^7.1.0"$/;"	s	object:dependencies.svelte-check.dependencies.chalk.requires
+supports-color	package-lock.json	/^        "supports-color": "^5.3.0"$/;"	s	object:dependencies.chalk.requires
+supports-color	package-lock.json	/^        "supports-color": "^7.0.0"$/;"	s	object:dependencies.jest-worker.requires
+supports-color	package-lock.json	/^        "supports-color": {$/;"	o	object:dependencies.jest-worker.dependencies
+supports-color	package-lock.json	/^        "supports-color": {$/;"	o	object:dependencies.svelte-check.dependencies
+supports-color	package-lock.json	/^    "supports-color": {$/;"	o	object:dependencies
+svelte	package-lock.json	/^    "svelte": {$/;"	o	object:dependencies
+svelte	package.json	/^    "svelte": "^3.0.0",$/;"	s	object:devDependencies
+svelte app	README.md	/^# svelte app$/;"	c
+svelte-check	package-lock.json	/^    "svelte-check": {$/;"	o	object:dependencies
+svelte-check	package.json	/^    "svelte-check": "^2.0.0",$/;"	s	object:devDependencies
+svelte-preprocess	package-lock.json	/^        "svelte-preprocess": "^4.0.0",$/;"	s	object:dependencies.svelte-check.requires
+svelte-preprocess	package-lock.json	/^    "svelte-preprocess": {$/;"	o	object:dependencies
+svelte-preprocess	package.json	/^    "svelte-preprocess": "^4.0.0",$/;"	s	object:devDependencies
+terser	package-lock.json	/^        "terser": "^5.0.0"$/;"	s	object:dependencies.rollup-plugin-terser.requires
+terser	package-lock.json	/^    "terser": {$/;"	o	object:dependencies
+text	public/build/bundle.js	/^    function text(data) {$/;"	f	function:app
+textarea	public/global.css	/^input, button, select, textarea {$/;"	s
+tinydate	package-lock.json	/^        "tinydate": "^1.0.0"$/;"	s	object:dependencies.sirv-cli.requires
+tinydate	package-lock.json	/^    "tinydate": {$/;"	o	object:dependencies
+to-regex-range	package-lock.json	/^        "to-regex-range": "^5.0.1"$/;"	s	object:dependencies.fill-range.requires
+to-regex-range	package-lock.json	/^    "to-regex-range": {$/;"	o	object:dependencies
+toExit	rollup.config.js	/^	function toExit() {$/;"	f	function:serve
+totalist	package-lock.json	/^        "totalist": "^1.0.0"$/;"	s	object:dependencies.sirv.requires
+totalist	package-lock.json	/^    "totalist": {$/;"	o	object:dependencies
+transfer	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070500.renderFrame
+transition_in	public/build/bundle.js	/^    function transition_in(block, local) {$/;"	f	function:app
+transition_out	public/build/bundle.js	/^    function transition_out(block, local, detach, callback) {$/;"	f	function:app
+tslib	package-lock.json	/^    "tslib": {$/;"	o	object:dependencies
+tslib	package.json	/^    "tslib": "^2.0.0",$/;"	s	object:devDependencies
+typescript	package-lock.json	/^        "typescript": "*"$/;"	s	object:dependencies.svelte-check.requires
+typescript	package-lock.json	/^    "typescript": {$/;"	o	object:dependencies
+typescript	package.json	/^    "typescript": "4.3.5",$/;"	s	object:devDependencies
+unbiasnet	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	f	function:AnonymousFunctione190fe070400.NeuQuant
+update	public/build/bundle.js	/^    function update($$) {$/;"	f	function:app
+validate_each_argument	public/build/bundle.js	/^    function validate_each_argument(arg) {$/;"	f	function:app
+validate_slots	public/build/bundle.js	/^    function validate_slots(name, slot, keys) {$/;"	f	function:app
+version	package-lock.json	/^          "version": "0.6.1",$/;"	s	object:dependencies.rollup-pluginutils.dependencies.estree-walker
+version	package-lock.json	/^          "version": "0.6.1",$/;"	s	object:dependencies.source-map-support.dependencies.source-map
+version	package-lock.json	/^          "version": "1.0.1",$/;"	s	object:dependencies.@rollup/pluginutils.dependencies.estree-walker
+version	package-lock.json	/^          "version": "1.1.4",$/;"	s	object:dependencies.svelte-check.dependencies.color-name
+version	package-lock.json	/^          "version": "2.0.1",$/;"	s	object:dependencies.svelte-check.dependencies.color-convert
+version	package-lock.json	/^          "version": "2.3.2",$/;"	s	object:dependencies.chokidar.dependencies.fsevents
+version	package-lock.json	/^          "version": "2.3.2",$/;"	s	object:dependencies.rollup.dependencies.fsevents
+version	package-lock.json	/^          "version": "4.0.0",$/;"	s	object:dependencies.jest-worker.dependencies.has-flag
+version	package-lock.json	/^          "version": "4.0.0",$/;"	s	object:dependencies.svelte-check.dependencies.has-flag
+version	package-lock.json	/^          "version": "4.1.1",$/;"	s	object:dependencies.rollup-plugin-css-only.dependencies.@rollup/pluginutils
+version	package-lock.json	/^          "version": "4.1.2",$/;"	s	object:dependencies.svelte-check.dependencies.chalk
+version	package-lock.json	/^          "version": "4.3.0",$/;"	s	object:dependencies.svelte-check.dependencies.ansi-styles
+version	package-lock.json	/^          "version": "7.2.0",$/;"	s	object:dependencies.jest-worker.dependencies.supports-color
+version	package-lock.json	/^          "version": "7.2.0",$/;"	s	object:dependencies.svelte-check.dependencies.supports-color
+version	package-lock.json	/^      "version": "0.0.1",$/;"	s	object:dependencies.concat-map
+version	package-lock.json	/^      "version": "0.0.39",$/;"	s	object:dependencies.@types/estree
+version	package-lock.json	/^      "version": "0.10.0",$/;"	s	object:dependencies.sorcery
+version	package-lock.json	/^      "version": "0.2.13",$/;"	s	object:dependencies.buffer-crc32
+version	package-lock.json	/^      "version": "0.25.7",$/;"	s	object:dependencies.magic-string
+version	package-lock.json	/^      "version": "0.5.1",$/;"	s	object:dependencies.sander
+version	package-lock.json	/^      "version": "0.5.20",$/;"	s	object:dependencies.source-map-support
+version	package-lock.json	/^      "version": "0.5.5",$/;"	s	object:dependencies.mkdirp
+version	package-lock.json	/^      "version": "0.7.3",$/;"	s	object:dependencies.source-map
+version	package-lock.json	/^      "version": "0.8.7",$/;"	s	object:dependencies.require-relative
+version	package-lock.json	/^      "version": "0.9.3",$/;"	s	object:dependencies.livereload
+version	package-lock.json	/^      "version": "1.0.0",$/;"	s	object:dependencies.fs.realpath
+version	package-lock.json	/^      "version": "1.0.0",$/;"	s	object:dependencies.is-module
+version	package-lock.json	/^      "version": "1.0.0-next.20",$/;"	s	object:dependencies.@polka/url
+version	package-lock.json	/^      "version": "1.0.1",$/;"	s	object:dependencies.commondir
+version	package-lock.json	/^      "version": "1.0.1",$/;"	s	object:dependencies.min-indent
+version	package-lock.json	/^      "version": "1.0.1",$/;"	s	object:dependencies.parent-module
+version	package-lock.json	/^      "version": "1.0.1",$/;"	s	object:dependencies.path-is-absolute
+version	package-lock.json	/^      "version": "1.0.14",$/;"	s	object:dependencies.sirv-cli
+version	package-lock.json	/^      "version": "1.0.17",$/;"	s	object:dependencies.sirv
+version	package-lock.json	/^      "version": "1.0.2",$/;"	s	object:dependencies.balanced-match
+version	package-lock.json	/^      "version": "1.0.2",$/;"	s	object:dependencies.wrappy
+version	package-lock.json	/^      "version": "1.0.3",$/;"	s	object:dependencies.has
+version	package-lock.json	/^      "version": "1.0.4",$/;"	s	object:dependencies.reusify
+version	package-lock.json	/^      "version": "1.0.5",$/;"	s	object:dependencies.escape-string-regexp
+version	package-lock.json	/^      "version": "1.0.6",$/;"	s	object:dependencies.inflight
+version	package-lock.json	/^      "version": "1.0.7",$/;"	s	object:dependencies.path-parse
+version	package-lock.json	/^      "version": "1.1.0",$/;"	s	object:dependencies.local-access
+version	package-lock.json	/^      "version": "1.1.0",$/;"	s	object:dependencies.semiver
+version	package-lock.json	/^      "version": "1.1.0",$/;"	s	object:dependencies.totalist
+version	package-lock.json	/^      "version": "1.1.1",$/;"	s	object:dependencies.console-clear
+version	package-lock.json	/^      "version": "1.1.1",$/;"	s	object:dependencies.function-bind
+version	package-lock.json	/^      "version": "1.1.11",$/;"	s	object:dependencies.brace-expansion
+version	package-lock.json	/^      "version": "1.1.2",$/;"	s	object:dependencies.buffer-from
+version	package-lock.json	/^      "version": "1.1.3",$/;"	s	object:dependencies.color-name
+version	package-lock.json	/^      "version": "1.13.0",$/;"	s	object:dependencies.fastq
+version	package-lock.json	/^      "version": "1.16.1",$/;"	s	object:dependencies.@types/sass
+version	package-lock.json	/^      "version": "1.17.1",$/;"	s	object:dependencies.@types/resolve
+version	package-lock.json	/^      "version": "1.2.0",$/;"	s	object:dependencies.mri
+version	package-lock.json	/^      "version": "1.2.0",$/;"	s	object:dependencies.run-parallel
+version	package-lock.json	/^      "version": "1.2.1",$/;"	s	object:dependencies.is-reference
+version	package-lock.json	/^      "version": "1.2.3",$/;"	s	object:dependencies.queue-microtask
+version	package-lock.json	/^      "version": "1.2.5",$/;"	s	object:dependencies.minimist
+version	package-lock.json	/^      "version": "1.2.8",$/;"	s	object:dependencies.@nodelib/fs.walk
+version	package-lock.json	/^      "version": "1.20.0",$/;"	s	object:dependencies.resolve
+version	package-lock.json	/^      "version": "1.3.0",$/;"	s	object:dependencies.tinydate
+version	package-lock.json	/^      "version": "1.4.0",$/;"	s	object:dependencies.once
+version	package-lock.json	/^      "version": "1.4.1",$/;"	s	object:dependencies.merge2
+version	package-lock.json	/^      "version": "1.4.8",$/;"	s	object:dependencies.sourcemap-codec
+version	package-lock.json	/^      "version": "1.7.4",$/;"	s	object:dependencies.sade
+version	package-lock.json	/^      "version": "1.9.3",$/;"	s	object:dependencies.color-convert
+version	package-lock.json	/^      "version": "11.2.1",$/;"	s	object:dependencies.@rollup/plugin-node-resolve
+version	package-lock.json	/^      "version": "16.9.4",$/;"	s	object:dependencies.@types/node
+version	package-lock.json	/^      "version": "17.1.0",$/;"	s	object:dependencies.@rollup/plugin-commonjs
+version	package-lock.json	/^      "version": "2.0.0",$/;"	s	object:dependencies.merge-stream
+version	package-lock.json	/^      "version": "2.0.1",$/;"	s	object:dependencies.@tsconfig/svelte
+version	package-lock.json	/^      "version": "2.0.2",$/;"	s	object:dependencies.estree-walker
+version	package-lock.json	/^      "version": "2.0.2",$/;"	s	object:dependencies.opts
+version	package-lock.json	/^      "version": "2.0.4",$/;"	s	object:dependencies.inherits
+version	package-lock.json	/^      "version": "2.0.5",$/;"	s	object:dependencies.@nodelib/fs.stat
+version	package-lock.json	/^      "version": "2.0.5",$/;"	s	object:dependencies.@types/pug
+version	package-lock.json	/^      "version": "2.0.5",$/;"	s	object:dependencies.rollup-plugin-livereload
+version	package-lock.json	/^      "version": "2.1.0",$/;"	s	object:dependencies.is-binary-path
+version	package-lock.json	/^      "version": "2.1.0",$/;"	s	object:dependencies.randombytes
+version	package-lock.json	/^      "version": "2.1.1",$/;"	s	object:dependencies.is-extglob
+version	package-lock.json	/^      "version": "2.1.5",$/;"	s	object:dependencies.@nodelib/fs.scandir
+version	package-lock.json	/^      "version": "2.2.0",$/;"	s	object:dependencies.binary-extensions
+version	package-lock.json	/^      "version": "2.2.6",$/;"	s	object:dependencies.svelte-check
+version	package-lock.json	/^      "version": "2.20.3",$/;"	s	object:dependencies.commander
+version	package-lock.json	/^      "version": "2.3.0",$/;"	s	object:dependencies.picomatch
+version	package-lock.json	/^      "version": "2.3.1",$/;"	s	object:dependencies.tslib
+version	package-lock.json	/^      "version": "2.4.2",$/;"	s	object:dependencies.chalk
+version	package-lock.json	/^      "version": "2.5.2",$/;"	s	object:dependencies.mime
+version	package-lock.json	/^      "version": "2.56.3",$/;"	s	object:dependencies.rollup
+version	package-lock.json	/^      "version": "2.6.0",$/;"	s	object:dependencies.is-core-module
+version	package-lock.json	/^      "version": "2.7.1",$/;"	s	object:dependencies.rimraf
+version	package-lock.json	/^      "version": "2.8.2",$/;"	s	object:dependencies.rollup-pluginutils
+version	package-lock.json	/^      "version": "26.6.2",$/;"	s	object:dependencies.jest-worker
+version	package-lock.json	/^      "version": "3.0.0",$/;"	s	object:dependencies.has-flag
+version	package-lock.json	/^      "version": "3.0.0",$/;"	s	object:dependencies.normalize-path
+version	package-lock.json	/^      "version": "3.0.0",$/;"	s	object:dependencies.strip-indent
+version	package-lock.json	/^      "version": "3.0.2",$/;"	s	object:dependencies.braces
+version	package-lock.json	/^      "version": "3.0.3",$/;"	s	object:dependencies.kleur
+version	package-lock.json	/^      "version": "3.0.4",$/;"	s	object:dependencies.minimatch
+version	package-lock.json	/^      "version": "3.1.0",$/;"	s	object:dependencies.@rollup/pluginutils
+version	package-lock.json	/^      "version": "3.1.0",$/;"	s	object:dependencies.callsites
+version	package-lock.json	/^      "version": "3.1.0",$/;"	s	object:dependencies.rollup-plugin-css-only
+version	package-lock.json	/^      "version": "3.1.2",$/;"	s	object:dependencies.anymatch
+version	package-lock.json	/^      "version": "3.2.0",$/;"	s	object:dependencies.builtin-modules
+version	package-lock.json	/^      "version": "3.2.0",$/;"	s	object:dependencies.get-port
+version	package-lock.json	/^      "version": "3.2.1",$/;"	s	object:dependencies.ansi-styles
+version	package-lock.json	/^      "version": "3.2.7",$/;"	s	object:dependencies.fast-glob
+version	package-lock.json	/^      "version": "3.3.0",$/;"	s	object:dependencies.import-fresh
+version	package-lock.json	/^      "version": "3.3.1",$/;"	s	object:dependencies.es6-promise
+version	package-lock.json	/^      "version": "3.3.2",$/;"	s	object:dependencies.livereload-js
+version	package-lock.json	/^      "version": "3.42.6",$/;"	s	object:dependencies.svelte
+version	package-lock.json	/^      "version": "3.5.2",$/;"	s	object:dependencies.chokidar
+version	package-lock.json	/^      "version": "3.6.0",$/;"	s	object:dependencies.readdirp
+version	package-lock.json	/^      "version": "4.0.0",$/;"	s	object:dependencies.js-tokens
+version	package-lock.json	/^      "version": "4.0.0",$/;"	s	object:dependencies.resolve-from
+version	package-lock.json	/^      "version": "4.0.0",$/;"	s	object:dependencies.serialize-javascript
+version	package-lock.json	/^      "version": "4.0.1",$/;"	s	object:dependencies.is-glob
+version	package-lock.json	/^      "version": "4.0.4",$/;"	s	object:dependencies.micromatch
+version	package-lock.json	/^      "version": "4.2.2",$/;"	s	object:dependencies.deepmerge
+version	package-lock.json	/^      "version": "4.2.8",$/;"	s	object:dependencies.graceful-fs
+version	package-lock.json	/^      "version": "4.3.5",$/;"	s	object:dependencies.typescript
+version	package-lock.json	/^      "version": "4.9.5",$/;"	s	object:dependencies.svelte-preprocess
+version	package-lock.json	/^      "version": "5.0.1",$/;"	s	object:dependencies.to-regex-range
+version	package-lock.json	/^      "version": "5.1.2",$/;"	s	object:dependencies.glob-parent
+version	package-lock.json	/^      "version": "5.2.1",$/;"	s	object:dependencies.safe-buffer
+version	package-lock.json	/^      "version": "5.5.0",$/;"	s	object:dependencies.supports-color
+version	package-lock.json	/^      "version": "5.8.0",$/;"	s	object:dependencies.terser
+version	package-lock.json	/^      "version": "6.1.0",$/;"	s	object:dependencies.detect-indent
+version	package-lock.json	/^      "version": "7.0.0",$/;"	s	object:dependencies.is-number
+version	package-lock.json	/^      "version": "7.0.1",$/;"	s	object:dependencies.fill-range
+version	package-lock.json	/^      "version": "7.0.2",$/;"	s	object:dependencies.rollup-plugin-terser
+version	package-lock.json	/^      "version": "7.1.0",$/;"	s	object:dependencies.rollup-plugin-svelte
+version	package-lock.json	/^      "version": "7.1.7",$/;"	s	object:dependencies.glob
+version	package-lock.json	/^      "version": "7.14.5",$/;"	s	object:dependencies.@babel/code-frame
+version	package-lock.json	/^      "version": "7.14.5",$/;"	s	object:dependencies.@babel/highlight
+version	package-lock.json	/^      "version": "7.15.7",$/;"	s	object:dependencies.@babel/helper-validator-identifier
+version	package-lock.json	/^      "version": "7.5.5",$/;"	s	object:dependencies.ws
+version	package-lock.json	/^      "version": "8.2.5",$/;"	s	object:dependencies.@rollup/plugin-typescript
+version	package.json	/^  "version": "1.0.0",$/;"	s
+wrappy	package-lock.json	/^        "wrappy": "1"$/;"	s	object:dependencies.inflight.requires
+wrappy	package-lock.json	/^        "wrappy": "1"$/;"	s	object:dependencies.once.requires
+wrappy	package-lock.json	/^    "wrappy": {$/;"	o	object:dependencies
+writeByte	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:ByteArray
+writeBytes	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:ByteArray
+writeGraphicCtrlExt	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeHeader	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeImageDesc	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeLSD	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeNetscapeExt	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writePalette	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writePixels	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeShort	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:GIFEncoder
+writeUTFBytes	src/assets/gif.worker.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require/;"	m	class:ByteArray
+ws	package-lock.json	/^        "ws": "^7.4.3"$/;"	s	object:dependencies.livereload.requires
+ws	package-lock.json	/^    "ws": {$/;"	o	object:dependencies
+x	public/build/bundle.js	/^    			x: center - offset,$/;"	p	class:app.instance$1.setPosition.defaultPos
+x	public/build/bundle.js	/^    	let lp = { x: 0, y: 0 };$/;"	p	class:app.instance$3.lp
+y	public/build/bundle.js	/^    			y: window.innerHeight$/;"	p	class:app.instance$1.setPosition.defaultPos
+y	public/build/bundle.js	/^    	let lp = { x: 0, y: 0 };$/;"	p	class:app.instance$3.lp

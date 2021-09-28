@@ -60,14 +60,25 @@
 	}
 
 	function handleStrokeEvent(e){
+		/* consle.log('drawing..') */
 		drawStrokes(e.detail.aPosition);
 		// layers[0].draw()
 		// console.log(strokes);
 	}
 
+	function clickHandle(){
+		console.log('click')
+	}
+
+	function handleColor(e){
+		layers[0].color = e.detail;
+	}
+
 	function savePNG(){
-		const url = canvas.toDataURL('image/png');
+		const can = layers[0].$$.ctx[0];
+		const url = can.toDataURL('image/png');
 		let fURL;
+		console.log('saving');
 		fetch(url)
 		.then(res => res.blob())
 		.then( blob => {
@@ -85,7 +96,10 @@
 		<Can2D bind:this={layer}  />
 	{/each}
 
-	<Menu bind:this={menu} />
+	<Menu 
+		on:handleSave={savePNG} 
+		on:handleColor={handleColor} 
+		bind:this={menu} />
 </main>
 
 <style>

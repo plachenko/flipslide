@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount, createEventDispatcher } from "svelte";
 
+    const dispatch = createEventDispatcher();
+    let color = "#000";
 	let menu;
     let options = [
         {label: 'brush size', type: 'range'},
@@ -12,6 +14,11 @@
 	onMount(()=>{
         setPosition();
         window.addEventListener('resize', setPosition);
+        
+        menu.addEventListener('opointerdown', (e)=>{
+            console.log(e);
+        });
+
         menu.addEventListener('ondragstart', (e)=>{
             console.log(e);
         })
@@ -19,6 +26,15 @@
             console.log(e);
         })
 	});
+
+  function handleColor(e){
+      console.log(color)
+    dispatch('handleColor', color);
+  }
+
+  function handleSave(){
+    dispatch('handleSave')
+  }
 
     function setPosition(dragEvent = null, pos = null){
         let center = window.innerWidth / 2;
@@ -35,6 +51,14 @@
 </script>
 
 <div id="flipslide-logo" bind:this={menu} draggable="true">
+    <div id="menu">
+        <input on:change={handleColor} bind:value={color} class="btn" type="color" />
+        <div class="btn">
+            <span on:click={handleSave}>
+                save
+            </span>
+        </div>
+    </div>
     <div>
         <!--
         {#each options as option}
@@ -50,32 +74,45 @@
         -->
     </div>
     
-    <div>flipslide</div>
+    <div id="logo">flipslide</div>
 </div>
 
 <style>
 
-#flipslide-logo{
+#menu{
     border: 1px solid;
     padding: 5px 10px;
+    margin: 10px 0px;
+    }
+
+
+#flipslide-logo{
     position: absolute;
     float: left;
     z-index: 9999;
     bottom: 5px;
-    user-select: none;
-    cursor: grab;
-    box-sizing: border-box;
-    width: 100px;
-    text-align: center;
-    background-color:#FFF;
     }
-    #flipslide-logo:hover{
-        /* font-weight: bold; */
+
+    .btn{
+        user-select: none;
+        padding: 5px 10px;
+        cursor: grab;
+        text-align: center;
+        background-color:#FFF;
+        box-sizing: border-box;
+        width: 100px;
+        }
+    .btn:hover{
         border: 2px solid;
         background-color:#444;
         color:#FFF;
-    }
-    #flipslide-logo:active{
+        }
+    .btn:active{
         cursor: grabbing !important;
-    }
+        }
+
+    #logo{
+        padding: 5px;
+        border: 1px solid;
+        }
 </style>
