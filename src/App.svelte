@@ -66,8 +66,9 @@
 		// console.log(strokes);
 	}
 
-	function clickHandle(){
-		console.log('click')
+	function handleClear(e){
+		console.log('clearing')
+		layers[0].clear();
 	}
 
 	function handleColor(e){
@@ -98,6 +99,7 @@
 
 	<Menu 
 		on:handleSave={savePNG} 
+		on:handleClear={handleClear} 
 		on:handleColor={handleColor} 
 		bind:this={menu} />
 </main>

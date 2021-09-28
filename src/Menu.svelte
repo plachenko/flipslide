@@ -5,10 +5,10 @@
     let color = "#000";
 	let menu;
     let options = [
-        {label: 'brush size', type: 'range'},
-        {label: 'color', type: 'color'},
-        {label: 'save', type: 'submit'},
-        {label: 'clear', type: 'submit'},
+        /* {label: 'brush size', type: 'range'}, */
+        /* {label: 'brush size', type: 'range'}, */
+        {label: 'save', type: 'submit', method: handleSave},
+        {label: 'clear', type: 'submit', method: handleClear}
     ];
 
 	onMount(()=>{
@@ -32,6 +32,10 @@
     dispatch('handleColor', color);
   }
 
+  function handleClear(){
+    dispatch('handleClear');
+  }
+
   function handleSave(){
     dispatch('handleSave')
   }
@@ -53,35 +57,14 @@
 <div id="flipslide-logo" bind:this={menu} draggable="true">
     <div id="menu">
         <input on:change={handleColor} bind:value={color} class="btn" type="color" />
+
         {#each options as option }
-            <div class="btn">
-                <span on:click={option.method}>
-                    {option.label}
-                </span>
-            </div>
-        {/each}
-
-
-        </div>
         <div class="btn">
-            <span on:click={handleSave}>
-                save
+            <span on:click={option.method}>
+                {option.label}
             </span>
         </div>
-    </div>
-    <div>
-        <!--
-        {#each options as option}
-            <label for={option.label} type={option.label} />
-            <input id={option.label} type={option.type} />
         {/each}
-
-        <input type="range" bind:value={iSize} />
-        <input type="color" bind:value={color} />
-        <input type="range" bind:value={frame} />
-        <a href="#" on:click={savePNG}>save</a>
-        <a href="#" on:click={clear}>clear</a>
-        -->
     </div>
     
     <div class="btn" id="logo">flipslide</div>
