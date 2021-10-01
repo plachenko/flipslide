@@ -1,13 +1,17 @@
 <svelte:options accessors />
 <script lang="ts">
 	import { onMount } from "svelte";
+	import Point from './classes/Point.js';
 	
 	let canvas;
 	let ctx;
 
 	export let strokeArray = [];
 	export let iSize = 10;
-	export	let color = "#000";
+	export let color = "#000";
+
+	export let width = 0;
+	export let height = 0;
 
 	let stroke = [];
 	let fStroke = [];
@@ -15,26 +19,50 @@
 	let lp;
 	let lSize;
 
+	let frames = [];
+	let frameLimit = 100;
+	let frameNum = 0;
 
 	onMount(()=>{
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		// set the canvas dimensions
+		canvas.width = width || window.innerWidth;
+		canvas.height = height || window.innerHeight;
 
 		ctx = canvas.getContext('2d');
 		ctx.fillStyle = "#FFF";
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	});
 
+	export function drawStroke(stroke){
+		if(stroke){
+			fStroke = stroke[0];
+			let e = stroke[stroke.length-1]; 
 
-    export function drawStroke(stroke){
-				if(stroke){
-					fStroke = stroke[0];
-					let e = stroke[stroke.length-1]; 
-					/* clear(); */
-					draw(e.x, e.y, e.dx, e.dy, e.pressure);
-					
-				}
-    }
+			let p1 = new Point(e.x, e.y);
+			let pd = new Point(e.dx, e.dy);
+
+			/* clear(); */
+			draw(...p1.points, ...pd.points, e.pressure);
+
+			frames[frameNum] = stroke;
+			if(frameNum < frameLimit){
+				frameNum++;
+			}else{
+				clear();
+				drawFrame(frameNum);
+				frameNum = 0;
+			}
+
+		}
+	}
+
+	function drawFrame(frame){
+
+		let p1 = new Point(e.x, e.y);
+		let pd = new Point(e.dx, e.dy);
+
+		draw(...p1.points, ...pd.points, e.pressure);
+	}
 
 	function draw(x, y, dx = 0, dy = 0, pressure = 0){
 		if(!x){
@@ -59,12 +87,13 @@
 			lSize = size;
 		}
 
-		iSize = iSize * .6 + (pressure * 10);
+		iSize = iSize + (pressure * 5);
 		iSize = snap(iSize, size)
 
 		function snap(val, grid){
 			const num = grid * Math.round(val/grid);
 			const ret = val-num < 2 ? num : lSize; 
+
 
 			return ret; 
 		}
