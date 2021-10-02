@@ -24,21 +24,21 @@
 
 	}
 
+	// Start Capturing stroke.
 	function handleCapStartEvt(){
-		// Start Capturing stroke.
 	}
 
 	function handleCapEvt(e){
 		layers[curLayer].currentPoint = e.detail;
 	}
 
+	// Done Capturing stroke.
 	function handleCapDoneEvt(){
-		// Done Capturing stroke.
 		layers[0].endStroke();
 	}
 
+	// Handle cursor move...
 	function handleMoveEvt(e){
-		// Handle cursor move...
 	}
 
 </script>

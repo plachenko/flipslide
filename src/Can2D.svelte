@@ -24,8 +24,6 @@
 	let lp;
 	let lSize;
 
-	let bgCol = "#FFF";
-
 	let frames = [];
 	let frameLimit = 100;
 	let frameNum = 0;
@@ -34,17 +32,49 @@
 
 	function handlePointChange(){
 		stroke.push(currentPoint);
+		// ctx.fillStyle = "#F00";
 		drawPoint(currentPoint);
-		/*
-		console.log(currentPoint.dx);
 		
-		for(let x = 0; x < Math.abs(currentPoint.dx); x++){
-			for(let y = 0; y < Math.abs(currentPoint.dy); y++){
-				const pt = new Point(currentPoint.x + x*2, currentPoint.y + y);
+		ctx.fillStyle = "#000";
+
+		const xdiff = Math.abs(currentPoint.dx);
+		const ydiff = Math.abs(currentPoint.dy);
+
+		// console.log(xdiff, ydiff);
+		if(xdiff > ydiff){
+			for(let x = 0; x <= xdiff; x++){
+				const _x = currentPoint.x - (x * Math.sign(currentPoint.dx));
+				const _y = currentPoint.y + x/10;
+
+				const pt = new Point(_x, _y);
 				drawPoint(pt);
 			}
+			console.log('x');
+		}else{
+			/*
+			for(let y = 0; y <= ydiff; y++){
+				const _y = currentPoint.x + (y * Math.sign(currentPoint.dy));
+				const _x = currentPoint.y - y/10;
+
+				const pt = new Point(_x, _y);
+				drawPoint(pt);
+			}
+			console.log('y');
+			*/
 		}
-		*/
+		// for(let x = 0; x < Math.abs(currentPoint.dx); x++){
+		
+		// }
+
+		// for(let x = 0; x < Math.abs(currentPoint.dx); x++){
+		// 	for(let y = 0; y < Math.abs(currentPoint.dy); y++){
+		// 		const _x = currentPoint.x + x * Math.sign(currentPoint.dx) * 10;
+		// 		const _y = currentPoint.y + y * Math.sign(currentPoint.dy) * 10;
+		// 		// console.log(_x, _y)
+		// 		const pt = new Point(_x, _y);
+		// 		drawPoint(pt);
+		// 	}
+		// }
 		// frameNum++;
 		// console.log(frameNum);
 		// clear();
@@ -61,10 +91,6 @@
 		canvas.width = width || window.innerWidth;
 		canvas.height = height || window.innerHeight;
 		ctx = canvas.getContext('2d');
-
-		// set canvas background
-		ctx.fillStyle = bgCol;
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	});
 
 
@@ -119,7 +145,6 @@
 			iSize = Math.abs(Math.round(dy));
 		}
 
-		ctx.fillStyle = "#F00";
 		ctx.fillRect(x, y, size, size);
 
 		// if(dx && Math.abs(dx) >= Math.abs(dy)){
