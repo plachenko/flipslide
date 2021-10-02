@@ -15,53 +15,106 @@
 
 	export let currentPoint = null;
 
-	let frameIdx = 0;
-	let frameArray = [];
-
 	let stroke = [];
-	let fStroke = [];
-
-	let lp;
-	let lSize;
 
 	let frames = [];
+	let frameIdx = 0;
 	let frameLimit = 100;
-	let frameNum = 0;
 
 	$: currentPoint && handlePointChange();
 
+	onMount(()=>{
+		// set the canvas dimensions
+		canvas.width = width || window.innerWidth;
+		canvas.height = height || window.innerHeight;
+		ctx = canvas.getContext('2d');
+
+	});
+
+	function lerp(v0, v1, t){
+		return (1-t)*v0+(t*v1);
+	}
+
+	function drawBetween(pt1, pt2){
+		clear();
+
+		let maxDiff = 0;
+		let sign = 1;
+		let slopeX = 1;
+		let slopeY = 1;
+
+		let yOffset = 0;
+		let xOffset = 0;
+
+		let xDiff = pt2.x - pt1.x;
+		let yDiff = pt2.y - pt1.y;
+
+		// console.log(xDiff, yDiff, Math.abs(xDiff) > Math.abs(yDiff));
+
+		if(Math.abs(xDiff) > Math.abs(yDiff)){
+			maxDiff = Math.abs(xDiff);
+			console.log('x');
+			slopeY = Math.abs(yDiff) / Math.abs(xDiff);
+			slopeX = 0;
+
+			xOffset = (Math.sign(xDiff)) + slopeX;
+			yOffset = (Math.sign(yDiff));
+		}else{
+			maxDiff = Math.abs(yDiff);
+			slopeX = Math.abs(xDiff) / Math.abs(yDiff);
+			slopeY = 0;
+			console.log('y');
+
+			yOffset = (Math.sign(yDiff)) + slopeY;
+			xOffset = (Math.sign(xDiff));
+		}
+		
+		drawPoint(pt1);
+
+		for(let diff = 0; diff <= maxDiff; diff++){
+			const _x = pt1.x + (diff * xOffset);
+			const _y = pt1.y + (diff * yOffset);
+
+			const pt = new Point(_x, _y);
+
+			pt.pressure = lerp(pt1.pressure, pt2.pressure, diff/maxDiff);
+
+			drawPoint(pt);
+		}
+
+		drawPoint(pt2);
+	}
+
 	function handlePointChange(){
 		stroke.push(currentPoint);
+		drawBetween(new Point(200, 200), currentPoint);
 		// ctx.fillStyle = "#F00";
-		drawPoint(currentPoint);
+		// drawPoint(currentPoint);
 		
 		ctx.fillStyle = "#000";
 
-		const xdiff = Math.abs(currentPoint.dx);
-		const ydiff = Math.abs(currentPoint.dy);
 
 		// console.log(xdiff, ydiff);
+		/*
 		if(xdiff > ydiff){
 			for(let x = 0; x <= xdiff; x++){
 				const _x = currentPoint.x - (x * Math.sign(currentPoint.dx));
-				const _y = currentPoint.y + x/10;
+				const _y = currentPoint.y - currentPoint.dy;
 
 				const pt = new Point(_x, _y);
 				drawPoint(pt);
 			}
-			console.log('x');
 		}else{
-			/*
 			for(let y = 0; y <= ydiff; y++){
-				const _y = currentPoint.x + (y * Math.sign(currentPoint.dy));
-				const _x = currentPoint.y - y/10;
+				const _y = currentPoint.y + (y * Math.sign(currentPoint.dy));
+				const _x = currentPoint.x - y/10;
 
 				const pt = new Point(_x, _y);
 				drawPoint(pt);
 			}
-			console.log('y');
-			*/
+			
 		}
+		*/
 		// for(let x = 0; x < Math.abs(currentPoint.dx); x++){
 		
 		// }
@@ -82,18 +135,9 @@
 	}
 
 	export function endStroke(){
-		frames[frameNum] = [...stroke, frames[frameNum]];
+		frames[frameIdx] = [...stroke, frames[frameIdx]];
 		stroke = [];
 	}
-
-	onMount(()=>{
-		// set the canvas dimensions
-		canvas.width = width || window.innerWidth;
-		canvas.height = height || window.innerHeight;
-		ctx = canvas.getContext('2d');
-	});
-
-
 	
 	export function drawStroke(stroke){
 		if(stroke){
@@ -106,7 +150,7 @@
 			/* clear(); */
 			draw(...p1.points, ...pd.points, e.pressure);
 
-			frames[frameNum] = stroke;
+			frames[frameIdx] = stroke;
 			/*
 			if(frameNum < frameLimit){
 				frameNum++;
@@ -131,19 +175,23 @@
 	function drawPoint(point: Point){
 		let size = iSize;
 
-		let x = point.x;
-			x -= iSize/2;
-		let y = point.y;
-			y -= iSize/2;
-		
 		let dx = point.dx;
 		let dy = point.dy; 
 		
+		/*
 		if(dx && Math.abs(dx) >= Math.abs(dy)){
-			iSize = Math.abs(Math.round(dx));
+			size = Math.abs(Math.round(dx));
 		}else if(dy && Math.abs(dy) >= Math.abs(dx)){
-			iSize = Math.abs(Math.round(dy));
+			size = Math.abs(Math.round(dy));
 		}
+		*/
+
+		let x = point.x;
+			x -= size/2;
+		let y = point.y;
+			y -= size/2;
+		
+		size = size*point.pressure;
 
 		ctx.fillRect(x, y, size, size);
 
