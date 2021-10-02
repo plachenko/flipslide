@@ -7,13 +7,14 @@
 	let ctx;
 
 	export let strokeArray = [];
-	export let iSize = 10;
+	export let iSize = 4;
 	export let color = "#000";
 
 	export let width = 0;
 	export let height = 0;
 
 	export let currentPoint = null;
+	let lastPoint;
 
 	let stroke = [];
 
@@ -28,7 +29,6 @@
 		canvas.width = width || window.innerWidth;
 		canvas.height = height || window.innerHeight;
 		ctx = canvas.getContext('2d');
-
 	});
 
 	function lerp(v0, v1, t){
@@ -36,65 +36,56 @@
 	}
 
 	function drawBetween(pt1, pt2){
-		clear();
 
 		let maxDiff = 0;
-		let sign = 1;
-		let slopeX = 1;
-		let slopeY = 1;
-
-		let yOffset = 0;
-		let xOffset = 0;
 
 		let xDiff = pt2.x - pt1.x;
 		let yDiff = pt2.y - pt1.y;
 
-		// console.log(xDiff, yDiff, Math.abs(xDiff) > Math.abs(yDiff));
-
 		if(Math.abs(xDiff) > Math.abs(yDiff)){
 			maxDiff = Math.abs(xDiff);
-			console.log('x');
-			slopeY = Math.abs(yDiff) / Math.abs(xDiff);
-			slopeX = 0;
-
-			xOffset = (Math.sign(xDiff)) + slopeX;
-			yOffset = (Math.sign(yDiff));
 		}else{
 			maxDiff = Math.abs(yDiff);
-			slopeX = Math.abs(xDiff) / Math.abs(yDiff);
-			slopeY = 0;
-			console.log('y');
-
-			yOffset = (Math.sign(yDiff)) + slopeY;
-			xOffset = (Math.sign(xDiff));
 		}
 		
-		drawPoint(pt1);
+		/* drawPoint(pt1); */
 
 		for(let diff = 0; diff <= maxDiff; diff++){
-			const _x = pt1.x + (diff * xOffset);
-			const _y = pt1.y + (diff * yOffset);
+			let _x = lerp(pt1.x, pt2.x, diff/maxDiff);
+			let _y = lerp(pt1.y, pt2.y, diff/maxDiff);
 
 			const pt = new Point(_x, _y);
 
 			pt.pressure = lerp(pt1.pressure, pt2.pressure, diff/maxDiff);
+			pt.size = lerp(pt1.size, pt2.size, diff/maxDiff);
+			pt.dx = lerp(pt1.dx, pt2.dx, diff/maxDiff);
+			pt.dy = lerp(pt1.dy, pt2.dy, diff/maxDiff);
 
 			drawPoint(pt);
 		}
 
-		drawPoint(pt2);
+		/* drawPoint(pt2); */
 	}
 
 	function handlePointChange(){
-		stroke.push(currentPoint);
-		drawBetween(new Point(200, 200), currentPoint);
-		// ctx.fillStyle = "#F00";
-		// drawPoint(currentPoint);
-		
+		/* let pt = currentPoint; */
+		let pt = new Point(currentPoint.x+iSize/2, currentPoint.y+iSize/2);
+			pt.dy = currentPoint.dy;
+			pt.dx = currentPoint.dx;
+			pt.size = currentPoint.size;
+			pt.pressure = currentPoint.pressure;
+
+		if(!lastPoint){
+			lastPoint = pt;
+		}
+
+		stroke.push(pt);
+
 		ctx.fillStyle = "#000";
-
-
-		// console.log(xdiff, ydiff);
+		/* drawPoint(pt); */
+		drawBetween(pt, lastPoint);
+		lastPoint = pt;
+		
 		/*
 		if(xdiff > ydiff){
 			for(let x = 0; x <= xdiff; x++){
@@ -112,12 +103,8 @@
 				const pt = new Point(_x, _y);
 				drawPoint(pt);
 			}
-			
 		}
 		*/
-		// for(let x = 0; x < Math.abs(currentPoint.dx); x++){
-		
-		// }
 
 		// for(let x = 0; x < Math.abs(currentPoint.dx); x++){
 		// 	for(let y = 0; y < Math.abs(currentPoint.dy); y++){
@@ -136,6 +123,7 @@
 
 	export function endStroke(){
 		frames[frameIdx] = [...stroke, frames[frameIdx]];
+		lastPoint = null;
 		stroke = [];
 	}
 	
@@ -178,68 +166,32 @@
 		let dx = point.dx;
 		let dy = point.dy; 
 		
-		/*
 		if(dx && Math.abs(dx) >= Math.abs(dy)){
 			size = Math.abs(Math.round(dx));
 		}else if(dy && Math.abs(dy) >= Math.abs(dx)){
 			size = Math.abs(Math.round(dy));
 		}
-		*/
 
 		let x = point.x;
 			x -= size/2;
 		let y = point.y;
 			y -= size/2;
 		
-		size = size*point.pressure;
+		/* point.size = (size + dx); */
+		point.size = (size + point.pressure)/3;
 
-		ctx.fillRect(x, y, size, size);
-
-		// if(dx && Math.abs(dx) >= Math.abs(dy)){
-		// 	iSize = Math.abs(Math.round(dx));
-		// }else if(dy && Math.abs(dy) >= Math.abs(dx)){
-		// 	/* iSize == lSize; */
-		// 	iSize = Math.abs(Math.round(dy));
-		// }else{
-		// 	iSize = lSize;
-		// }
-
-		// if(!lSize){
-		// 	lSize = size;
-		// }
-
-		// iSize = iSize + (pressure * 5)/2;
-		// iSize = snap(iSize, size)
-
-
-		
-		// ctx.strokeStyle = "#F00";
-		// let _x = x;
-		// let _y = y;
-
-		// x -= iSize/2;
-		// y -= iSize/2;
-
-		// x = snap(x, size);
-		// y = snap(y, size);
-
-		// /* console.log(x,y,iSize) */
-
-		// if(iSize < lSize){
-		// 	ctx.fillStyle = "#F00";
-		// }else{
-		// 	ctx.fillStyle = "#000";
-		// }
-		// ctx.fillStyle = color;
-
-		// for(let i =0; i< 100; i++){
-		// 	const offset = new Point(i, i)
-
-		// }
-		// ctx.fillStyle= "#FFF";
-
-		// lSize = iSize;
-		// lp = {x: _x, y: _y};
+		ctx.fillRect(x, y, point.size, point.size);
+		/*
+		ctx.beginPath();
+		ctx.arc(x,y,Math.abs(point.size), 0, Math.PI*2);
+		ctx.fill();
+		ctx.closePath();
+		*/
+		/*
+		ctx.moveTo(x-point.size/2, y-point.Size/2);
+		ctx.lineTo(x, y-point.size/2);
+		ctx.lineTo(x, y+point.size/2);
+		*/
 	}
 
 	export function clear(){

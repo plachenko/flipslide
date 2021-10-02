@@ -2,6 +2,7 @@ export default class Point{
 	points = [];
 	x = 0;
 	y = 0;
+	size = 0;
 
 	dx = 0;
 	dy = 0;
@@ -11,15 +12,22 @@ export default class Point{
 		this.points = [...pts];
 		this.x = pts[0]
 		this.y = pts[1]
+		
+		// console.log('pressure',this.pressure);
 
 		return;
 	}
 
-	offset(...pts){
-		x += pts[0];
-		y += pts[1];
+	offset(pts){
+		pts[0] = this.x + pts[0];
+		pts[1] = this.y + pts[1];
+
+		let pt = new Point(pts);
+		pt.dx = this.dx;
+		pt.dy = this.dy;
+		pt.pressure = this.pressure;
 		
-		return new Point(x, y);
+		return pt;
 	}
 
 	distance(pt){
