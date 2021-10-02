@@ -63,8 +63,12 @@
 	}
 
 	function handlePointChange(){
-		/* clear(); */
+		clear();
 		// TODO: CLEAN THIS
+
+		let rotX;
+		let rotY;
+		
 		let pt = new Point(currentPoint.x+iSize/2, currentPoint.y+iSize/2);
 		pt.dy = currentPoint.dy;
 		pt.dx = currentPoint.dx;
@@ -74,16 +78,39 @@
 		if(!lastPoint){
 			lastPoint = pt;
 		}
+		console.log(stroke[0]?.x);
 
-		stroke.push(pt);
+		ctx.beginPath();
+		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
+		ctx.lineTo(lastPoint.x, lastPoint.y);
+		ctx.closePath();
+		ctx.stroke();
 
-		drawBetween(pt, lastPoint);
-		lastPoint = pt;
+		rotX = Math.PI*(lastPoint.x/stroke[0]?.x);
+		rotY = Math.PI*(lastPoint.y/stroke[0]?.y);
+
+		ctx.beginPath();
+		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
+		// ctx.moveTo(stroke[0]?.x-iSize/2 + rotX, stroke[0]?.y + rotY);
+		ctx.lineTo(stroke[0]?.x, stroke[0]?.y + iSize/2);
+		// ctx.lineTo(stroke[0]?.x + iSize/2, stroke[0]?.y);
+		// ctx.lineTo(stroke[0]?.x, stroke[0]?.y - iSize/2);
+		ctx.closePath();
+		ctx.stroke();
+
+		stroke.push(currentPoint);
+
+		// drawBetween(pt, lastPoint);
+
+		lastPoint = currentPoint;
+		
+		/*
 		if(frameIdx < frameLimit){
 			frameIdx++;
 		}else{
 			frameIdx = 0;
 		}
+		*/
 
 		/* endStroke(); */
 	}
