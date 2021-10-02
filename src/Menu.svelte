@@ -3,7 +3,8 @@
 
     const dispatch = createEventDispatcher();
     let color = "#000";
-	let menu;
+    let menu;
+
     let options = [
         /* {label: 'brush size', type: 'range'}, */
         /* {label: 'brush size', type: 'range'}, */
