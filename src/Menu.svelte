@@ -26,10 +26,9 @@
             console.log(e);
         })
 	});
-
+    
   function handleColor(e){
-      console.log(color)
-    dispatch('handleColor', color);
+    dispatch('menuEvt', color);
   }
 
   function handleClear(){

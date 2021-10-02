@@ -13,26 +13,62 @@
 	export let width = 0;
 	export let height = 0;
 
+	export let currentPoint = null;
+
+	let frameIdx = 0;
+	let frameArray = [];
+
 	let stroke = [];
 	let fStroke = [];
 
 	let lp;
 	let lSize;
 
+	let bgCol = "#FFF";
+
 	let frames = [];
 	let frameLimit = 100;
 	let frameNum = 0;
+
+	$: currentPoint && handlePointChange();
+
+	function handlePointChange(){
+		stroke.push(currentPoint);
+		drawPoint(currentPoint);
+		/*
+		console.log(currentPoint.dx);
+		
+		for(let x = 0; x < Math.abs(currentPoint.dx); x++){
+			for(let y = 0; y < Math.abs(currentPoint.dy); y++){
+				const pt = new Point(currentPoint.x + x*2, currentPoint.y + y);
+				drawPoint(pt);
+			}
+		}
+		*/
+		// frameNum++;
+		// console.log(frameNum);
+		// clear();
+		// endStroke();
+	}
+
+	export function endStroke(){
+		frames[frameNum] = [...stroke, frames[frameNum]];
+		stroke = [];
+	}
 
 	onMount(()=>{
 		// set the canvas dimensions
 		canvas.width = width || window.innerWidth;
 		canvas.height = height || window.innerHeight;
-
 		ctx = canvas.getContext('2d');
-		ctx.fillStyle = "#FFF";
+
+		// set canvas background
+		ctx.fillStyle = bgCol;
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 	});
 
+
+	
 	export function drawStroke(stroke){
 		if(stroke){
 			fStroke = stroke[0];
@@ -45,6 +81,7 @@
 			draw(...p1.points, ...pd.points, e.pressure);
 
 			frames[frameNum] = stroke;
+			/*
 			if(frameNum < frameLimit){
 				frameNum++;
 			}else{
@@ -52,6 +89,7 @@
 				drawFrame(frameNum);
 				frameNum = 0;
 			}
+			*/
 
 		}
 	}
@@ -64,63 +102,71 @@
 		draw(...p1.points, ...pd.points, e.pressure);
 	}
 
-	function draw(x, y, dx = 0, dy = 0, pressure = 0){
-		if(!x){
-			x = fStroke.x;
-		}
+	function drawPoint(point: Point){
+		let size = iSize;
 
-		if(!y){
-			y = fStroke.y;
-		}
-
+		let x = point.x;
+			x -= iSize/2;
+		let y = point.y;
+			y -= iSize/2;
+		
+		let dx = point.dx;
+		let dy = point.dy; 
+		
 		if(dx && Math.abs(dx) >= Math.abs(dy)){
 			iSize = Math.abs(Math.round(dx));
 		}else if(dy && Math.abs(dy) >= Math.abs(dx)){
-			/* iSize == lSize; */
 			iSize = Math.abs(Math.round(dy));
-		}else{
-			iSize = lSize;
 		}
 
-		const size = 3;
-		if(!lSize){
-			lSize = size;
-		}
+		ctx.fillStyle = "#F00";
+		ctx.fillRect(x, y, size, size);
 
-		iSize = iSize + (pressure * 5);
-		iSize = snap(iSize, size)
+		// if(dx && Math.abs(dx) >= Math.abs(dy)){
+		// 	iSize = Math.abs(Math.round(dx));
+		// }else if(dy && Math.abs(dy) >= Math.abs(dx)){
+		// 	/* iSize == lSize; */
+		// 	iSize = Math.abs(Math.round(dy));
+		// }else{
+		// 	iSize = lSize;
+		// }
 
-		function snap(val, grid){
-			const num = grid * Math.round(val/grid);
-			const ret = val-num < 2 ? num : lSize; 
+		// if(!lSize){
+		// 	lSize = size;
+		// }
+
+		// iSize = iSize + (pressure * 5)/2;
+		// iSize = snap(iSize, size)
 
 
-			return ret; 
-		}
 		
-		ctx.strokeStyle = "#F00";
-		let _x = x;
-		let _y = y;
+		// ctx.strokeStyle = "#F00";
+		// let _x = x;
+		// let _y = y;
 
-		x -= iSize/2;
-		y -= iSize/2;
+		// x -= iSize/2;
+		// y -= iSize/2;
 
-		x = snap(x, size);
-		y = snap(y, size);
+		// x = snap(x, size);
+		// y = snap(y, size);
 
-		/* console.log(x,y,iSize) */
+		// /* console.log(x,y,iSize) */
 
-		if(iSize < lSize){
-			ctx.fillStyle = "#F00";
-		}else{
-			ctx.fillStyle = "#000";
-		}
-		ctx.fillStyle = color;
+		// if(iSize < lSize){
+		// 	ctx.fillStyle = "#F00";
+		// }else{
+		// 	ctx.fillStyle = "#000";
+		// }
+		// ctx.fillStyle = color;
 
-		ctx.fillRect(x, y, iSize, iSize);
+		// for(let i =0; i< 100; i++){
+		// 	const offset = new Point(i, i)
 
-		lSize = iSize;
-		lp = {x: _x, y: _y};
+		// }
+		// ctx.fillStyle= "#FFF";
+
+		// lSize = iSize;
+		// lp = {x: _x, y: _y};
 	}
 
 	export function clear(){

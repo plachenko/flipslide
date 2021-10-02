@@ -1,57 +1,47 @@
 <script lang="ts">
 	import { onMount } from "svelte";
     import { createEventDispatcher } from "svelte";
+	import Point from "./classes/Point";
 
-	let capture;
-	let bPenDown = false;
-    let aPosition = [];
-
-	onMount(()=>{
-		capture.addEventListener('pointermove', pmv);
-		capture.addEventListener('pointerdown', pdn);
-		capture.addEventListener('pointerup', pup);
-		capture.addEventListener('contextmenu', (e)=>{
-			e.preventDefault();
-		});
-	});
+	let captureEl;
+	let md = false;
 
     const dispatch = createEventDispatcher();
 
-    function pEvt(e: PointerEvent){
-			aPosition.push({
-				x: e.clientX,
-				y: e.clientY,
-				dx: e.movementX,
-				dy: e.movementY,
-				pressure: e.pressure
-			});
+    function pEvt(e: PointerEvent) {
+		const point = new Point(e.clientX, e.clientY);
 
-			dispatch('pEvt', {
-				aPosition
-			});
-    }
+		if(e.pressure){
+			if(!md){
+				md = true;
+				dispatch('capStart');
+			}
+		
+			point.pressure = e.pressure;
+			point.dx = e.movementX;
+			point.dy = e.movementY;
 
-	/* -- Pointer Events -- */
-	function pdn(e){
-		bPenDown = true;
-		pEvt(e);
-	}
-
-	function pmv(e){
-		if(bPenDown){
-			pEvt(e);
+			dispatch('capEvt', point);
+		} else {
+			if(md){
+				dispatch('capDone');
+				md = false;
+			}
+			dispatch('mvEvt', point);
 		}
-	}
 
-	function pup(e){
-        // pEvt(e);
-        bPenDown = false;
-        aPosition = [];
-	}
+
+    }
 </script>
 
-<div bind:this={capture} id="capture"></div>
-
+<div 
+	id="capture"
+	bind:this={captureEl}
+	on:contextmenu|preventDefault
+	on:pointermove={pEvt}
+	on:pointerdown={pEvt}
+	on:pointerup={pEvt}
+	/>
 <style>
 #capture{
     touch-action: none;
