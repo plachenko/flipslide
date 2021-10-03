@@ -78,21 +78,67 @@
 		if(!lastPoint){
 			lastPoint = pt;
 		}
-		console.log(stroke[0]?.x);
 
+		// Draw slope line...
 		ctx.beginPath();
 		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
 		ctx.lineTo(lastPoint.x, lastPoint.y);
 		ctx.closePath();
 		ctx.stroke();
 
-		rotX = Math.PI*(lastPoint.x/stroke[0]?.x);
-		rotY = Math.PI*(lastPoint.y/stroke[0]?.y);
+		let rise = currentPoint.y - stroke[0]?.y;
+		let run =  currentPoint.x - stroke[0]?.x;
 
+		// console.log(run, rise, (rise/run));
+		console.log(run);
+
+
+		// Draw Grid lines
 		ctx.beginPath();
 		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
+		ctx.lineTo(currentPoint.x, stroke[0]?.y);
+		ctx.lineTo(currentPoint.x, currentPoint.y);
+		ctx.closePath();
+		ctx.stroke();
+
+		
+		ctx.beginPath();
+		ctx.moveTo(
+			stroke[0]?.x, 
+			stroke[0]?.y
+			);
+		ctx.lineTo(
+			stroke[0]?.x + 10, 
+			stroke[0]?.y + 10
+			);
+		ctx.closePath();
+		ctx.stroke();
+
+		// Get Rect!!
+		ctx.beginPath();
+		ctx.moveTo(
+			stroke[0]?.x, 
+			stroke[0]?.y + iSize/2
+			);
+		ctx.lineTo(
+			stroke[0]?.x + iSize/2, 
+			stroke[0]?.y
+			);
+		ctx.lineTo(
+			stroke[0]?.x, 
+			stroke[0]?.y - iSize/2
+			);
+		ctx.lineTo(
+			stroke[0]?.x - iSize/2, 
+			stroke[0]?.y
+			);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.beginPath();
+		// ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
 		// ctx.moveTo(stroke[0]?.x-iSize/2 + rotX, stroke[0]?.y + rotY);
-		ctx.lineTo(stroke[0]?.x, stroke[0]?.y + iSize/2);
+		// ctx.lineTo(stroke[0]?.x + rotX, stroke[0]?.y + iSize/2);
 		// ctx.lineTo(stroke[0]?.x + iSize/2, stroke[0]?.y);
 		// ctx.lineTo(stroke[0]?.x, stroke[0]?.y - iSize/2);
 		ctx.closePath();
