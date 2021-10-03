@@ -92,7 +92,6 @@
 		// console.log(run, rise, (rise/run));
 		console.log(run);
 
-
 		// Draw Grid lines
 		ctx.beginPath();
 		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
@@ -101,15 +100,14 @@
 		ctx.closePath();
 		ctx.stroke();
 
-		
 		ctx.beginPath();
 		ctx.moveTo(
-			stroke[0]?.x, 
-			stroke[0]?.y
+			stroke[0]?.x - (10 + Math.cos(rise/run)), 
+			stroke[0]?.y - (10 + Math.sin(rise/run))
 			);
 		ctx.lineTo(
-			stroke[0]?.x + 10, 
-			stroke[0]?.y + 10
+			stroke[0]?.x + (10), 
+			stroke[0]?.y + (10)
 			);
 		ctx.closePath();
 		ctx.stroke();
