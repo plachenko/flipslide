@@ -1,7 +1,9 @@
 <svelte:options accessors />
 <script lang="ts">
 	import { onMount } from "svelte";
+import { compute_slots } from "svelte/internal";
 	import Point from './classes/Point.js';
+	import * as FSMath from './classes/FSMath.js'
 	
 	let canvas;
 	let ctx;
@@ -25,17 +27,54 @@
 	$: currentPoint && handlePointChange();
 
 	onMount(()=>{
-		// set the canvas dimensions
-		canvas.width = width || window.innerWidth;
-		canvas.height = height || window.innerHeight;
-		ctx = canvas.getContext('2d');
+		// On Mount function. When the component appears do this immediately.
+		setCanvas();
+		// tick();
+		drawRect(new Point(220, 220), 100, 45);
 	});
 
-	function lerp(v0, v1, t){
-		return (1-t)*v0+(t*v1);
+	function tick(){
+		// Animates a frame.
+		let angle = 0;
+		let i = 0;
+
+		// requestAnimationFrame(tick);
+
+		/*
+		setInterval(()=>{
+			angle = Math.PI * i;
+			clear();
+			drawRect(new Point(200, 200), 50, angle);
+			i+=.1;
+		}, 100);
+		*/
+	}
+
+	function setCanvas(width = window.innerWidth, height = window.innerHeight){
+		// Sets the canvas dimensions
+
+		canvas.width = width;
+		canvas.height = height;
+		ctx = canvas.getContext('2d');
+	}
+
+	
+	function draw(pt, i = 0){
+		
+		// Draw to Point.
+		console.log('drawing.', i, pt);
+
+		// Draw it again
+		if(i){
+			draw(pt, --i);
+		}
+
+		return;
 	}
 
 	function drawBetween(pt1, pt2){
+		// Draws between two points
+
 		let maxDiff = 0;
 
 		let xDiff = pt2.x - pt1.x;
@@ -48,19 +87,61 @@
 		}
 
 		for(let diff = 0; diff <= maxDiff; diff++){
-			let _x = lerp(pt1.x, pt2.x, diff/maxDiff);
-			let _y = lerp(pt1.y, pt2.y, diff/maxDiff);
+			let _x = FSMath.lerp(pt1.x, pt2.x, diff/maxDiff);
+			let _y = FSMath.lerp(pt1.y, pt2.y, diff/maxDiff);
 
 			// TODO: Clean this
 			const pt = new Point(_x, _y);
-			pt.pressure = lerp(pt1.pressure, pt2.pressure, diff/maxDiff);
-			pt.size = lerp(pt1.size, pt2.size, diff/maxDiff);
-			pt.dx = lerp(pt1.dx, pt2.dx, diff/maxDiff)/iSize;
-			pt.dy = lerp(pt1.dy, pt2.dy, diff/maxDiff)/iSize;
+			pt.pressure = FSMath.lerp(pt1.pressure, pt2.pressure, diff/maxDiff);
+			pt.size = FSMath.lerp(pt1.size, pt2.size, diff/maxDiff);
+			pt.dx = FSMath.lerp(pt1.dx, pt2.dx, diff/maxDiff)/iSize;
+			pt.dy = FSMath.lerp(pt1.dy, pt2.dy, diff/maxDiff)/iSize;
 
 			drawPoint(pt);
 		}
 	}
+
+
+	function rotatePoint(pt: Point, angle = 0, piv: Point = new Point(0, 0)){
+		let s = Math.sin(angle);
+		let c = Math.cos(angle);
+
+		pt.x -= piv.x;
+		pt.y -= piv.y;
+
+		let _x = pt.x * c - pt.y * s;
+		let _y = pt.x * s + pt.y * c;
+		
+		pt.x = _x + piv.x;
+		pt.y = _y + piv.y;
+
+		return new Point(pt.x, pt.y);
+	}
+
+	
+
+	function drawRect(pt: Point, size, angle = 0){
+		// let offset = new Point(pt.x - (size/2), pt.y - (size/2));
+		// let _pt = rotatePoint(pt, angle, );
+		// console.log(angle)
+		// let p1 = rotatePoint(pt, angle, offset);
+		// let p2 = rotatePoint(new Point(pt.x, pt.y+size), angle, offset);
+		// let p2 = pt;
+		// let x = pt.x - (size/2);
+		// let y = pt.y - (size/2);
+
+
+		ctx.fillRect(pt.x-5, pt.y-5, 10, 10);
+		
+		// ctx.beginPath();
+		// ctx.moveTo(p1.x, p1.y);
+		// ctx.lineTo(p2.x, p2.y);
+		// ctx.lineTo(x + size, y + size);
+		// ctx.lineTo(x + size, y);
+		// ctx.closePath();
+		// ctx.stroke();
+	}
+
 
 	function handlePointChange(){
 		clear();
@@ -86,29 +167,24 @@
 		ctx.closePath();
 		ctx.stroke();
 
-		let rise = currentPoint.y - stroke[0]?.y;
-		let run =  currentPoint.x - stroke[0]?.x;
+		let x1 = stroke[0]?.x - 10;
+		let x2 = x1 + 20;
 
-		// console.log(run, rise, (rise/run));
-		console.log(run);
+		let y1 = stroke[0]?.y - 10;
+		let y2 = y1 + 20;
+
+		// let p1 = rotatePoint(x1, y1, angle);
+		// let p2 = rotatePoint(x2, y2, angle);
+
+		if(stroke[0]){
+			drawRect(stroke[0], FSMath.setAngleProps(stroke[0]?.x, lastPoint.x).hyp, 0);
+		}
 
 		// Draw Grid lines
 		ctx.beginPath();
 		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
 		ctx.lineTo(currentPoint.x, stroke[0]?.y);
 		ctx.lineTo(currentPoint.x, currentPoint.y);
-		ctx.closePath();
-		ctx.stroke();
-
-		ctx.beginPath();
-		ctx.moveTo(
-			stroke[0]?.x - (10 + Math.cos(rise/run)), 
-			stroke[0]?.y - (10 + Math.sin(rise/run))
-			);
-		ctx.lineTo(
-			stroke[0]?.x + (10), 
-			stroke[0]?.y + (10)
-			);
 		ctx.closePath();
 		ctx.stroke();
 

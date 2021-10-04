@@ -5,7 +5,20 @@ export default class Stroke{
 		this.pointArray = ptArray;
 	}
 
-	addPoint(pt){
-		this.pointArray.push(pt);
+	add(point, pos = this.pointArray.length){
+		// add points to a position in stroke array
+		const ptArray = this.pointArray;
+
+		if(ptArray[pos]){
+			ptArray.slice(pos, 0);
+		}
+
+		// this.pointArray.push(pt);
 	}
+
+	rem(){
+		this.pointArray.s
+
+	}
+
 }

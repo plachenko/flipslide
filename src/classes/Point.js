@@ -1,15 +1,14 @@
 export default class Point{
-	points = [];
-	x = 0;
-	y = 0;
-	size = 0;
-
+	position = [];
+	
+	size = 1;
 	dx = 0;
 	dy = 0;
 	pressure = 1;
+	angle = 0;
 
 	constructor(...pts){
-		this.points = [...pts];
+		this.position = [...pts];
 		this.x = pts[0]
 		this.y = pts[1]
 		
@@ -35,6 +34,7 @@ export default class Point{
 		const y = this.y - pt.y;
 	}
 
+	
 	snap(val, grid){
 		//snap current value to snapamt
 		const num = grid * Math.round(val/grid);
