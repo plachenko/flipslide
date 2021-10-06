@@ -1,41 +1,37 @@
 export default class Point{
-	position = [];
-	
-	size = 1;
-	dx = 0;
-	dy = 0;
-	pressure = 1;
-	angle = 0;
 
-	constructor(...pts){
-		this.position = [...pts];
-		this.x = pts[0]
-		this.y = pts[1]
-		
-		// console.log('pressure',this.pressure);
+	size = 10;
+	angle = 0;
+	delta = [0, 0];
+	pressure = 1;
+
+	x = 0; 
+	y = 0;
+
+	constructor(x = 0, y = 0, options){
+		this.x = x;
+		this.y = y;
+
+		if(options){
+			this.delta = options.delta;
+			this.angle = options.angle;
+			this.size = options.size;
+		}
 
 		return;
 	}
 
-	offset(pts){
-		pts[0] = this.x + pts[0];
-		pts[1] = this.y + pts[1];
+	offset(_x = 0, _y = 0, _options){
+		const x = this.x + _x;
+		const y = this.y + _y; 
 
-		let pt = new Point(pts);
-		pt.dx = this.dx;
-		pt.dy = this.dy;
-		pt.pressure = this.pressure;
+		let pt = new Point(x, y, _options);
 		
 		return pt;
 	}
 
-	distance(pt){
-		const x = this.x - pt.x;
-		const y = this.y - pt.y;
-	}
-
-	
 	snap(val, grid){
+		// TODO: Move out of point.
 		//snap current value to snapamt
 		const num = grid * Math.round(val/grid);
 		const ret = val-num < 2 ? num : lSize; 

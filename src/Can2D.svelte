@@ -24,30 +24,30 @@ import { compute_slots } from "svelte/internal";
 	let frameIdx = 0;
 	let frameLimit = 100;
 
+	let tickTime = 1;
+	let tickInt = 0;
+
 	$: currentPoint && handlePointChange();
 
 	onMount(()=>{
 		// On Mount function. When the component appears do this immediately.
+		let rot = rotatePoint(new Point(0, 0), 90);
+		console.log(rot.x, rot.y);
+
 		setCanvas();
-		// tick();
-		drawRect(new Point(220, 220), 100, 45);
+
+		tick();
 	});
 
 	function tick(){
 		// Animates a frame.
-		let angle = 0;
-		let i = 0;
 
-		// requestAnimationFrame(tick);
-
-		/*
-		setInterval(()=>{
-			angle = Math.PI * i;
-			clear();
-			drawRect(new Point(200, 200), 50, angle);
-			i+=.1;
-		}, 100);
-		*/
+		setTimeout(()=>{
+			/* clear(); */
+			/* draw(new Point(canvas.width/2, canvas.height/2)); */
+			tickInt++;
+			requestAnimationFrame(tick);
+		}, tickTime);
 	}
 
 	function setCanvas(width = window.innerWidth, height = window.innerHeight){
@@ -59,14 +59,21 @@ import { compute_slots } from "svelte/internal";
 	}
 
 	
-	function draw(pt, i = 0){
+	function draw(pt = new Point(100, 100), i = 0){
 		
 		// Draw to Point.
-		console.log('drawing.', i, pt);
+		/* let pt2 = pt.offset(5, -5) */
+		/* let pt3 = rotatePoint(pt2, tickInt/100) */
+
+		/* ctx.beginPath(pt.x, pt.y); */
+		/* ctx.moveTo(pt.x, pt.y); */
+		/* ctx.lineTo(pt3.x, pt3.y); */
+		/* ctx.closePath(); */
+		/* ctx.stroke(); */
 
 		// Draw it again
 		if(i){
-			draw(pt, --i);
+			/* draw(pt, --i); */
 		}
 
 		return;
@@ -102,18 +109,20 @@ import { compute_slots } from "svelte/internal";
 	}
 
 
-	function rotatePoint(pt: Point, angle = 0, piv: Point = new Point(0, 0)){
+	function rotatePoint(pt: Point, angle = 0){
 		let s = Math.sin(angle);
 		let c = Math.cos(angle);
 
-		pt.x -= piv.x;
-		pt.y -= piv.y;
+		/* pt.x -= piv.x; */
+		/* pt.y -= piv.y; */
 
-		let _x = pt.x * c - pt.y * s;
-		let _y = pt.x * s + pt.y * c;
+		let _x = (pt.x * c) - (pt.y * s);
+		let _y = (pt.y * s) + (pt.x * c);
 		
-		pt.x = _x + piv.x;
-		pt.y = _y + piv.y;
+		pt.x = _x;
+		pt.y = _y;
+		/* pt.x = _x + piv.x; */
+		/* pt.y = _y + piv.y; */
 
 		return new Point(pt.x, pt.y);
 	}
@@ -131,7 +140,7 @@ import { compute_slots } from "svelte/internal";
 		// let y = pt.y - (size/2);
 
 
-		ctx.fillRect(pt.x-5, pt.y-5, 10, 10);
+		ctx.fillRect(pt.x, pt.y, 10, 10);
 		
 		// ctx.beginPath();
 		// ctx.moveTo(p1.x, p1.y);

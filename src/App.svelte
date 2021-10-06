@@ -14,7 +14,6 @@
 	// Handle a menu Event.
 	function menuEvt(e){
 		const evt = e.detail;
-		console.log(evt);
 
 		// Handle clear
 		layers[curLayer].clear();
