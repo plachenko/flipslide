@@ -33,6 +33,7 @@
 
 	// Done Capturing stroke.
 	function handleCapDoneEvt(){
+		layers[0].clear();
 		layers[0].endStroke();
 	}
 

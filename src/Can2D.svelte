@@ -38,10 +38,6 @@
 
 		let rot = rotatePoint(new Point(0, 0), new Point(9, 9), 90);
 
-		// console.log(ctx.strokeStyle, col);
-		
-		// drawBetween([...pts]);
-
 		tick();
 	});
 
@@ -64,15 +60,41 @@
 		ctx = canvas.getContext('2d');
 	}
 
+	function handlePointChange(){
+		// called whenever a pointer event change is handled.
+		
+		clear();
+		let props;
+		
+		if(!lastPoint){
+			lastPoint = currentPoint;
+		}
+
+		stroke.push(currentPoint);
+		props = FSMath.setAngleProps(stroke[0], currentPoint);
+
+		drawBetween([stroke[0], currentPoint]);
+		drawRect(stroke[0], props.hyp)
+
+		lastPoint = currentPoint
+		
+		/*
+		if(frameIdx < frameLimit){
+			frameIdx++;
+		}else{
+			frameIdx = 0;
+		}
+		*/
+	}
+
 	function drawBetween(pts, resolution = 1, connected = false){
 		let idx = pts.length;
-		console.log(resolution);
 
 		ctx.beginPath();
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
 
 		while(0 < idx){
-			const i = pts.length - idx;
+			const i = pts.length - (idx - 1);
 			ctx.lineTo(pts[i]?.x, pts[i]?.y);
 			if(i == 0 && !connected){
 				ctx.closePath();
@@ -167,130 +189,20 @@
 		// let p1 = rotatePoint(pt, angle, offset);
 		// let p2 = rotatePoint(new Point(pt.x, pt.y+size), angle, offset);
 		// let p2 = pt;
-		// let x = pt.x - (size/2);
-		// let y = pt.y - (size/2);
+		const pts = [];
+		let x = pt.x;
+		let y = pt.y;
+		let i = 4*2;
 
+		while (i){
+			x = Math.sin(i*4 / (4)) * size + pt.x;
+			y = Math.cos(i*4 / (4)) * size + pt.y;
 
-		ctx.fillRect(pt.x, pt.y, 10, 10);
-		
-		// ctx.beginPath();
-		// ctx.moveTo(p1.x, p1.y);
-		// ctx.lineTo(p2.x, p2.y);
-		// ctx.lineTo(x + size, y + size);
-		// ctx.lineTo(x + size, y);
-		// ctx.closePath();
-		// ctx.stroke();
-	}
-
-
-	function handlePointChange(){
-		clear();
-		// TODO: CLEAN THIS
-
-		let rotX;
-		let rotY;
-		let props;
-
-		pts = [];
-
-		if(stroke.length){
-			props = FSMath.setAngleProps(stroke[0], currentPoint);
-			const amt = Math.sign(props.run) * 1/Math.abs(props.run)+1;
-			const radius = 30;
-			if(props){
-				for(let i = 0; i < Math.abs(props.run); i++){
-					pts.push(new Point(
-						Math.cos(i / amt) * radius + currentPoint.x,
-						Math.sin(i / amt) * radius + currentPoint.y
-						))
-				}
-				drawBetween(pts, 1);
-			}
-		}
-		
-		let pt = new Point(currentPoint.x+iSize/2, currentPoint.y+iSize/2);
-		pt.dy = currentPoint.dy;
-		pt.dx = currentPoint.dx;
-		pt.size = currentPoint.size;
-		pt.pressure = currentPoint.pressure;
-
-		if(!lastPoint){
-			lastPoint = pt;
+			pts.push(new Point(x, y));
+			i--;
 		}
 
-		// Draw slope line...
-		ctx.beginPath();
-		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
-		ctx.lineTo(lastPoint.x, lastPoint.y);
-		ctx.closePath();
-		ctx.stroke();
-
-		let x1 = stroke[0]?.x - 10;
-		let x2 = x1 + 20;
-
-		let y1 = stroke[0]?.y - 10;
-		let y2 = y1 + 20;
-
-		// let p1 = rotatePoint(x1, y1, angle);
-		// let p2 = rotatePoint(x2, y2, angle);
-
-		if(stroke[0]){
-			drawRect(stroke[0], FSMath.setAngleProps(stroke[0]?.x, lastPoint.x).hyp, 0);
-		}
-
-		// Draw Grid lines
-		ctx.beginPath();
-		ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
-		ctx.lineTo(currentPoint.x, stroke[0]?.y);
-		ctx.lineTo(currentPoint.x, currentPoint.y);
-		ctx.closePath();
-		ctx.stroke();
-
-		// Get Rect!!
-		ctx.beginPath();
-		ctx.moveTo(
-			stroke[0]?.x, 
-			stroke[0]?.y + iSize/2
-			);
-		ctx.lineTo(
-			stroke[0]?.x + iSize/2, 
-			stroke[0]?.y
-			);
-		ctx.lineTo(
-			stroke[0]?.x, 
-			stroke[0]?.y - iSize/2
-			);
-		ctx.lineTo(
-			stroke[0]?.x - iSize/2, 
-			stroke[0]?.y
-			);
-		ctx.closePath();
-		ctx.stroke();
-
-		ctx.beginPath();
-		// ctx.moveTo(stroke[0]?.x, stroke[0]?.y);
-		// ctx.moveTo(stroke[0]?.x-iSize/2 + rotX, stroke[0]?.y + rotY);
-		// ctx.lineTo(stroke[0]?.x + rotX, stroke[0]?.y + iSize/2);
-		// ctx.lineTo(stroke[0]?.x + iSize/2, stroke[0]?.y);
-		// ctx.lineTo(stroke[0]?.x, stroke[0]?.y - iSize/2);
-		ctx.closePath();
-		ctx.stroke();
-
-		stroke.push(currentPoint);
-
-		// drawBetween(pt, lastPoint);
-
-		lastPoint = currentPoint;
-		
-		/*
-		if(frameIdx < frameLimit){
-			frameIdx++;
-		}else{
-			frameIdx = 0;
-		}
-		*/
-
-		/* endStroke(); */
+		drawBetween(pts);
 	}
 
 	export function endStroke(){
