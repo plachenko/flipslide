@@ -1,9 +1,10 @@
 <svelte:options accessors />
 <script lang="ts">
 	import { onMount } from "svelte";
-import { compute_slots } from "svelte/internal";
 	import Point from './classes/Point.js';
 	import * as FSMath from './classes/FSMath.js'
+
+	import { Color } from './classes/Color.js';
 	
 	let canvas;
 	let ctx;
@@ -27,14 +28,19 @@ import { compute_slots } from "svelte/internal";
 	let tickTime = 1;
 	let tickInt = 0;
 
+	let pts = [];
+
 	$: currentPoint && handlePointChange();
 
 	onMount(()=>{
 		// On Mount function. When the component appears do this immediately.
-		let rot = rotatePoint(new Point(0, 0), 90);
-		console.log(rot.x, rot.y);
-
 		setCanvas();
+
+		let rot = rotatePoint(new Point(0, 0), new Point(9, 9), 90);
+
+		// console.log(ctx.strokeStyle, col);
+		
+		// drawBetween([...pts]);
 
 		tick();
 	});
@@ -58,7 +64,30 @@ import { compute_slots } from "svelte/internal";
 		ctx = canvas.getContext('2d');
 	}
 
-	
+	function drawBetween(pts, resolution = 1, connected = false){
+		let idx = pts.length;
+		console.log(resolution);
+
+		ctx.beginPath();
+		ctx.moveTo(pts[0]?.x, pts[0]?.y);
+
+		while(0 < idx){
+			const i = pts.length - idx;
+			ctx.lineTo(pts[i]?.x, pts[i]?.y);
+			if(i == 0 && !connected){
+				ctx.closePath();
+			}
+			idx -= Math.abs(resolution) + 1;
+		}
+
+		if(connected){
+			ctx.closePath();
+		}
+
+		// ctx.fill();
+		ctx.stroke();
+	}
+
 	function draw(pt = new Point(100, 100), i = 0){
 		
 		// Draw to Point.
@@ -79,7 +108,7 @@ import { compute_slots } from "svelte/internal";
 		return;
 	}
 
-	function drawBetween(pt1, pt2){
+	function drawLerp(pt1, pt2){
 		// Draws between two points
 
 		let maxDiff = 0;
@@ -109,18 +138,20 @@ import { compute_slots } from "svelte/internal";
 	}
 
 
-	function rotatePoint(pt: Point, angle = 0){
-		let s = Math.sin(angle);
-		let c = Math.cos(angle);
+	function rotatePoint(pt: Point, pt2: Point, angle = 0){
+		let props = FSMath.getAngle(pt, pt2);
+		console.log(props)
+		// let s = Math.sin(angle);
+		// let c = Math.cos(angle);
 
 		/* pt.x -= piv.x; */
 		/* pt.y -= piv.y; */
 
-		let _x = (pt.x * c) - (pt.y * s);
-		let _y = (pt.y * s) + (pt.x * c);
+		// let _x = (pt.x * c) - (pt.y * s);
+		// let _y = (pt.y * s) + (pt.x * c);
 		
-		pt.x = _x;
-		pt.y = _y;
+		// pt.x = _x;
+		// pt.y = _y;
 		/* pt.x = _x + piv.x; */
 		/* pt.y = _y + piv.y; */
 
@@ -158,6 +189,24 @@ import { compute_slots } from "svelte/internal";
 
 		let rotX;
 		let rotY;
+		let props;
+
+		pts = [];
+
+		if(stroke.length){
+			props = FSMath.setAngleProps(stroke[0], currentPoint);
+			const amt = Math.sign(props.run) * 1/Math.abs(props.run)+1;
+			const radius = 30;
+			if(props){
+				for(let i = 0; i < Math.abs(props.run); i++){
+					pts.push(new Point(
+						Math.cos(i / amt) * radius + currentPoint.x,
+						Math.sin(i / amt) * radius + currentPoint.y
+						))
+				}
+				drawBetween(pts, 1);
+			}
+		}
 		
 		let pt = new Point(currentPoint.x+iSize/2, currentPoint.y+iSize/2);
 		pt.dy = currentPoint.dy;
