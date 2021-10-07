@@ -36,8 +36,8 @@
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
 
-		let rot = rotatePoint(new Point(0, 0), new Point(9, 9), 90);
-
+		let pt = new Point(canvas.width/2, canvas.height/2)
+		drawRect(pt, 100, 20);
 		tick();
 	});
 
@@ -94,12 +94,12 @@
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
 
 		while(0 < idx){
-			const i = pts.length - (idx - 1);
+			const i = pts.length - idx;
 			ctx.lineTo(pts[i]?.x, pts[i]?.y);
 			if(i == 0 && !connected){
 				ctx.closePath();
 			}
-			idx -= Math.abs(resolution) + 1;
+			idx -= Math.abs(resolution);
 		}
 
 		if(connected){
@@ -160,20 +160,19 @@
 	}
 
 
-	function rotatePoint(pt: Point, pt2: Point, angle = 0){
-		let props = FSMath.getAngle(pt, pt2);
-		console.log(props)
-		// let s = Math.sin(angle);
-		// let c = Math.cos(angle);
+	function rotatePoint(pt: Point, angle = 0){
+		/* console.log(props) */
+		let s = Math.sin(angle);
+		let c = Math.cos(angle);
 
 		/* pt.x -= piv.x; */
 		/* pt.y -= piv.y; */
 
-		// let _x = (pt.x * c) - (pt.y * s);
-		// let _y = (pt.y * s) + (pt.x * c);
+		let _x = (pt.x * c) - (pt.y * s);
+		let _y = (pt.y * s) + (pt.x * c);
 		
-		// pt.x = _x;
-		// pt.y = _y;
+		pt.x = _x;
+		pt.y = _y;
 		/* pt.x = _x + piv.x; */
 		/* pt.y = _y + piv.y; */
 
@@ -183,26 +182,33 @@
 	
 
 	function drawRect(pt: Point, size, angle = 0){
-		// let offset = new Point(pt.x - (size/2), pt.y - (size/2));
-		// let _pt = rotatePoint(pt, angle, );
-		// console.log(angle)
-		// let p1 = rotatePoint(pt, angle, offset);
-		// let p2 = rotatePoint(new Point(pt.x, pt.y+size), angle, offset);
-		// let p2 = pt;
+		// Draw a rectangle.
+
 		const pts = [];
-		let x = pt.x;
-		let y = pt.y;
-		let i = 4*2;
+		let i = 4;
+		let ptSize = 4;
+
+		// Draw the pivot point.
+		ctx.fillRect(
+			pt.x - ptSize / 2, 
+			pt.y - ptSize / 2, 
+			ptSize, 
+			ptSize
+		);
+
+		/* pts[0] = new Point(pt.x+size, pt.y-size); */
+		/* pts[1] = new Point(pt.x+size, pt.y+size); */
+		/* pts[2] = new Point(pt.x-size, pt.y+size); */
+		/* pts[3] = new Point(pt.x-size, pt.y-size); */
 
 		while (i){
-			x = Math.sin(i*4 / (4)) * size + pt.x;
-			y = Math.cos(i*4 / (4)) * size + pt.y;
+			const _pt = rotatePoint(pt, angle);
 
-			pts.push(new Point(x, y));
+			pts.push(_pt);
 			i--;
 		}
 
-		drawBetween(pts);
+		drawBetween(pts, 1, true);
 	}
 
 	export function endStroke(){
