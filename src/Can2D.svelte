@@ -25,10 +25,11 @@
 	let frameIdx = 0;
 	let frameLimit = 100;
 
-	let tickTime = 1000;
+	let tickTime = 10;
 	let tickInt = 0;
 
 	let pts = [];
+
 
 	$: currentPoint && handlePointChange();
 
@@ -36,39 +37,59 @@
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
 
+
 		tick();
-
-
-
-		// for(let i = 0; i<400*6.3; i+=1){
-		// 	let x = Math.sin(i/100)*(10*i/100)+canvas.width/2;
-		// 	let y = Math.cos(i/100)*(10*i/100)+canvas.height/2;
-		// 	ctx.fillRect(x, y, 2, 2);
-		// }
 		
 	});
+
+	function rotTest2(ang = 0){
+		clear();
+
+		let pt = new Point(canvas.width/2-200, canvas.height/2);
+		let pt2 = pt.offset(100, -100);
+		let pt3 = pt.offset(-100, -100);
+		let pt4 = pt.offset(-100, 100);
+		let pt5 = pt.offset(100, 100);
+
+		let angle = ang/100;
+
+		rotatePoint(pt2, angle, pt);
+		rotatePoint(pt3, angle, pt);
+		rotatePoint(pt4, angle, pt);
+		rotatePoint(pt5, angle, pt);
+
+		drawBetween([pt2, pt3, pt4, pt5],1, true);
+	}
+
+	function rotTest(ang = 0){
+		/* clear(); */
+
+		let pt = new Point(canvas.width/2, canvas.height/2);
+		let pt2 = pt.offset(0, -100);
+		let angle = ang
+
+		let s = Math.sin(angle);
+		let c = Math.cos(angle);
+
+		pt2.x -= pt.x;
+		pt2.y -= pt.y;
+
+		let x = pt2.x * c - pt2.y  * s;
+		let y = pt2.x * s + pt2.y  * c;
+
+		pt2.x = x + pt.x;
+		pt2.y = y + pt.y;
+
+		drawBetween([pt,pt2]);
+	}
 
 	function tick(){
 		// Animates a frame.
 
+		rotTest2(tickInt);
+		/* console.log('test') */
+
 		setTimeout(()=>{
-			// clear();
-			/* draw(new Point(canvas.width/2, canvas.height/2)); */
-			// drawBetween([pt, pt2]);
-			// let rpt = rotatePoint(pt2, tickInt/100, pt);
-			// drawBetween([pt, rpt]);
-
-			
-			let pt = new Point(canvas.width/2, canvas.height/2);
-			let pt2 = pt.offset(0, -100);
-			drawBetween([pt, pt2]);
-
-
-			// let pt3 = rotatePoint(pt2, tickInt/10, pt);
-			// drawBetween([pt, pt3]);
-
-			drawRect(pt, 20, tickInt/10);
-
 			tickInt++;
 			requestAnimationFrame(tick);
 		}, tickTime);
@@ -96,7 +117,7 @@
 		props = FSMath.setAngleProps(stroke[0], currentPoint);
 
 		drawBetween([stroke[0], currentPoint]);
-		drawRect(stroke[0], props.hyp)
+		/* drawRect(stroke[0], props.hyp) */
 
 		lastPoint = currentPoint
 		
@@ -132,26 +153,6 @@
 		ctx.stroke();
 	}
 
-	function draw(pt = new Point(100, 100), i = 0){
-		
-		// Draw to Point.
-		/* let pt2 = pt.offset(5, -5) */
-		/* let pt3 = rotatePoint(pt2, tickInt/100) */
-
-		/* ctx.beginPath(pt.x, pt.y); */
-		/* ctx.moveTo(pt.x, pt.y); */
-		/* ctx.lineTo(pt3.x, pt3.y); */
-		/* ctx.closePath(); */
-		/* ctx.stroke(); */
-
-		// Draw it again
-		if(i){
-			/* draw(pt, --i); */
-		}
-
-		return;
-	}
-
 	function drawLerp(pt1, pt2){
 		// Draws between two points
 
@@ -182,30 +183,20 @@
 	}
 
 
-	function rotatePoint(pt: Point, angle = 0, piv = new Point()){
-
-		// let angle = FSMath.toRad(_angle);
+	function rotatePoint(pt: Point, _angle = 0, piv = new Point()){
+		let angle = _angle;
 
 		let s = Math.sin(angle);
 		let c = Math.cos(angle);
 
-		// console.log(angle, s, c)
-
 		pt.x -= piv.x;
 		pt.y -= piv.y;
 
-		// let _x = (pt.x * c) - (pt.y * s);
-		// let _y = (pt.y * s) + (pt.x * c);
-		let _x = s * 100 + piv.x;
-		let _y = c * 100 + piv.y;
+		let _x = (pt.x * c) - (pt.y * s);
+		let _y = (pt.x * s) + (pt.y * c);
 		
-		// pt.x = _x + piv.x;
-		// pt.y = _y + piv.y;
-
-		pt.x = _x;
-		pt.y = _y;
-
-		return new Point(pt.x, pt.y);
+		pt.x = _x + piv.x;
+		pt.y = _y + piv.y;
 	}
 
 	
@@ -214,6 +205,7 @@
 		// Draw a rectangle.
 
 		const pts = [];
+		const pts2 = [];
 		let i = 4;
 		let ptSize = 4;
 
@@ -229,14 +221,7 @@
 		pts[1] = new Point(pt.x+size, pt.y+size);
 		pts[2] = new Point(pt.x-size, pt.y+size);
 		pts[3] = new Point(pt.x-size, pt.y-size);
-
-		pts.forEach((el, idx) => {
-			// console.log(idx, el.x, el.y)
-			pts[idx] = rotatePoint(el, angle, pt)
-			// console.log(idx, el.x, el.y)
-		});
-		// console.log(pts);
-
+		
 		drawBetween(pts, 1, true);
 	}
 
