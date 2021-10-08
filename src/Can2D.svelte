@@ -25,7 +25,7 @@
 	let frameIdx = 0;
 	let frameLimit = 100;
 
-	let tickTime = 1;
+	let tickTime = 40;
 	let tickInt = 0;
 
 	let pts = [];
@@ -36,8 +36,6 @@
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
 
-		let pt = new Point(canvas.width/2, canvas.height/2)
-		drawRect(pt, 100, 20);
 		tick();
 	});
 
@@ -47,6 +45,8 @@
 		setTimeout(()=>{
 			/* clear(); */
 			/* draw(new Point(canvas.width/2, canvas.height/2)); */
+			let pt = new Point(canvas.width/2, canvas.height/2)
+			drawRect(pt, 100, tickInt);
 			tickInt++;
 			requestAnimationFrame(tick);
 		}, tickTime);
@@ -160,21 +160,20 @@
 	}
 
 
-	function rotatePoint(pt: Point, angle = 0){
+	function rotatePoint(pt: Point, angle = 0, piv = new Point()){
 		/* console.log(props) */
+
 		let s = Math.sin(angle);
 		let c = Math.cos(angle);
 
-		/* pt.x -= piv.x; */
-		/* pt.y -= piv.y; */
+		pt.x -= piv.x;
+		pt.y -= piv.y;
 
 		let _x = (pt.x * c) - (pt.y * s);
 		let _y = (pt.y * s) + (pt.x * c);
 		
-		pt.x = _x;
-		pt.y = _y;
-		/* pt.x = _x + piv.x; */
-		/* pt.y = _y + piv.y; */
+		pt.x = _x + piv.x;
+		pt.y = _y + piv.y;
 
 		return new Point(pt.x, pt.y);
 	}
@@ -196,13 +195,15 @@
 			ptSize
 		);
 
-		/* pts[0] = new Point(pt.x+size, pt.y-size); */
-		/* pts[1] = new Point(pt.x+size, pt.y+size); */
-		/* pts[2] = new Point(pt.x-size, pt.y+size); */
-		/* pts[3] = new Point(pt.x-size, pt.y-size); */
+		if(!pts.length){
+			pts[0] = new Point(pt.x+size, pt.y-size);
+			pts[1] = new Point(pt.x+size, pt.y+size);
+			pts[2] = new Point(pt.x-size, pt.y+size);
+			pts[3] = new Point(pt.x-size, pt.y-size);
+		}
 
 		while (i){
-			const _pt = rotatePoint(pt, angle);
+			const _pt = rotatePoint(pts[i-1], angle, pt);
 
 			pts.push(_pt);
 			i--;
