@@ -37,9 +37,7 @@
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
 
-
-		tick();
-		
+		/* tick(); */
 	});
 
 	function rotTest2(ang = 0){
@@ -86,7 +84,6 @@
 	function tick(){
 		// Animates a frame.
 
-		rotTest2(tickInt);
 		/* console.log('test') */
 
 		setTimeout(()=>{
@@ -117,7 +114,10 @@
 		props = FSMath.setAngleProps(stroke[0], currentPoint);
 
 		drawBetween([stroke[0], currentPoint]);
-		/* drawRect(stroke[0], props.hyp) */
+
+		let angle = props.angle;
+		/* let angle = props.angle + FSMath.toRad(45); */
+		drawRect(stroke[0], props.hyp, angle);
 
 		lastPoint = currentPoint
 		
@@ -199,10 +199,11 @@
 		pt.y = _y + piv.y;
 	}
 
-	
-
-	function drawRect(pt: Point, size, angle = 0){
+	function drawRect(pt: Point, size, _angle = 0){
 		// Draw a rectangle.
+
+		/* console.log(angle); */
+		let angle = FSMath.toDeg(_angle);
 
 		const pts = [];
 		const pts2 = [];
@@ -217,10 +218,15 @@
 			ptSize
 		);
 
-		pts[0] = new Point(pt.x+size, pt.y-size);
-		pts[1] = new Point(pt.x+size, pt.y+size);
-		pts[2] = new Point(pt.x-size, pt.y+size);
-		pts[3] = new Point(pt.x-size, pt.y-size);
+		pts[0] = pt.offset(size, -size);
+		pts[1] = pt.offset(-size, -size);
+		pts[2] = pt.offset(-size, size);
+		pts[3] = pt.offset(size, size);
+
+		pts.forEach((el) => {
+			rotatePoint(el, angle, pt);
+		});
+
 		
 		drawBetween(pts, 1, true);
 	}
