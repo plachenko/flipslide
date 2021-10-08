@@ -25,7 +25,7 @@
 	let frameIdx = 0;
 	let frameLimit = 100;
 
-	let tickTime = 40;
+	let tickTime = 1000;
 	let tickInt = 0;
 
 	let pts = [];
@@ -37,16 +37,38 @@
 		setCanvas();
 
 		tick();
+
+
+
+		// for(let i = 0; i<400*6.3; i+=1){
+		// 	let x = Math.sin(i/100)*(10*i/100)+canvas.width/2;
+		// 	let y = Math.cos(i/100)*(10*i/100)+canvas.height/2;
+		// 	ctx.fillRect(x, y, 2, 2);
+		// }
+		
 	});
 
 	function tick(){
 		// Animates a frame.
 
 		setTimeout(()=>{
-			/* clear(); */
+			// clear();
 			/* draw(new Point(canvas.width/2, canvas.height/2)); */
-			let pt = new Point(canvas.width/2, canvas.height/2)
-			drawRect(pt, 100, tickInt);
+			// drawBetween([pt, pt2]);
+			// let rpt = rotatePoint(pt2, tickInt/100, pt);
+			// drawBetween([pt, rpt]);
+
+			
+			let pt = new Point(canvas.width/2, canvas.height/2);
+			let pt2 = pt.offset(0, -100);
+			drawBetween([pt, pt2]);
+
+
+			// let pt3 = rotatePoint(pt2, tickInt/10, pt);
+			// drawBetween([pt, pt3]);
+
+			drawRect(pt, 20, tickInt/10);
+
 			tickInt++;
 			requestAnimationFrame(tick);
 		}, tickTime);
@@ -161,19 +183,27 @@
 
 
 	function rotatePoint(pt: Point, angle = 0, piv = new Point()){
-		/* console.log(props) */
+
+		// let angle = FSMath.toRad(_angle);
 
 		let s = Math.sin(angle);
 		let c = Math.cos(angle);
 
+		// console.log(angle, s, c)
+
 		pt.x -= piv.x;
 		pt.y -= piv.y;
 
-		let _x = (pt.x * c) - (pt.y * s);
-		let _y = (pt.y * s) + (pt.x * c);
+		// let _x = (pt.x * c) - (pt.y * s);
+		// let _y = (pt.y * s) + (pt.x * c);
+		let _x = s * 100 + piv.x;
+		let _y = c * 100 + piv.y;
 		
-		pt.x = _x + piv.x;
-		pt.y = _y + piv.y;
+		// pt.x = _x + piv.x;
+		// pt.y = _y + piv.y;
+
+		pt.x = _x;
+		pt.y = _y;
 
 		return new Point(pt.x, pt.y);
 	}
@@ -195,19 +225,17 @@
 			ptSize
 		);
 
-		if(!pts.length){
-			pts[0] = new Point(pt.x+size, pt.y-size);
-			pts[1] = new Point(pt.x+size, pt.y+size);
-			pts[2] = new Point(pt.x-size, pt.y+size);
-			pts[3] = new Point(pt.x-size, pt.y-size);
-		}
+		pts[0] = new Point(pt.x+size, pt.y-size);
+		pts[1] = new Point(pt.x+size, pt.y+size);
+		pts[2] = new Point(pt.x-size, pt.y+size);
+		pts[3] = new Point(pt.x-size, pt.y-size);
 
-		while (i){
-			const _pt = rotatePoint(pts[i-1], angle, pt);
-
-			pts.push(_pt);
-			i--;
-		}
+		pts.forEach((el, idx) => {
+			// console.log(idx, el.x, el.y)
+			pts[idx] = rotatePoint(el, angle, pt)
+			// console.log(idx, el.x, el.y)
+		});
+		// console.log(pts);
 
 		drawBetween(pts, 1, true);
 	}
