@@ -45,7 +45,7 @@
 <style>
 #capture{
     touch-action: none;
-    z-index: 9998;
+    z-index: 9997;
     width: 100%;
     height: 100%;
     position: absolute;

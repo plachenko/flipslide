@@ -7,6 +7,9 @@
 	
 	let menu;
 	let slider;
+	let brushSize = 10;
+	let opacity = 1;
+
 	let layers = [
 		null
 	];
@@ -35,30 +38,43 @@
 	// Done Capturing stroke.
 	function handleCapDoneEvt(){
 		// layers[0].clear();
-		layers[0].endStroke();
+		layers[curLayer].endStroke();
 	}
 
 	// Handle cursor move...
 	function handleMoveEvt(e){
 	}
 
+	/* TODO Clean. */
+	function handleOpacity(e){
+		layers[curLayer].opacity = e.target.value;
+	}
+
+	function handleSize(e){
+		layers[curLayer].iSize = e.target.value/2;
+	}
+
+	function handleColor(e){
+		layers[curLayer].color = e.target.value;
+	}
+
 </script>
 
 <main>
-	<div id="brushSize">
-		<input orient="vertical" id="range" type="range" /> 
-		<div class="sliderContainer">
-		</div>
+	<div id="brushSize" class="menu vert">
+		<input on:change="{handleSize}" type="range" /> 
 	</div>
+	<div id="brushOpacity" class="menu vert">
+		<input min="0" max="1" step=".1" on:change="{handleOpacity}" type="range" /> 
+	</div>
+	<input on:change="{handleColor}" value="2" type="color" class="menu" id="color">
 	
-	<!--
 	<Capture 
 		on:capEvt={handleCapEvt}
 		on:mvEvt={handleMoveEvt}
 		on:capStart={handleCapStartEvt}
 		on:capDone={handleCapDoneEvt}
 		/>
-	-->
 	<!-- <Cursor bind:pos={{x: 0, y:0}} /> -->
 
 	{#each layers as layer}
@@ -74,26 +90,45 @@
 		width: 100%;
 		height: 100%;
 		}
-	#range{
-		background-color:#F00;
-		border: 1px solid;
-		transform: rotate(90deg);
-		}
-	#brushSize{
-		border-radius: 10px;
+	.menu{
+		z-index: 9999;
+	}
+
+	#color{
 		position: absolute;
-		background-color: #555;
-		height: 400px;
-		left: 20px;
-		width: 100px;
-		/* padding: 10px; */
+		bottom: 10px;
+	}
+
+	.vert input[type="range"]{
+		cursor: pointer;
+		width: 200px !important;
+		background-color:#333;
+		transform: rotate(90deg);
+		transform-origin: left top;
+		position: absolute;
+		left: 25px;
+		top: 0px;
+		}
+
+	.vert{
+		position: absolute;
+		height: 200px;
+		left: 10px;
 		box-sizing: border-box;
+		padding: 10px;
+	}
+
+	#brushOpacity{
+		top: 300px;
+	}
+	#brushSize{
+		width: 10px;
 		top: 10px;
 		}
+	/*
 	.sliderContainer{
 		border-radius: 10px;
 		box-sizing: border-box;
-		/* padding: 3px; */
 		background-color:#AAA;
 		width: 36px;
 		height: 100%;
@@ -116,4 +151,5 @@
 			z-index:9999;
 
 		}
+		*/
 </style>

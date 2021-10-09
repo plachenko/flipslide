@@ -4,14 +4,15 @@
 	import Point from './classes/Point.js';
 	import * as FSMath from './classes/FSMath.js'
 
-	import { Color } from './classes/Color.js';
+	import { Color } from './classes/threejs/Color.js';
 	
 	let canvas;
 	let ctx;
 
 	export let strokeArray = [];
-	export let iSize = 18;
+	export let iSize = 2;
 	export let color = "#000";
+	export let opacity = 1;
 
 	export let width = 0;
 	export let height = 0;
@@ -29,6 +30,7 @@
 	let tickInt = 0;
 
 	let pts = [];
+
 
 
 	$: currentPoint && handlePointChange();
@@ -88,7 +90,7 @@
 		}
 
 		currentPoint.angle = angle + FSMath.toRad(45);
-		currentPoint.size = s/3 + (currentPoint.pressure*4);
+		currentPoint.size = (iSize/3) + (s/3 + (currentPoint.pressure*4));
 		
 		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
 		drawLerp(currentPoint, lastPoint);
@@ -109,6 +111,9 @@
 
 		ctx.beginPath();
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
+		let col = new Color(color)
+		ctx.fillStyle = `rgba(${col.r*255}, ${col.g*255}, ${col.b*255}, ${opacity/2})`;
+		console.log(ctx.fillStyle);
 
 		while(0 < idx){
 			const i = pts.length - idx;
@@ -126,7 +131,7 @@
 		if(fill){
 			ctx.fill();
 		}
-		ctx.stroke();
+		/* ctx.stroke(); */
 	}
 
 	function drawLerp(pt1, pt2){
