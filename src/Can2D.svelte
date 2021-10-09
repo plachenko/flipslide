@@ -65,26 +65,25 @@
 
 	function handlePointChange(){
 		// called whenever a pointer event change is handled.
-		
 		clear();
-		let props;
 		
 		if(!lastPoint){
 			lastPoint = currentPoint;
 		}
 
-		stroke.push(currentPoint);
-		props = FSMath.setAngleProps(stroke[0], currentPoint);
-
-		drawBetween([stroke[0], currentPoint], 1, true);
-
 		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
-		let angle;
-		let delta_x = currentPoint.x - stroke[0].x;
-		let delta_y = currentPoint.y - stroke[0].y;
-		angle = Math.atan2(delta_y, delta_x);
+		// let delta_x = currentPoint.x - stroke[0].x;
+		// let delta_y = currentPoint.y - stroke[0].y;
 		
-		drawRect(stroke[0], props.hyp, angle+FSMath.toRad(45));
+		let delta_x = currentPoint.x - lastPoint.x;
+		let delta_y = currentPoint.y - lastPoint.y;
+		let angle = Math.atan2(delta_y, delta_x);
+
+		currentPoint.angle = angle + FSMath.toRad(45);
+		stroke.push(currentPoint);
+		
+		// drawRect(currentPoint, 10, currentPoint.angle);
+		drawLerp(currentPoint, lastPoint);
 
 		lastPoint = currentPoint
 		
@@ -97,7 +96,7 @@
 		*/
 	}
 
-	function drawBetween(pts, resolution = 1, connected = false){
+	function drawBetween(pts, resolution = 1, connected = false, fill = false){
 		let idx = pts.length;
 
 		ctx.beginPath();
@@ -116,7 +115,9 @@
 			ctx.closePath();
 		}
 
-		// ctx.fill();
+		if(fill){
+			ctx.fill();
+		}
 		ctx.stroke();
 	}
 
@@ -142,13 +143,13 @@
 			const pt = new Point(_x, _y);
 			pt.pressure = FSMath.lerp(pt1.pressure, pt2.pressure, diff/maxDiff);
 			pt.size = FSMath.lerp(pt1.size, pt2.size, diff/maxDiff);
-			pt.dx = FSMath.lerp(pt1.dx, pt2.dx, diff/maxDiff)/iSize;
-			pt.dy = FSMath.lerp(pt1.dy, pt2.dy, diff/maxDiff)/iSize;
+			pt.delta[0] = FSMath.lerp(pt1.delta[0], pt2.delta[0], diff/maxDiff)/iSize;
+			pt.delta[1] = FSMath.lerp(pt1.delta[1], pt2.delta[1], diff/maxDiff)/iSize;
+			pt.angle = FSMath.lerp(pt1.angle, pt2.angle, diff/maxDiff)/iSize;
 
 			drawPoint(pt);
 		}
 	}
-
 
 	function rotatePoint(pt: Point, _angle = 0, piv = new Point()){
 		let angle = _angle;
@@ -168,10 +169,6 @@
 
 	function drawRect(pt: Point, size, angle = 0){
 		// Draw a rectangle.
-
-		// let angle = FSMath.toRad(_angle/(Math.PI*2));
-		// let angle = _angle;
-		// console.log(angle);
 
 		const pts = [];
 		const pts2 = [];
@@ -196,7 +193,7 @@
 		});
 
 		
-		drawBetween(pts, 1, true);
+		drawBetween(pts, 1, true, true);
 	}
 
 	export function endStroke(){
@@ -221,8 +218,8 @@
 	function drawPoint(point: Point){
 		let size = iSize;
 
-		let dx = point.dx;
-		let dy = point.dy; 
+		let dx = point.delta[0];
+		let dy = point.delta[1]; 
 
 		let s;
 		
@@ -237,24 +234,21 @@
 		let y = point.y;
 			y -= size/2;
 		
+		// console.log(size, point.angle);
 		/* point.size = (size + dx); */
 		point.size = (size + s) * (point.pressure*2);
 
-		/* ctx.fillRect(x, y, point.size, point.size); */
-		ctx.beginPath();
-		ctx.moveTo(x-point.size/2, y);
-		ctx.lineTo(x, y+point.size/2);
-		ctx.lineTo(x+point.size/2, y);
-		ctx.lineTo(x, y-point.size/2);
-		ctx.fill();
-		ctx.closePath();
+		
+		drawRect(point, point.size, point.angle);
 
-		ctx.strokeStyle ="#F00";
-		ctx.beginPath();
-		ctx.moveTo(x, y);
-		ctx.lineTo(currentPoint.x, currentPoint.y);
-		ctx.stroke();
-		ctx.closePath();
+		/* ctx.fillRect(x, y, point.size, point.size); */
+
+		// ctx.strokeStyle ="#F00";
+		// ctx.beginPath();
+		// ctx.moveTo(x, y);
+		// ctx.lineTo(currentPoint.x, currentPoint.y);
+		// ctx.stroke();
+		// ctx.closePath();
 	}
 
 	export function clear(){
