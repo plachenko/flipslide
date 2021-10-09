@@ -42,7 +42,7 @@
 
 	function tick(){
 		// Animates a frame.
-		clear();
+		/* clear(); */
 		// let pt = new Point(canvas.width/2, canvas.height/2);
 
 		// drawRect(pt, 20, tickInt*40);
@@ -53,6 +53,7 @@
 			tickInt++;
 			requestAnimationFrame(tick);
 		}, tickTime);
+
 	}
 
 	function setCanvas(width = window.innerWidth, height = window.innerHeight){
@@ -61,28 +62,35 @@
 		canvas.width = width;
 		canvas.height = height;
 		ctx = canvas.getContext('2d');
+
 	}
 
 	function handlePointChange(){
 		// called whenever a pointer event change is handled.
-		clear();
-		
+
+		/* clear(); */
 		if(!lastPoint){
 			lastPoint = currentPoint;
 		}
 
+		stroke.push(currentPoint);
+	
 		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
-		// let delta_x = currentPoint.x - stroke[0].x;
-		// let delta_y = currentPoint.y - stroke[0].y;
+		let dx = currentPoint.x - lastPoint.x;
+		let dy = currentPoint.y - lastPoint.y;
+		let angle = Math.atan2(dy, dx);
+		let s;
 		
-		let delta_x = currentPoint.x - lastPoint.x;
-		let delta_y = currentPoint.y - lastPoint.y;
-		let angle = Math.atan2(delta_y, delta_x);
+		if(dx && Math.abs(dx) >= Math.abs(dy)){
+			s = Math.abs(Math.round(dx));
+		}else if(dy && Math.abs(dy) >= Math.abs(dx)){
+			s = Math.abs(Math.round(dy));
+		}
 
 		currentPoint.angle = angle + FSMath.toRad(45);
-		stroke.push(currentPoint);
+		currentPoint.size = s/3 + (currentPoint.pressure*4);
 		
-		// drawRect(currentPoint, 10, currentPoint.angle);
+		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
 		drawLerp(currentPoint, lastPoint);
 
 		lastPoint = currentPoint
@@ -145,9 +153,9 @@
 			pt.size = FSMath.lerp(pt1.size, pt2.size, diff/maxDiff);
 			pt.delta[0] = FSMath.lerp(pt1.delta[0], pt2.delta[0], diff/maxDiff)/iSize;
 			pt.delta[1] = FSMath.lerp(pt1.delta[1], pt2.delta[1], diff/maxDiff)/iSize;
-			pt.angle = FSMath.lerp(pt1.angle, pt2.angle, diff/maxDiff)/iSize;
+			pt.angle = FSMath.lerp(pt1.angle, pt2.angle, diff/maxDiff);
 
-			drawPoint(pt);
+			drawRect(pt, pt.size, pt.angle, true);
 		}
 	}
 
@@ -167,7 +175,7 @@
 		pt.y = _y + piv.y;
 	}
 
-	function drawRect(pt: Point, size, angle = 0){
+	function drawRect(pt: Point, size, angle = 0, fill = false, lp: Point){
 		// Draw a rectangle.
 
 		const pts = [];
@@ -176,12 +184,14 @@
 		let ptSize = 4;
 
 		// Draw the pivot point.
+		/*
 		ctx.fillRect(
 			pt.x - ptSize / 2, 
 			pt.y - ptSize / 2, 
 			ptSize, 
 			ptSize
 		);
+		*/
 
 		pts[0] = pt.offset(size, -size);
 		pts[1] = pt.offset(-size, -size);
@@ -192,8 +202,7 @@
 			rotatePoint(el, angle, pt);
 		});
 
-		
-		drawBetween(pts, 1, true, true);
+		drawBetween(pts, 1, true, fill);
 	}
 
 	export function endStroke(){
@@ -235,20 +244,13 @@
 			y -= size/2;
 		
 		// console.log(size, point.angle);
-		/* point.size = (size + dx); */
-		point.size = (size + s) * (point.pressure*2);
+		/* point.size = (size + s); */
+		/* point.size = (size + s) * (point.pressure*2); */
 
-		
-		drawRect(point, point.size, point.angle);
+		/* drawRect(point, point.size, Math.atan2(dy-dx)+FSMath.toRad(45)); */
+		/* console.log(point.size, x, y); */
 
-		/* ctx.fillRect(x, y, point.size, point.size); */
-
-		// ctx.strokeStyle ="#F00";
-		// ctx.beginPath();
-		// ctx.moveTo(x, y);
-		// ctx.lineTo(currentPoint.x, currentPoint.y);
-		// ctx.stroke();
-		// ctx.closePath();
+		ctx.fillRect(x, y, point.size, point.size);
 	}
 
 	export function clear(){

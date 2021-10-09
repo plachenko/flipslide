@@ -15,6 +15,7 @@ export default class Point{
 		if(options){
 			this.delta = options.delta;
 			this.angle = options.angle;
+			this.pressure = options.pressure;
 			this.size = options.size;
 		}
 
