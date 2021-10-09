@@ -15,10 +15,4 @@ export default class Stroke{
 
 		// this.pointArray.push(pt);
 	}
-
-	rem(){
-		this.pointArray.s
-
-	}
-
 }

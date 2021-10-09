@@ -9,13 +9,11 @@ export function setAngleProps(pt1, pt2){
     let rise = pt2.y - pt1.y;
     let run = pt2.x - pt1.x;
     let hyp = Math.sqrt((rise * rise) + (run * run));
-    let angle = rise / hyp;
 
     return{
         rise,
         run,
-        hyp,
-        angle
+        hyp
     }
 }
 

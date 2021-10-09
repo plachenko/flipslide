@@ -37,52 +37,15 @@
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
 
-		/* tick(); */
+		// tick();
 	});
-
-	function rotTest2(ang = 0){
-		clear();
-
-		let pt = new Point(canvas.width/2-200, canvas.height/2);
-		let pt2 = pt.offset(100, -100);
-		let pt3 = pt.offset(-100, -100);
-		let pt4 = pt.offset(-100, 100);
-		let pt5 = pt.offset(100, 100);
-
-		let angle = ang/100;
-
-		rotatePoint(pt2, angle, pt);
-		rotatePoint(pt3, angle, pt);
-		rotatePoint(pt4, angle, pt);
-		rotatePoint(pt5, angle, pt);
-
-		drawBetween([pt2, pt3, pt4, pt5],1, true);
-	}
-
-	function rotTest(ang = 0){
-		/* clear(); */
-
-		let pt = new Point(canvas.width/2, canvas.height/2);
-		let pt2 = pt.offset(0, -100);
-		let angle = ang
-
-		let s = Math.sin(angle);
-		let c = Math.cos(angle);
-
-		pt2.x -= pt.x;
-		pt2.y -= pt.y;
-
-		let x = pt2.x * c - pt2.y  * s;
-		let y = pt2.x * s + pt2.y  * c;
-
-		pt2.x = x + pt.x;
-		pt2.y = y + pt.y;
-
-		drawBetween([pt,pt2]);
-	}
 
 	function tick(){
 		// Animates a frame.
+		clear();
+		// let pt = new Point(canvas.width/2, canvas.height/2);
+
+		// drawRect(pt, 20, tickInt*40);
 
 		/* console.log('test') */
 
@@ -113,11 +76,15 @@
 		stroke.push(currentPoint);
 		props = FSMath.setAngleProps(stroke[0], currentPoint);
 
-		drawBetween([stroke[0], currentPoint]);
+		drawBetween([stroke[0], currentPoint], 1, true);
 
-		let angle = props.angle;
-		/* let angle = props.angle + FSMath.toRad(45); */
-		drawRect(stroke[0], props.hyp, angle);
+		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
+		let angle;
+		let delta_x = currentPoint.x - stroke[0].x;
+		let delta_y = currentPoint.y - stroke[0].y;
+		angle = Math.atan2(delta_y, delta_x);
+		
+		drawRect(stroke[0], props.hyp, angle+FSMath.toRad(45));
 
 		lastPoint = currentPoint
 		
@@ -199,11 +166,12 @@
 		pt.y = _y + piv.y;
 	}
 
-	function drawRect(pt: Point, size, _angle = 0){
+	function drawRect(pt: Point, size, angle = 0){
 		// Draw a rectangle.
 
-		/* console.log(angle); */
-		let angle = FSMath.toDeg(_angle);
+		// let angle = FSMath.toRad(_angle/(Math.PI*2));
+		// let angle = _angle;
+		// console.log(angle);
 
 		const pts = [];
 		const pts2 = [];
