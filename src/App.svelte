@@ -1,11 +1,12 @@
 <script lang="ts">
-	// import { onMount } from "svelte";
+	import { onMount } from "svelte";
 	import Can2D from './Can2D.svelte';
 	import Capture from './Capture.svelte';
 	import Cursor from './Cursor.svelte';
 	import Menu from './Menu.svelte';
 	
 	let menu;
+	let animMenu;
 	let slider;
 	let brushSize = 10;
 	let opacity = 1;
@@ -19,6 +20,11 @@
 		null
 	];
 	let curLayer = 0;
+
+	onMount(()=>{
+		console.log();
+		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
+	});
 
 	// Handle a menu Event.
 	function menuEvt(e){
@@ -76,7 +82,11 @@
 	}
 
 	function handleFrameChange(e){
-		console.log('test')
+		layers[curLayer].frameIdx = e.target.value;
+	}
+
+	function handleSkipChange(e){
+		layers[curLayer].frameSkip = e.target.value;
 	}
 
 	function tick(){
@@ -98,7 +108,7 @@
 
 <main>
 
-	<div style="z-index: 9999; position: absolute; left: 100px;">
+	<div style="z-index: 9999; position: absolute;" bind:this={animMenu}>
 			<a on:click={handlePlay} class="btn" href="#">
 				{#if !playing}
 					play
@@ -118,7 +128,7 @@
 			type="range" 
 			min="1" 
 			max="10" 
-			on:input={handleFrameChange} 
+			on:input={handleSkipChange} 
 			bind:value={frameSkip} 
 			style="width:40px;" />
 

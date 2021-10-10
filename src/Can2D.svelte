@@ -24,8 +24,9 @@
 	let stroke = [];
 
 	let frames = [];
-	let frameIdx = 0;
+	export let frameIdx = 0;
 	let frameLimit = 100;
+	export let frameSkip = 1;
 
 	let tickTime = 10;
 	let tickInt = 0;
@@ -33,6 +34,9 @@
 	let pts = [];
 
 	$: currentPoint && handlePointChange();
+	$: frameIdx && frameIdxChange();
+	$: frameSkip && frameSkipChange();
+
 
 	onMount(()=>{
 		// On Mount function. When the component appears do this immediately.
@@ -40,6 +44,13 @@
 
 		// tick();
 	});
+
+	function frameIdxChange(){
+		console.log('testing!', frameIdx);
+p
+		// console.log(frames);
+		// drawFrame(frames[frameIdx]);
+	}
 
 	function tick(){
 		// Animates a frame.
@@ -75,6 +86,11 @@
 		}
 
 		stroke.push(currentPoint);
+
+		if(recording){
+			// console.log('recorid')
+			frameIdx++;
+		}
 	
 		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
 		// TODO move this into the point object.
@@ -96,15 +112,10 @@
 		drawLerp(currentPoint, lastPoint);
 
 		lastPoint = currentPoint
-		
-		endStroke();
-		if(frameIdx < frameLimit){
-			frameIdx++;
-		}else{
-			frameIdx = 0;
-		}
-		console.log(frames);
-		/* drawFrame(frames[frameIdx]); */
+	}
+
+	function frameSkipChange(){
+		frameSkipChange
 	}
 
 	function drawBetween(pts, resolution = 1, connected = false, fill = false){
