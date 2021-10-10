@@ -78,6 +78,7 @@
 		stroke.push(currentPoint);
 	
 		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
+		// TODO move this into the point object.
 		let dx = currentPoint.x - lastPoint.x;
 		let dy = currentPoint.y - lastPoint.y;
 		let angle = Math.atan2(dy, dx);
@@ -97,13 +98,14 @@
 
 		lastPoint = currentPoint
 		
-		/*
+		endStroke();
 		if(frameIdx < frameLimit){
 			frameIdx++;
 		}else{
 			frameIdx = 0;
 		}
-		*/
+		console.log(frames);
+		/* drawFrame(frames[frameIdx]); */
 	}
 
 	function drawBetween(pts, resolution = 1, connected = false, fill = false){
@@ -113,7 +115,6 @@
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
 		let col = new Color(color)
 		ctx.fillStyle = `rgba(${col.r*255}, ${col.g*255}, ${col.b*255}, ${opacity/2})`;
-		console.log(ctx.fillStyle);
 
 		while(0 < idx){
 			const i = pts.length - idx;
@@ -189,14 +190,14 @@
 		let ptSize = 4;
 
 		// Draw the pivot point.
-		/*
-		ctx.fillRect(
-			pt.x - ptSize / 2, 
-			pt.y - ptSize / 2, 
-			ptSize, 
-			ptSize
-		);
-		*/
+		if(!fill){
+			ctx.fillRect(
+				pt.x - ptSize / 2, 
+				pt.y - ptSize / 2, 
+				ptSize, 
+				ptSize
+			);
+		}
 
 		pts[0] = pt.offset(size, -size);
 		pts[1] = pt.offset(-size, -size);
@@ -212,21 +213,31 @@
 
 	export function endStroke(){
 		/* frames[frameIdx] = [...frames, frames[frameIdx]]; */
+
 		if(!frames[frameIdx]){
 			frames[frameIdx] = [];
 		}
 
 		frames[frameIdx].push(stroke);
 		lastPoint = null;
+		frameIdx = 0;
 		stroke = [];
 	}
 	
 	function drawFrame(frame){
-		frame.forEach((strokes, idx)=>{
-			stroke.forEach((stroke)=>{
-
+		clear();
+		/*
+		framesforEach((strokes, idx)=>{
+			stroke.forEach((point, idx)=>{
+				let lp;
+				if(idx){
+					lastPoint = stroke[idx-1];
+				}
+				drawLerp(point, lp);
 			});
 		});
+		*/
+		console.log(frame);
 	}
 
 	function drawPoint(point: Point){
