@@ -55,6 +55,7 @@
 </script>
 
 <div id="flipslide-logo" bind:this={menu} draggable="true">
+    <div class="btn" on:click={handleSave}>save</div>
     <div class="btn" id="logo">flipslide</div>
 </div>
 
@@ -64,17 +65,20 @@
     border: 1px solid;
     padding: 5px 10px;
     margin: 10px 0px;
+    z-index: 9999;
     }
 
 
 #flipslide-logo{
     position: absolute;
     float: left;
-    z-index: 9999;
     bottom: 5px;
     }
 
     .btn{
+        position: relative;
+        
+        z-index: 9999;
         user-select: none;
         padding: 5px 10px;
         cursor: grab;
@@ -90,7 +94,7 @@
         color:#FFF;
         }
     .btn:active{
-        cursor: grabbing !important;
+        /* cursor: grabbing !important; */
         }
 
     #logo{
