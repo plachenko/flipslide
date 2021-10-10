@@ -15,6 +15,7 @@
 	let frameSkip = 1;
 	let playing = false;
 	let recording = false;
+	let timeline;
 
 	let layers = [
 		null
@@ -22,8 +23,8 @@
 	let curLayer = 0;
 
 	onMount(()=>{
-		console.log();
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
+		recording = layers[curLayer].recording;
 	});
 
 	// Handle a menu Event.
@@ -82,11 +83,20 @@
 	}
 
 	function handleFrameChange(e){
-		layers[curLayer].frameIdx = e.target.value;
+		layers[curLayer].frameIdx = frameIdx;
 	}
 
 	function handleSkipChange(e){
 		layers[curLayer].frameSkip = e.target.value;
+	}
+
+	function handleFrameEvt(){
+		if(frameIdx< 100){
+			frameIdx++;
+		}else{
+			frameIdx = 0;
+		}
+		handleFrameChange();
 	}
 
 	function tick(){
@@ -119,6 +129,7 @@
 
 		<input 
 			type="range" 
+			bind:this={timeline}
 			on:input={handleFrameChange} 
 			bind:value={frameIdx} />
 
@@ -159,7 +170,7 @@
 	<!-- <Cursor bind:pos={{x: 0, y:0}} /> -->
 
 	{#each layers as layer}
-		<Can2D bind:this={layer}  />
+		<Can2D on:frameChange={handleFrameEvt} bind:this={layer}  />
 	{/each}
 
 	<Menu bind:this={menu} on:menuEvt={menuEvt} />

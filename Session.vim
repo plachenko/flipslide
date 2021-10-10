@@ -8,17 +8,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/App.svelte
-badd +0 src/classes/Point.js
+badd +27 src/App.svelte
+badd +10 src/classes/Point.js
+badd +52 src/Can2D.svelte
 argglobal
 %argdel
-edit src/classes/Point.js
+edit src/Can2D.svelte
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+1wincmd h
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -29,8 +30,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 22 + 23) / 47)
-exe '2resize ' . ((&lines * 22 + 23) / 47)
+exe 'vert 1resize ' . ((&columns * 41 + 39) / 78)
+exe 'vert 2resize ' . ((&columns * 36 + 39) / 78)
 argglobal
 balt src/App.svelte
 setlocal fdm=manual
@@ -43,11 +44,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 11) / 22)
+let s:l = 26 - ((11 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 26
 normal! 0
 wincmd w
 argglobal
@@ -55,7 +56,7 @@ if bufexists("src/App.svelte") | buffer src/App.svelte | else | edit src/App.sve
 if &buftype ==# 'terminal'
   silent file src/App.svelte
 endif
-balt src/App.svelte
+balt src/Can2D.svelte
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -66,15 +67,15 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 11) / 22)
+let s:l = 27 - ((26 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 27
+normal! 05|
 wincmd w
-exe '1resize ' . ((&lines * 22 + 23) / 47)
-exe '2resize ' . ((&lines * 22 + 23) / 47)
+exe 'vert 1resize ' . ((&columns * 41 + 39) / 78)
+exe 'vert 2resize ' . ((&columns * 36 + 39) / 78)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

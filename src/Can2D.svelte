@@ -1,6 +1,6 @@
 <svelte:options accessors />
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount, createEventDispatcher } from "svelte";
 	import Point from './classes/Point.js';
 	import * as FSMath from './classes/FSMath.js'
 
@@ -18,7 +18,10 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = false;
+	export let recording = true;
+
+	let dispatch = createEventDispatcher();
+
 	let lastPoint;
 
 	let stroke = [];
@@ -37,7 +40,6 @@
 	$: frameIdx && frameIdxChange();
 	$: frameSkip && frameSkipChange();
 
-
 	onMount(()=>{
 		// On Mount function. When the component appears do this immediately.
 		setCanvas();
@@ -46,10 +48,11 @@
 	});
 
 	function frameIdxChange(){
-		console.log('testing!', frameIdx);
-p
-		// console.log(frames);
-		// drawFrame(frames[frameIdx]);
+		if(recording){
+			/* stroke.push(currentPoint); */
+		}
+		drawFrame(frames[frameIdx]);
+		/* console.log('idxChgjl'); */
 	}
 
 	function tick(){
@@ -87,11 +90,6 @@ p
 
 		stroke.push(currentPoint);
 
-		if(recording){
-			// console.log('recorid')
-			frameIdx++;
-		}
-	
 		// https://stackoverflow.com/questions/2676719/calculating-the-angle-between-the-line-defined-by-two-points
 		// TODO move this into the point object.
 		let dx = currentPoint.x - lastPoint.x;
@@ -111,11 +109,15 @@ p
 		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
 		drawLerp(currentPoint, lastPoint);
 
+		if(recording){
+			dispatch('frameChange');
+		}
+
 		lastPoint = currentPoint
 	}
 
 	function frameSkipChange(){
-		frameSkipChange
+		/* frameSkipChange */
 	}
 
 	function drawBetween(pts, resolution = 1, connected = false, fill = false){
@@ -222,32 +224,27 @@ p
 	}
 
 	export function endStroke(){
-		/* frames[frameIdx] = [...frames, frames[frameIdx]]; */
 
 		if(!frames[frameIdx]){
 			frames[frameIdx] = [];
 		}
 
 		frames[frameIdx].push(stroke);
+
 		lastPoint = null;
-		frameIdx = 0;
 		stroke = [];
 	}
 	
 	function drawFrame(frame){
 		clear();
-		/*
-		framesforEach((strokes, idx)=>{
-			stroke.forEach((point, idx)=>{
-				let lp;
-				if(idx){
-					lastPoint = stroke[idx-1];
-				}
-				drawLerp(point, lp);
+		/* console.log(frames[frameIdx]); */
+		
+		frames[frameIdx]?.forEach((stroke)=>{
+			stroke.forEach((pt, idx)=>{
+				let lp = idx ? stroke[idx-1] : stroke[0];
+				drawLerp(pt, lp);
 			});
 		});
-		*/
-		console.log(frame);
 	}
 
 	function drawPoint(point: Point){
