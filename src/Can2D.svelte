@@ -18,6 +18,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
+	export let recording = false;
 	let lastPoint;
 
 	let stroke = [];
@@ -30,8 +31,6 @@
 	let tickInt = 0;
 
 	let pts = [];
-
-
 
 	$: currentPoint && handlePointChange();
 

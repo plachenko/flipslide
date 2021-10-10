@@ -10,6 +10,11 @@
 	let brushSize = 10;
 	let opacity = 1;
 
+	let frameIdx = 0;
+	let frameSkip = 1;
+	let playing = false;
+	let recording = false;
+
 	let layers = [
 		null
 	];
@@ -58,14 +63,80 @@
 		layers[curLayer].color = e.target.value;
 	}
 
+	function handleRecord(){
+		recording = !recording;
+		layers[curLayer].recording = recording;
+	}
+
+	function handlePlay(){
+		playing = !playing;
+		if(playing){
+			tick()
+		}
+	}
+
+	function handleFrameChange(e){
+		console.log('test')
+	}
+
+	function tick(){
+		if(playing){
+
+			if(frameIdx< 100){
+				frameIdx++;
+			}else{
+				frameIdx = 0;
+			}
+
+			setTimeout(()=>{
+				requestAnimationFrame(tick);
+			},100);
+		}
+	}
+
 </script>
 
 <main>
+
+	<div style="z-index: 9999; position: absolute; left: 100px;">
+			<a on:click={handlePlay} class="btn" href="#">
+				{#if !playing}
+					play
+				{:else}
+					stop
+				{/if}
+			</a>
+
+		<input 
+			type="range" 
+			on:input={handleFrameChange} 
+			bind:value={frameIdx} />
+
+		<span>frame: {frameIdx}</span>
+
+		<input 
+			type="range" 
+			min="1" 
+			max="10" 
+			on:input={handleFrameChange} 
+			bind:value={frameSkip} 
+			style="width:40px;" />
+
+		<a on:click={handleRecord} class="btn" href="#">
+			{#if !recording}
+				record
+			{:else}
+				recording...
+			{/if}
+		</a>
+
+	</div>
+
 	<div id="brushSize" class="menu vert">
-		<input on:change="{handleSize}" type="range" /> 
+		<input on:change={handleSize} type="range" /> 
 	</div>
 	<div id="brushOpacity" class="menu vert">
-		<input min="0" max="1" step=".1" on:change="{handleOpacity}" type="range" /> 
+		<input min="0" max="1" step=".1" on:change={handleOpacity} type="range" /> 
 	</div>
 	<input on:change="{handleColor}" value="2" type="color" class="menu" id="color">
 	
