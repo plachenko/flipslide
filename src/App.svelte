@@ -57,6 +57,10 @@
 	function handleMoveEvt(e){
 	}
 
+	function handleSave(){
+		layers[curLayer].savePNG();
+	}
+
 	/* TODO Clean. */
 	function handleOpacity(e){
 		layers[curLayer].opacity = e.target.value;
@@ -173,7 +177,7 @@
 		<Can2D on:frameChange={handleFrameEvt} bind:this={layer}  />
 	{/each}
 
-	<Menu bind:this={menu} on:menuEvt={menuEvt} />
+	<Menu bind:this={menu} on:handleSave={handleSave} />
 </main>
 
 <style>

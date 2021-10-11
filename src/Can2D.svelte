@@ -18,7 +18,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = true;
+	export let recording = false;
 
 	let dispatch = createEventDispatcher();
 
@@ -281,7 +281,7 @@
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
 
-	function savePNG(){
+	export function savePNG(){
 		const url = canvas.toDataURL('image/png');
 		let fURL;
 		fetch(url)
