@@ -51,8 +51,8 @@
 		if(recording){
 			/* stroke.push(currentPoint); */
 		}
-		drawFrame(frames[frameIdx]);
-		/* console.log('idxChgjl'); */
+		// drawFrame(frames[frameIdx]);
+		console.log('idxChgjl');
 	}
 
 	function tick(){
