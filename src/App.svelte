@@ -4,6 +4,8 @@
 	import Capture from './Capture.svelte';
 	import Cursor from './Cursor.svelte';
 	import Menu from './Menu.svelte';
+	import Point from './classes/Point';
+	import {stroke} from './assets/stroke';
 	
 	let menu;
 	let animMenu;
@@ -25,6 +27,16 @@
 	onMount(()=>{
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
 		recording = layers[curLayer].recording;
+		let i = 0;
+		
+		setInterval(()=>{
+			if(i < stroke.length-1){
+				layers[curLayer].currentPoint = stroke[i];
+				i++;
+			} else {
+				layers[curLayer].endStroke();
+			}
+		}, 10);
 	});
 
 	// Handle a menu Event.

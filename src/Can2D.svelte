@@ -18,7 +18,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = true;
+	export let recording = false;
 
 	let dispatch = createEventDispatcher();
 
@@ -48,11 +48,7 @@
 	});
 
 	function frameIdxChange(){
-		if(recording){
-			/* stroke.push(currentPoint); */
-		}
-		// drawFrame(frames[frameIdx]);
-		console.log('idxChgjl');
+		/* drawFrame(frames[frameIdx]); */
 	}
 
 	function tick(){
@@ -82,6 +78,7 @@
 
 	function handlePointChange(){
 		// called whenever a pointer event change is handled.
+		console.log('drawing...');
 
 		/* clear(); */
 		if(!lastPoint){
