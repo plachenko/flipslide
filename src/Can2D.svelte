@@ -18,7 +18,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = false;
+	export let recording = true;
 
 	let dispatch = createEventDispatcher();
 
@@ -57,8 +57,6 @@
 		// let pt = new Point(canvas.width/2, canvas.height/2);
 
 		// drawRect(pt, 20, tickInt*40);
-
-		/* console.log('test') */
 
 		setTimeout(()=>{
 			tickInt++;
@@ -102,11 +100,13 @@
 		currentPoint.angle = angle + FSMath.toRad(45);
 		currentPoint.size = (iSize/3) + (s/3 + (currentPoint.pressure*4));
 		
-		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
-		drawLerp(currentPoint, lastPoint);
+		drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint);
+		/* drawLerp(currentPoint, lastPoint); */
 
 		if(recording){
-			// dispatch('frameChange');
+			endStroke();
+			/* frames[frameIdx].push(stroke); */
+			dispatch('frameChange', currentPoint);
 		}
 
 		lastPoint = currentPoint
@@ -189,13 +189,15 @@
 		pt.y = _y + piv.y;
 	}
 
-	function drawRect(pt: Point, size, angle = 0, fill = false, lp: Point){
+	function drawRect(_pt: Point, size, angle = 0, fill = false, lp: Point){
 		// Draw a rectangle.
 
 		const pts = [];
 		const pts2 = [];
 		let i = 4;
 		let ptSize = 4;
+
+		let pt = new Point(_pt.x, _pt.y, _pt.options)
 
 		// Draw the pivot point.
 		if(!fill){
@@ -207,10 +209,10 @@
 			);
 		}
 
-		pts[0] = pt.offset(size, -size);
-		pts[1] = pt.offset(-size, -size);
-		pts[2] = pt.offset(-size, size);
-		pts[3] = pt.offset(size, size);
+		pts[0] = pt?.offset(size, -size);
+		pts[1] = pt?.offset(-size, -size);
+		pts[2] = pt?.offset(-size, size);
+		pts[3] = pt?.offset(size, size);
 
 		pts.forEach((el) => {
 			rotatePoint(el, angle, pt);
@@ -227,19 +229,18 @@
 
 		frames[frameIdx].push(stroke);
 
-		console.log(frames);
-
 		lastPoint = null;
 		stroke = [];
 	}
 	
 	function drawFrame(){
 		clear();
-		console.log(frames[frameIdx])
 		
+
 		frames[frameIdx]?.forEach((stroke)=>{
 			stroke.forEach((pt, idx)=>{
 				let lp = idx ? stroke[idx-1] : stroke[0];
+				ctx.fillRect(pt.x, pt.y, 10, 10);
 				drawLerp(pt, lp);
 			});
 		});
@@ -268,7 +269,7 @@
 		/* point.size = (size + s); */
 		/* point.size = (size + s) * (point.pressure*2); */
 
-		/* drawRect(point, point.size, Math.atan2(dy-dx)+FSMath.toRad(45)); */
+		drawRect(point, point.size, Math.atan2(dy-dx)+FSMath.toRad(45));
 		/* console.log(point.size, x, y); */
 
 		ctx.fillRect(x, y, point.size, point.size);

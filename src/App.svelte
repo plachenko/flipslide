@@ -29,6 +29,7 @@
 	onMount(()=>{
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
 		recording = layers[curLayer].recording;
+		frameIdx = 1;
 		
 		let i = 0;
 		
@@ -61,6 +62,7 @@
 	}
 
 	function handleCapEvt(e){
+		console.log(e.detail);
 		layers[curLayer].currentPoint = e.detail;
 	}
 
@@ -111,15 +113,13 @@
 		layers[curLayer].frameSkip = e.target.value;
 	}
 
-	function handleFrameEvt(){
-		/*
+	function handleFrameEvt(e){
 		if(frameIdx< 100){
 			frameIdx++;
+			handleCapEvt(e);
 		}else{
 			frameIdx = 0;
 		}
-		*/
-		// handleFrameChange();
 	}
 
 	function tick(){
