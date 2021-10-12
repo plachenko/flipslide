@@ -24,17 +24,22 @@
 	];
 	let curLayer = 0;
 
+	$: frameIdx && handleFrameChange();
+
 	onMount(()=>{
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
 		recording = layers[curLayer].recording;
+		
 		let i = 0;
 		
-		setInterval(()=>{
+		let sInt = setInterval(()=>{
 			if(i < stroke.length-1){
+
 				layers[curLayer].currentPoint = stroke[i];
 				i++;
-			} else {
+			}else{
 				layers[curLayer].endStroke();
+				clearInterval(sInt);
 			}
 		}, 10);
 	});
@@ -98,7 +103,7 @@
 		}
 	}
 
-	function handleFrameChange(e){
+	function handleFrameChange(){
 		layers[curLayer].frameIdx = frameIdx;
 	}
 
@@ -107,12 +112,14 @@
 	}
 
 	function handleFrameEvt(){
+		/*
 		if(frameIdx< 100){
 			frameIdx++;
 		}else{
 			frameIdx = 0;
 		}
-		handleFrameChange();
+		*/
+		// handleFrameChange();
 	}
 
 	function tick(){
@@ -145,11 +152,14 @@
 
 		<input 
 			type="range" 
+			min="0"
 			bind:this={timeline}
-			on:input={handleFrameChange} 
 			bind:value={frameIdx} />
 
-		<span>frame: {frameIdx}</span>
+		<span>
+			frame: 
+			<input max="100" min="0" style="width: 60px;" type="number" bind:value={frameIdx} />
+		</span>
 
 		<input 
 			type="range" 

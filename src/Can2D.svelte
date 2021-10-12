@@ -48,7 +48,7 @@
 	});
 
 	function frameIdxChange(){
-		/* drawFrame(frames[frameIdx]); */
+		drawFrame();
 	}
 
 	function tick(){
@@ -78,7 +78,6 @@
 
 	function handlePointChange(){
 		// called whenever a pointer event change is handled.
-		console.log('drawing...');
 
 		/* clear(); */
 		if(!lastPoint){
@@ -107,7 +106,7 @@
 		drawLerp(currentPoint, lastPoint);
 
 		if(recording){
-			dispatch('frameChange');
+			// dispatch('frameChange');
 		}
 
 		lastPoint = currentPoint
@@ -228,13 +227,15 @@
 
 		frames[frameIdx].push(stroke);
 
+		console.log(frames);
+
 		lastPoint = null;
 		stroke = [];
 	}
 	
-	function drawFrame(frame){
+	function drawFrame(){
 		clear();
-		/* console.log(frames[frameIdx]); */
+		console.log(frames[frameIdx])
 		
 		frames[frameIdx]?.forEach((stroke)=>{
 			stroke.forEach((pt, idx)=>{
