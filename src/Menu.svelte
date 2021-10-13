@@ -8,7 +8,7 @@
     let options = [
         /* {label: 'brush size', type: 'range'}, */
         /* {label: 'brush size', type: 'range'}, */
-        {label: 'save', type: 'submit', method: handleSave},
+        // {label: 'save', type: 'submit', method: handleSave},
         {label: 'clear', type: 'submit', method: handleClear}
     ];
 
@@ -36,8 +36,16 @@
     dispatch('handleClear');
   }
 
-  function handleSave(){
-    dispatch('handleSave')
+  function handleGIF(){
+    dispatch('handleSave', {
+        type: 'gif'
+    })
+  }
+
+  function handlePNG(){
+    dispatch('handleSave', {
+        type: 'png'
+    })
   }
 
     function setPosition(dragEvent = null, pos = null){
@@ -55,7 +63,8 @@
 </script>
 
 <div id="flipslide-logo" bind:this={menu} draggable="true">
-    <div class="btn" on:click={handleSave}>save</div>
+    <div class="btn" on:click={handlePNG}>save png</div>
+    <div class="btn" on:click={handleGIF}>save gif</div>
     <div class="btn" id="logo">flipslide</div>
 </div>
 

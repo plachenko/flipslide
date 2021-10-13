@@ -6,13 +6,14 @@
 	import Menu from './Menu.svelte';
 	import Point from './classes/Point';
 	import {stroke} from './assets/stroke';
+	import IO from './IO.svelte';
 	
 	let menu;
 	let animMenu;
 	let slider;
 	let brushSize = 10;
 	let opacity = 1;
-	let reset = false;
+	let reset = true;
 
 	let frameIdx = 0;
 	let frameSkip = 1;
@@ -20,6 +21,8 @@
 	let playing = false;
 	let recording = false;
 	let timeline;
+
+	let io;
 
 	let layers = [
 		null
@@ -35,10 +38,16 @@
 		frameSkip = layers[curLayer].frameSkip;
 
 		let i = 0;
-		
+
+		addEventListener('keyup', (e)=>{
+			if(e.which == 32){
+				handlePlay();
+			}
+		});
+
+		/*
 		let sInt = setInterval(()=>{
 			if(i < stroke.length-1){
-
 				layers[curLayer].currentPoint = stroke[i];
 				i++;
 			}else{
@@ -46,6 +55,7 @@
 				clearInterval(sInt);
 			}
 		}, 10);
+		*/
 	});
 
 	// Handle a menu Event.
@@ -88,8 +98,18 @@
 	function handleMoveEvt(e){
 	}
 
-	function handleSave(){
-		layers[curLayer].savePNG();
+	function handleSave(e){
+		let opt = e.detail;
+
+		switch(opt.type){
+			case 'png':
+				layers[curLayer].savePNG();
+				break;
+			case 'gif':
+				layers[curLayer].saveGIF();
+				break;
+		}
+
 	}
 
 	/* TODO Clean. */
@@ -123,6 +143,9 @@
 
 	function handleFrameChange(){
 		layers[curLayer].frameIdx = frameIdx;
+		if(recording){
+			layers[curLayer].endStroke();
+		}
 	}
 
 	function handleSkipChange(e){
@@ -151,7 +174,7 @@
 
 			setTimeout(()=>{
 				requestAnimationFrame(tick);
-			},100);
+			}, 100);
 		}
 	}
 
@@ -160,13 +183,13 @@
 <main>
 
 	<div style="z-index: 9999; position: absolute;" bind:this={animMenu}>
-			<a on:click={handlePlay} class="btn" href="#">
-				{#if !playing}
-					play
-				{:else}
-					stop
-				{/if}
-			</a>
+		<a on:click={handlePlay} class="btn" href="#">
+			{#if !playing}
+				play
+			{:else}
+				stop
+			{/if}
+		</a>
 
 		<input 
 			type="range" 
@@ -195,14 +218,16 @@
 			{/if}
 		</a>
 
-		<a on:click={handleReset} class="btn" href="#">
-			autoReset: 
-			{#if !reset}
-				off
-			{:else}
-				on
-			{/if}
-		</a>
+		{#if recording}
+			<a on:click={handleReset} class="btn" href="#">
+				autoReset: 
+				{#if !reset}
+					off
+				{:else}
+					on
+				{/if}
+			</a>
+		{/if}
 
 	</div>
 
@@ -227,6 +252,7 @@
 	{/each}
 
 	<Menu bind:this={menu} on:handleSave={handleSave} />
+	<!-- <IO bind:this={io} /> -->
 </main>
 
 <style>

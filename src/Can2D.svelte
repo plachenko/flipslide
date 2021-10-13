@@ -4,6 +4,9 @@
 	import Point from './classes/Point.js';
 	import * as FSMath from './classes/FSMath.js'
 
+	import * as WorkerGIF from './assets/gif.worker';
+	import GIF from './assets/gif.js';
+
 	import { Color } from './classes/threejs/Color.js';
 	
 	let canvas;
@@ -26,12 +29,12 @@
 
 	let stroke = [];
 
-	let frames = [];
 	export let frameIdx = 0;
-	let frameLimit = 100;
-	export let frameSkip = 11;
+	export let frameSkip = 3;
+	let frames = [];
+	let frameLimit = 10;
 
-	let tickTime = 10;
+	let tickTime = 1;
 	let tickInt = 0;
 
 	let pts = [];
@@ -98,17 +101,15 @@
 		}
 
 		let co = new Color(color).getHexString();
-		console.log(co);
 
 		currentPoint.angle = angle + FSMath.toRad(45);
 		currentPoint.size = (iSize/3) + (s/3 + (currentPoint.pressure*4));
-		currentPoint.color = co;		
+		currentPoint.color = co;
 
 		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
 		drawLerp(currentPoint, lastPoint);
 
 		if(recording){
-			endStroke();
 			dispatch('frameChange', currentPoint);
 		}
 
@@ -124,15 +125,11 @@
 
 		ctx.beginPath();
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
-		/* let col = new Color(color) */
-		/* ctx.fillStyle = `rgba(${col.r*255}, ${col.g*255}, ${col.b*255}, ${opacity/2})`; */
 
 		while(0 < idx){
 			const i = pts.length - idx;
 			ctx.lineTo(pts[i]?.x, pts[i]?.y);
-			let ptcolor = new Color(pts[i]?.color);
 			
-			ctx.fillStyle = `rgba(${ptcolor.r*255}, ${ptcolor.g*255}, ${ptcolor.b*255}, ${opacity/2})`;
 			if(i == 0 && !connected){
 				ctx.closePath();
 			}
@@ -144,6 +141,7 @@
 		}
 
 		if(fill){
+			ctx.fillStyle = fill;
 			ctx.fill();
 		}
 		/* ctx.stroke(); */
@@ -174,8 +172,9 @@
 			pt.delta[0] = FSMath.lerp(pt1.delta[0], pt2.delta[0], diff/maxDiff)/iSize;
 			pt.delta[1] = FSMath.lerp(pt1.delta[1], pt2.delta[1], diff/maxDiff)/iSize;
 			pt.angle = FSMath.lerp(pt1.angle, pt2.angle, diff/maxDiff);
+			pt.color = pt1.color;
 
-			drawRect(pt, pt.size, pt.angle, true);
+			drawRect(pt, pt.size, pt.angle, pt.color);
 		}
 	}
 
@@ -203,7 +202,7 @@
 		let i = 4;
 		let ptSize = 4;
 
-		let pt = new Point(_pt.x, _pt.y, _pt.options)
+		let pt = new Point(_pt.x, _pt.y, _pt.options);
 
 		// Draw the pivot point.
 		if(!fill){
@@ -239,14 +238,16 @@
 		stroke = [];
 	}
 	
-	function drawFrame(){
+	function drawFrame(num = frameIdx){
 		clear();
 		
-		frames[frameIdx]?.forEach((stroke)=>{
+		frames[num]?.forEach((stroke)=>{
+			// ctx.fillStyle = stroke[0].color;
 			stroke.forEach((pt, idx)=>{
 				let lp = idx ? stroke[idx-1] : stroke[0];
-				ctx.fillRect(pt.x, pt.y, 10, 10);
-				/* drawLerp(pt, lp); */
+				// console.log(pt, lp);
+				drawLerp(pt, lp);
+				// ctx.fillRect(pt.x, pt.y, 10, 10);
 			});
 		});
 	}
@@ -283,6 +284,33 @@
 	export function clear(){
 		strokeArray = [];
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
+
+	export function saveGIF(){
+		const workerStr = WorkerGIF.default;
+		const blob = new Blob([workerStr], {
+			type: 'application/javascript'
+		});
+		let img;
+
+		const gif = new GIF({
+			workers: 4,
+			width: canvas.width,
+			height: canvas.height,
+			workerScript: URL.createObjectURL(blob),
+			quality: 3
+		});
+
+		for(let i = 0; i <= 100; i++){
+			// img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+			drawFrame(i);
+			gif.addFrame(canvas, {copy: true, delay: 1});
+		}
+
+		gif.render();
+		gif.on('finished', function(_gifblob){
+        	window.open(URL.createObjectURL(_gifblob));
+      	});
 	}
 
 	export function savePNG(){
