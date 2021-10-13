@@ -29,7 +29,7 @@
 	let frames = [];
 	export let frameIdx = 0;
 	let frameLimit = 100;
-	export let frameSkip = 1;
+	export let frameSkip = 11;
 
 	let tickTime = 10;
 	let tickInt = 0;
@@ -97,15 +97,18 @@
 			s = Math.abs(Math.round(dy));
 		}
 
+		let co = new Color(color).getHexString();
+		console.log(co);
+
 		currentPoint.angle = angle + FSMath.toRad(45);
 		currentPoint.size = (iSize/3) + (s/3 + (currentPoint.pressure*4));
-		
-		drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint);
-		/* drawLerp(currentPoint, lastPoint); */
+		currentPoint.color = co;		
+
+		/* drawRect(currentPoint, currentPoint.size, currentPoint.angle, true, lastPoint); */
+		drawLerp(currentPoint, lastPoint);
 
 		if(recording){
 			endStroke();
-			/* frames[frameIdx].push(stroke); */
 			dispatch('frameChange', currentPoint);
 		}
 
@@ -121,12 +124,15 @@
 
 		ctx.beginPath();
 		ctx.moveTo(pts[0]?.x, pts[0]?.y);
-		let col = new Color(color)
-		ctx.fillStyle = `rgba(${col.r*255}, ${col.g*255}, ${col.b*255}, ${opacity/2})`;
+		/* let col = new Color(color) */
+		/* ctx.fillStyle = `rgba(${col.r*255}, ${col.g*255}, ${col.b*255}, ${opacity/2})`; */
 
 		while(0 < idx){
 			const i = pts.length - idx;
 			ctx.lineTo(pts[i]?.x, pts[i]?.y);
+			let ptcolor = new Color(pts[i]?.color);
+			
+			ctx.fillStyle = `rgba(${ptcolor.r*255}, ${ptcolor.g*255}, ${ptcolor.b*255}, ${opacity/2})`;
 			if(i == 0 && !connected){
 				ctx.closePath();
 			}
@@ -236,12 +242,11 @@
 	function drawFrame(){
 		clear();
 		
-
 		frames[frameIdx]?.forEach((stroke)=>{
 			stroke.forEach((pt, idx)=>{
 				let lp = idx ? stroke[idx-1] : stroke[0];
 				ctx.fillRect(pt.x, pt.y, 10, 10);
-				drawLerp(pt, lp);
+				/* drawLerp(pt, lp); */
 			});
 		});
 	}

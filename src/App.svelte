@@ -12,9 +12,11 @@
 	let slider;
 	let brushSize = 10;
 	let opacity = 1;
+	let reset = false;
 
 	let frameIdx = 0;
 	let frameSkip = 1;
+	let strokeCnt = 0;
 	let playing = false;
 	let recording = false;
 	let timeline;
@@ -30,7 +32,8 @@
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
 		recording = layers[curLayer].recording;
 		frameIdx = 1;
-		
+		frameSkip = layers[curLayer].frameSkip;
+
 		let i = 0;
 		
 		let sInt = setInterval(()=>{
@@ -62,7 +65,13 @@
 	}
 
 	function handleCapEvt(e){
-		console.log(e.detail);
+
+		if(strokeCnt<=frameSkip){
+			strokeCnt++;
+		}else{
+			strokeCnt = 0;
+		}
+
 		layers[curLayer].currentPoint = e.detail;
 	}
 
@@ -70,6 +79,9 @@
 	function handleCapDoneEvt(){
 		// layers[0].clear();
 		layers[curLayer].endStroke();
+		if(reset){
+			frameIdx = 0;
+		}
 	}
 
 	// Handle cursor move...
@@ -93,6 +105,10 @@
 		layers[curLayer].color = e.target.value;
 	}
 
+	function handleReset(){
+		reset = !reset;
+	}
+
 	function handleRecord(){
 		recording = !recording;
 		layers[curLayer].recording = recording;
@@ -114,11 +130,13 @@
 	}
 
 	function handleFrameEvt(e){
-		if(frameIdx< 100){
-			frameIdx++;
-			handleCapEvt(e);
-		}else{
-			frameIdx = 0;
+		if(strokeCnt == frameSkip){
+			if(frameIdx < 100){
+				frameIdx++;
+				handleCapEvt(e);
+			} else {
+				frameIdx = 0;
+			}
 		}
 	}
 
@@ -174,6 +192,15 @@
 				record
 			{:else}
 				recording...
+			{/if}
+		</a>
+
+		<a on:click={handleReset} class="btn" href="#">
+			autoReset: 
+			{#if !reset}
+				off
+			{:else}
+				on
 			{/if}
 		</a>
 

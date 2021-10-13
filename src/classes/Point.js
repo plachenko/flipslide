@@ -4,6 +4,7 @@ export default class Point{
 	angle = 0;
 	delta = [0, 0];
 	pressure = 1;
+	color = "#000";
 
 	x = 0; 
 	y = 0;
@@ -13,6 +14,7 @@ export default class Point{
 		this.y = y;
 
 		if(options){
+			this.color = options.color;
 			this.delta = options.delta;
 			this.angle = options.angle;
 			this.pressure = options.pressure;
