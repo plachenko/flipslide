@@ -210,6 +210,7 @@
 			bind:value={frameSkip} 
 			style="width:40px;" />
 
+		<input type="number" />
 		<a on:click={handleRecord} class="btn" href="#">
 			{#if !recording}
 				record
