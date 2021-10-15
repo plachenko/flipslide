@@ -173,7 +173,7 @@
 	function tick(){
 		if(playing){
 
-			if(frameIdx< 100){
+			if(frameIdx<  frameEnd){
 				frameIdx++;
 			}else{
 				frameIdx = 0;
@@ -200,14 +200,14 @@
 
 		<input 
 			type="range" 
-			min="0"
+			min="1"
 			max={frameEnd}
 			bind:this={timeline}
 			bind:value={frameIdx} />
 
 		<span>
 			frame: 
-			<input max={frameEnd} min="0" style="width: 60px;" type="number" bind:value={frameIdx} />
+			<input max={frameEnd} min="1" style="width: 60px;" type="number" bind:value={frameIdx} />
 		</span>
 
 		<input 
@@ -218,7 +218,7 @@
 			bind:value={frameSkip} 
 			style="width:40px;" />
 
-		<input on:input={handleFrameEnd} type="number" bind:value={frameEnd} style="width:40px;"  />
+		<input on:input={handleFrameEnd} type="number" bind:value={frameEnd} style="width:60px;"  />
 		<a on:click={handleRecord} class="btn" href="#">
 			{#if !recording}
 				record

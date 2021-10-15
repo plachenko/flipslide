@@ -21,7 +21,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = false;
+	export let recording = true;
 
 	let dispatch = createEventDispatcher();
 
@@ -306,10 +306,10 @@
 		});
 
 
-		for(let i = 0; i <= frameEnd; i++){
+		for(let i = 1; i <= frameEnd; i++){
 			drawFrame(i);
 
-			gif.addFrame(ctx, {copy: true, delay: 10});
+			gif.addFrame(ctx, {copy: true, delay: .01});
 		}
 		gif.render();
 
