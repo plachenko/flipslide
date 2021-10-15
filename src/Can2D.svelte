@@ -21,7 +21,7 @@
 	export let height = 0;
 
 	export let currentPoint = null;
-	export let recording = true;
+	export let recording = false;
 
 	let dispatch = createEventDispatcher();
 
@@ -34,7 +34,7 @@
 	export let frameIdx = 0;
 	export let frameSkip = 3;
 	let frames = [];
-	export let frameEnd = 100;
+	export let frameEnd = 10;
 
 	let tickTime = 1;
 	let tickInt = 0;

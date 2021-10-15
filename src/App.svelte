@@ -15,6 +15,8 @@
 	let opacity = 1;
 	let reset = true;
 
+	let frameEnd = 10;
+
 	let frameIdx = 0;
 	let frameSkip = 1;
 	let strokeCnt = 0;
@@ -35,6 +37,7 @@
 		animMenu.style.left = window.innerWidth/2 - parseInt(window.getComputedStyle(animMenu).width)/2 + "px";
 		recording = layers[curLayer].recording;
 		frameIdx = 1;
+		frameEnd = layers[curLayer].frameEnd;
 		frameSkip = layers[curLayer].frameSkip;
 
 		let i = 0;
@@ -152,9 +155,13 @@
 		layers[curLayer].frameSkip = e.target.value;
 	}
 
+	function handleFrameEnd(e){
+		layers[curLayer].frameEnd = e.target.value;
+	}
+
 	function handleFrameEvt(e){
 		if(strokeCnt == frameSkip){
-			if(frameIdx < 100){
+			if(frameIdx < frameEnd){
 				frameIdx++;
 				handleCapEvt(e);
 			} else {
@@ -194,12 +201,13 @@
 		<input 
 			type="range" 
 			min="0"
+			max={frameEnd}
 			bind:this={timeline}
 			bind:value={frameIdx} />
 
 		<span>
 			frame: 
-			<input max="100" min="0" style="width: 60px;" type="number" bind:value={frameIdx} />
+			<input max={frameEnd} min="0" style="width: 60px;" type="number" bind:value={frameIdx} />
 		</span>
 
 		<input 
@@ -210,7 +218,7 @@
 			bind:value={frameSkip} 
 			style="width:40px;" />
 
-		<input type="number" />
+		<input on:input={handleFrameEnd} type="number" bind:value={frameEnd} style="width:40px;"  />
 		<a on:click={handleRecord} class="btn" href="#">
 			{#if !recording}
 				record
