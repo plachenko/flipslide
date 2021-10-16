@@ -101,6 +101,13 @@
 		}
 
 		let co = new Color(color).getHexString();
+		/*
+		let colr = new Color();
+		colr.r = currentPoint.x/canvas.width;
+		colr.g = currentPoint.y/canvas.height;
+		colr.b = Math.sin(currentPoint.x);
+		let co = colr.getHexString();
+		*/
 
 		currentPoint.angle = angle + FSMath.toRad(45);
 		currentPoint.size = (iSize/3) + (s/3 + (currentPoint.pressure*4));

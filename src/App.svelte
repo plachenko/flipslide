@@ -9,6 +9,7 @@
 	import IO from './IO.svelte';
 
 	import Layers from './Layers.svelte';
+	import Color from './Color.svelte';
 	
 	let menu;
 	let animMenu;
@@ -193,6 +194,7 @@
 </script>
 
 <main>
+	<Color />
 	<Layers curLayer={curLayer} layers={layers} />
 	<div style="z-index: 9999; position: absolute;" bind:this={animMenu}>
 		<a on:click={handlePlay} class="btn" href="#">
