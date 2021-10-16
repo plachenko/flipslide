@@ -333,4 +333,7 @@
 <canvas bind:this={canvas} />
 
 <style>
+	canvas{
+		position: absolute;
+	}
 </style>

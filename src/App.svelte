@@ -7,6 +7,8 @@
 	import Point from './classes/Point';
 	import {stroke} from './assets/stroke';
 	import IO from './IO.svelte';
+
+	import Layers from './Layers.svelte';
 	
 	let menu;
 	let animMenu;
@@ -27,6 +29,10 @@
 	let io;
 
 	let layers = [
+		null,
+		null,
+		null,
+		null,
 		null
 	];
 	let curLayer = 0;
@@ -184,17 +190,10 @@
 			}, 100);
 		}
 	}
-
 </script>
 
 <main>
-	<div id="layers">
-		<div class="actions">
-			<span>add</span>
-			<span>rem</span>
-		</div>
-	</div>
-
+	<Layers curLayer={curLayer} layers={layers} />
 	<div style="z-index: 9999; position: absolute;" bind:this={animMenu}>
 		<a on:click={handlePlay} class="btn" href="#">
 			{#if !playing}
@@ -271,39 +270,6 @@
 </main>
 
 <style>
-	#layers{
-		position: absolute;
-		right: 10px;
-		top: 50%;
-		min-width: 100px;
-		min-height: 100px;
-		border: 1px solid;
-		z-index: 9999;
-		user-select: none;
-	}
-	#layers .actions{
-		background-color: #CCC;
-		display: flex;
-		position: absolute;
-		bottom: 0px;
-		width: 100%;
-		border-top: 2px solid;
-	}
-	#layers .actions span{
-		padding: 3px;
-		text-align: center;
-		flex: 1;
-		display: inline-block;
-		border-right: 1px solid;
-	}
-	#layers .actions span:last-child{
-		border: none;
-	}
-	#layers .actions span:hover{
-		cursor: pointer;
-		background-color: #DDD;
-	}
-
 	main {
 		position: relative;
 		width: 100%;
