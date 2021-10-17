@@ -1,8 +1,19 @@
 <script lang="ts">
+		import {onMount} from 'svelte';
+
     export let curLayer;
     export let layers;
 
-    $: layers && handleLayerChange();
+    /* $: layers && handleLayerChange(); */
+		$: if(layers[0]){
+			layers = layers.reverse();
+			console.log(layers)
+		};
+
+		onMount(()=>{
+			layers = [];
+
+		});
 
     function handleLayerChange(){
         console.log('layer change.');
