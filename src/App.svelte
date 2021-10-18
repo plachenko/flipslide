@@ -7,6 +7,8 @@
 	import Point from './classes/Point';
 	import {stroke} from './assets/stroke';
 	import IO from './IO.svelte';
+
+	import Network from './Network.svelte';
 	
 	let menu;
 	let animMenu;
@@ -188,7 +190,7 @@
 </script>
 
 <main>
-
+	<Network />
 	<div style="z-index: 9999; position: absolute;" bind:this={animMenu}>
 		<a on:click={handlePlay} class="btn" href="#">
 			{#if !playing}

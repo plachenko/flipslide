@@ -2,13 +2,15 @@
   "name": "flipslide",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "bnd": "npm run build && npm run deploy",
     "deploy": "gh-pages -d public",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear --host=0.0.0.0",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "server": "node ./server/server.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -27,6 +29,7 @@
     "@tsconfig/svelte": "^2.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "ws": "^8.2.3"
   }
 }
