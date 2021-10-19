@@ -73,34 +73,6 @@
 
 	}
 
-	// Start Capturing stroke.
-	function handleCapStartEvt(){
-	}
-
-	function handleCapEvt(e){
-
-		if(strokeCnt<=frameSkip){
-			strokeCnt++;
-		}else{
-			strokeCnt = 0;
-		}
-
-		layers[curLayer].currentPoint = e.detail;
-	}
-
-	// Done Capturing stroke.
-	function handleCapDoneEvt(){
-		// layers[0].clear();
-		layers[curLayer].endStroke();
-		if(reset){
-			frameIdx = 0;
-		}
-	}
-
-	// Handle cursor move...
-	function handleMoveEvt(e){
-	}
-
 	function handleSave(e){
 		let opt = e.detail;
 

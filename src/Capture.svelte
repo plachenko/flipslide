@@ -45,10 +45,10 @@
 <style>
 #capture{
     touch-action: none;
-    z-index: 9997;
+    z-index: 9999;
     width: 100%;
     height: 100%;
     position: absolute;
-    cursor: crosshair;
+	background-color: #F00;
     }
 </style>

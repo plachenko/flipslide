@@ -64,7 +64,6 @@
 			tickInt++;
 			requestAnimationFrame(tick);
 		}, tickTime);
-
 	}
 
 	function setCanvas(width = window.innerWidth, height = window.innerHeight){
