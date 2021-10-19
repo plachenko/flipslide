@@ -16,32 +16,45 @@
     let y = 100;
 
     let pts = [];
+    let pdn = false;
 
     onMount(()=>{
         // On Mount function. When the component appears do this immediately.
         setCanvas();
-        
-        window.addEventListener('pointermove', (e)=>{
-            if(Math.ceil(e.pressure)){
-                
-                if(!pts[0]){
-                    pts[0] = new Point(e.clientX, e.clientY);
-                }
+        window.addEventListener('pointerdown', (e)=>{
+            pts[0] = new Point(e.clientX, e.clientY);
+            pdn = true;
+        });
 
+        window.addEventListener('pointerup', (e)=>{
+            // console.log(e);
+            pts = [];
+            pdn = false;
+        });
+
+        // requestAnimationFrame(tick);
+        tick();
+
+        window.addEventListener('pointermove', (e)=>{
+            if(pdn){
+                console.log(e);
                 pts[1] = new Point(e.clientX, e.clientY);
 
-                x = pts[1].x;
-                y = pts[1].y;
 
-                console.log(x, y);
-
-                render();
-            } else {
-                pts = [];
             }
         });
 
     });
+
+    function tick(){
+        if(pdn){
+            x = pts[1].x;
+            y = pts[1].y;
+            render();
+            console.log('tick');
+        }
+        requestAnimationFrame(tick);
+    }
 
     export function clear(){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -80,6 +93,9 @@
     }
 </script>
 
+<div>
+test
+</div>
 <canvas bind:this={canvas} />
 
 <style>
